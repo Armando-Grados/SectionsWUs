@@ -287,10 +287,12 @@
         }
 
         .testimonialSlider .carousel-inner {
-            padding: 32px;
+            padding: 32px 32px;
             margin: 0 -32px;
         }
-
+        .testimonialSlider .carousel-item{
+            padding: 32px 0 95px;
+        }
         .testimonialSlider .testimonialSlider_each {
             display: flex;
             flex-wrap: wrap;
@@ -300,13 +302,18 @@
         .testimonialSlider_each .testimonialSlider_left {
             width: 507px;
             flex-basis: 507px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
         }
 
         .testimonialSlider_each .testimonialSlider_right {
             width: calc(100% - 507px);
             flex-basis: calc(100% - 507px);
             padding-left: 110px;
-            padding-bottom: 60px;
+            margin-left: auto;
+            padding-top: 32px;
         }
 
 
@@ -314,11 +321,12 @@
             position: relative;
             z-index: 1;
             width: 100%;
+            height: 100%;
         }
 
         .testimonialSlider_each .testimonialSlider_left figure img {
             width: 100%;
-            height: 657px;
+            height: 100%;
             object-fit: cover;
         }
 
@@ -373,11 +381,11 @@
         .testimonialSlider_inner {
             position: relative;
         }
-
+    
         .testimonialSlider_inner .testimonialSlider_bot {
             position: absolute;
             right: 0;
-            bottom: 100px;
+            bottom: 68px;
             max-width: calc(100% - 507px);
             width: 100%;
             margin-left: auto;
@@ -1033,7 +1041,7 @@
         <div class="testimonialSlider">
             <div class="container-fluid">
                 <div class="testimonialSlider_inner">
-                    <div id="testimonialSliderControls" class="carousel slide" data-bs-ride="carousel">
+                    <div id="testimonialSliderControls" class="carousel slide testimonialSlider_carousel" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="testimonialSlider_each">
@@ -1156,6 +1164,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="testimonialSlider_bot">
                             <div class="testimonialSlider_bot_Left">
                                 <button class="testimonialSliderControls_prev testimonialSliderControls_arrow"
@@ -1167,7 +1176,7 @@
                                                 d="M2.38866 6.42717L6.87162 10.737C6.99506 10.8553 7.06296 11.0136 7.06296 11.1824C7.06296 11.3513 6.99506 11.5095 6.87162 11.628L6.4788 12.0055C6.35556 12.1242 6.19081 12.1896 6.01525 12.1896C5.83968 12.1896 5.67513 12.1242 5.55179 12.0055L0.214116 6.8743C0.0902874 6.75535 0.022479 6.59641 0.0229661 6.42745C0.0224789 6.25774 0.0901899 6.09899 0.214116 5.97995L5.54682 0.853739C5.67016 0.73498 5.83471 0.669606 6.01037 0.669606C6.18593 0.669606 6.35049 0.73498 6.47393 0.853739L6.86665 1.23118C7.1222 1.47685 7.1222 1.87677 6.86665 2.12234L2.38866 6.42717Z"
                                                 fill="white" />
                                         </svg>
-
+    
                                     </span>
                                     <!-- Previous -->
                                 </button>
@@ -1181,9 +1190,9 @@
                                                 d="M4.69728 6.43202L0.214319 2.12223C0.0908797 2.00385 0.0229737 1.84556 0.0229737 1.67679C0.0229737 1.50792 0.0908796 1.34974 0.214318 1.23116L0.607139 0.85372C0.730382 0.734961 0.89513 0.669587 1.07069 0.669587C1.24625 0.669587 1.41081 0.734961 1.53415 0.85372L6.87182 5.98489C6.99565 6.10384 7.06346 6.26278 7.06297 6.43174C7.06346 6.60145 6.99575 6.7602 6.87182 6.87924L1.53912 12.0055C1.41578 12.1242 1.25122 12.1896 1.07556 12.1896C0.900004 12.1896 0.735451 12.1242 0.612012 12.0055L0.219288 11.628C-0.0362597 11.3823 -0.0362598 10.9824 0.219288 10.7368L4.69728 6.43202Z"
                                                 fill="white" />
                                         </svg>
-
+    
                                     </span>
-
+    
                                 </button>
                             </div>
                             <div class="testimonialSlider_bot_right">
@@ -1224,7 +1233,7 @@
                                         d="M19.1114 0.205963C8.55815 0.205963 0.00390625 8.76183 0.00390625 19.3134C0.00390625 29.8666 8.55815 38.4209 19.1114 38.4209C29.6629 38.4209 38.2188 29.865 38.2188 19.3134C38.2188 8.76183 29.6629 0.205963 19.1114 0.205963ZM14.4304 24.4443C14.4304 25.477 13.5936 26.3122 12.5625 26.3122C11.5299 26.3122 10.6947 25.477 10.6947 24.4443V16.4809C10.6947 15.4482 11.5299 14.6114 12.5625 14.6114C13.5936 14.6114 14.4304 15.4482 14.4304 16.4809V24.4443ZM27.6251 24.31C27.6251 25.77 26.7721 26.2928 25.3122 26.2928H18.595C17.1351 26.2928 15.9519 25.1096 15.9519 23.6496V17.0425C15.9519 17.0425 15.8208 15.9435 17.0379 14.9109C17.7258 14.3265 18.7472 13.2113 19.461 11.8582C20.8789 9.16971 21.727 8.38632 22.3728 8.59673C24.7651 9.37204 23.569 12.9184 22.7969 14.3994H24.982C26.4403 14.3994 27.6251 15.5826 27.6251 17.0425V24.31Z"
                                         fill="#5D5DFF" />
                                 </svg>
-
+    
                             </div>
                         </div>
 
