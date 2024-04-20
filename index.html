@@ -1,11 +1,2054 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>SectionsWUs</title>
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- custom css -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+        body {
+            padding: 0;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        /* custom padding for bootstrap container */
+        .container-fluid {
+            padding: 0 80px;
+        }
+
+        /* common styles start */
+        .cmnSection_head {
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .cmnSection_head h6 {
+            font-weight: 700;
+            font-size: 18px;
+            color: #CEA03E;
+            margin-bottom: 0;
+        }
+
+        .cmnSection_head h2 {
+            font-weight: 700;
+            font-size: 48px;
+            margin-bottom: 15px;
+            color: #121212;
+        }
+
+        .cmnSection_head h2:last-child {
+            margin-bottom: 0;
+        }
+
+        .cmnSection_head p {
+            font-size: 24px;
+            color: #4A4A4A;
+        }
+
+        .cmn_btn {
+            font-size: 16px;
+            font-weight: 700;
+            color: #ffffff;
+            padding: 8px 24px;
+            min-width: 131px;
+            height: 44px;
+            background: linear-gradient(90deg, #EAB646 -2.63%, #966B33 100%);
+            border-radius: 4px;
+            border: 0;
+            transition: 0.4s all ease;
+        }
+
+        .cmn_btn:hover {
+            background: linear-gradient(90deg, #966B33 -2.63%, #EAB646 100%);
+        }
+
+        .cmnSecHead_withImg {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .cmnSecHead_withImg figure {
+            margin-bottom: 0;
+        }
+
+        .cmnSecHead_withImg figure img {
+            width: 100%;
+            height: 285px;
+            object-fit: fill;
+        }
+
+        .cmnSecHead_withImg .cmnSecHead_withImg_content {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 52px;
+            text-align: center;
+            max-width: 824px;
+            margin: 0 auto;
+        }
+
+        .cmnSecHead_withImg .cmnSecHead_withImg_content h2 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+        }
+
+        .cmnSecHead_withImg .cmnSecHead_withImg_content p {
+            font-size: 24px;
+            font-weight: 400;
+            color: #D7D7D7;
+        }
+
+        .cmn_innerTitle {
+            margin-bottom: 32px;
+        }
+
+        .cmn_innerTitle h3 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #121212;
+            margin-bottom: 25px;
+        }
+        .cmn_innerTitle p {
+            font-size: 18px;
+            font-weight: 400;
+            color: #CEA03E;
+        }
+
+        .cmn_innerTitle h3:last-child {
+            margin-bottom: 0;
+        }
+
+        .cmn_gap {
+            padding: 50px 0;
+        }
+
+        .cmnTabsWrap .nav-tabs {
+            justify-content: center;
+            border-bottom: 3px solid #E6E6E6;
+            margin-bottom: 40px;
+        }
+
+        .cmnTabsWrap .nav-tabs .nav-link {
+            border: 0;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -2px;
+            font-size: 24px;
+            color: #8F8F8F;
+            font-weight: 400;
+            padding: 0 28px 10px;
+
+        }
+
+        .cmnTabsWrap .nav-tabs .nav-link.active {
+            border-bottom-color: #006634;
+            font-weight: 700;
+            color: #006634;
+        }
+
+        /* common styles end */
+
+        /* job section start */
+
+
+        .jobsSec .cmnSection_head {
+            margin-bottom: 56px;
+        }
+
+        .eachJob {
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+            border-bottom: 1px solid #E0E0E0;
+            position: relative;
+            font-size: 18px;
+            font-weight: 400;
+            color: #7C7C7C;
+        }
+
+        .eachJob .cmn_btn {
+            position: absolute;
+            right: 0;
+            top: 12px;
+
+        }
+
+        .eachJob .jobAppliation_date {
+            font-size: 14px;
+            font-weight: 700;
+            color: #CEA03E;
+            margin-bottom: 8px;
+        }
+
+        .eachJob .jobTitle {
+            font-weight: 700;
+            font-size: 32px;
+            color: #006634;
+            font-family: "Open Sans", sans-serif;
+            margin-bottom: 15px;
+        }
+
+        .eachJob p {
+            margin-bottom: 15px;
+        }
+
+        .eachJob .hideContent {
+            display: none;
+        }
+
+        .eachJob .showContent {
+            display: initial;
+        }
+
+        .eachJob .show-more {
+            background: transparent;
+            border: 0;
+            color: #CEA03E;
+            margin-left: 5px;
+            font-weight: 500;
+        }
+
+        .eachJob .jobLocationTypeList {
+            list-style: none;
+            padding: 5px 0 0;
+            margin: 0 -8px;
+            display: flex;
+        }
+
+        .eachJob .jobLocationTypeList li {
+            font-size: 14px;
+            font-weight: 400;
+            color: #7C7C7C;
+            padding: 0 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .eachJob .jobLocationTypeList li span {
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .jobLoadMore_wrap {
+            display: flex;
+            justify-content: center;
+        }
+
+        .jobLoadMore_wrap .loadMoreJob_btn {
+            min-width: 149px;
+            height: 44px;
+            border: 1px solid #132020;
+            border-radius: 4px;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+            font-size: 16px;
+            font-weight: 700;
+            padding: 5px 10px 7px 10px;
+            color: #132020;
+        }
+
+        .jobLoadMore_wrap .loadMoreJob_btn:hover {
+            background-color: #CEA03E;
+            color: #ffffff;
+            border-color: #CEA03E;
+        }
+
+        .applyJobModal .modal-footer {
+            justify-content: center;
+            border: 0;
+        }
+
+        /* job section end */
+
+        /* Client success Stories start */
+        .successStoriesSec {
+            background: #F6F6F6;
+            padding: 0 0 50px;
+        }
+
+        .testimonialSlider .carousel-inner {
+            padding: 32px;
+            margin: 0 -32px;
+        }
+
+        .testimonialSlider .testimonialSlider_each {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .testimonialSlider_each .testimonialSlider_left {
+            width: 507px;
+            flex-basis: 507px;
+        }
+
+        .testimonialSlider_each .testimonialSlider_right {
+            width: calc(100% - 507px);
+            flex-basis: calc(100% - 507px);
+            padding-left: 110px;
+            padding-bottom: 60px;
+        }
+
+
+        .testimonialSlider_each .testimonialSlider_left figure {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+        }
+
+        .testimonialSlider_each .testimonialSlider_left figure img {
+            width: 100%;
+            height: 657px;
+            object-fit: cover;
+        }
+
+        .testimonialSlider_each .testimonialSlider_left figure::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            max-width: 370px;
+            height: 438px;
+            background: #006634;
+            top: -32px;
+            left: -32px;
+            z-index: -1;
+        }
+
+        .testimonialSlider_each .testimonialSlider_left figure::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            max-width: 370px;
+            height: 438px;
+            background: #CEA03E;
+            bottom: -32px;
+            right: -32px;
+            z-index: -1;
+        }
+
+        .testimonialSlider_each .testimonialSlider_right .testimonialText p {
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: 400;
+            color: #000000;
+        }
+
+        .testimonialSlider_each .testimonialSlider_right .testimonialInfo h6 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 2px;
+        }
+
+        .testimonialSlider_each .testimonialSlider_right .testimonialInfo p {
+            font-size: 14px;
+            font-weight: 400;
+            color: #303030;
+        }
+
+        .testimonialSlider_each .testimonialSlider_right .quoteIcon {
+            margin-bottom: 25px;
+        }
+
+        .testimonialSlider_inner {
+            position: relative;
+        }
+
+        .testimonialSlider_inner .testimonialSlider_bot {
+            position: absolute;
+            right: 0;
+            bottom: 100px;
+            max-width: calc(100% - 507px);
+            width: 100%;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 110px;
+        }
+
+        .testimonialSlider_bot .testimonialSliderControls_arrow {
+            padding: 16px 24px;
+            /* min-width: 133px; */
+            height: 44px;
+            background: #CEA03E;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 600;
+            color: #FFFFFF;
+            border: 0;
+            margin-left: 10px;
+            line-height: 1;
+        }
+
+        .testimonialSlider_bot .testimonialSliderControls_arrow:hover {
+            background: #006634;
+        }
+
+        .testimonialSlider_bot .testimonialSliderControls_arrow:first-child {
+            margin-left: 0;
+        }
+
+        .testimonialSlider_bot_Left {
+            display: flex;
+        }
+
+
+        /* Client success Stories end */
+
+        /* meet our team start */
+        .outTeamSec .ourTeam_row {
+            margin: 0 -25px -30px;
+        }
+
+        .ourTeam_row .ourTeam_col {
+            padding: 0 25px;
+            margin-bottom: 30px;
+        }
+
+        .ourTeam_col .ourTeamCard {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .ourTeamCard figure {
+            background: #537D7D;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            min-height: 230px;
+        }
+
+        .ourTeamCard figure img {
+            height: 215px;
+            object-fit: contain;
+        }
+
+        .ourTeamCard h5 {
+            color: #121212;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .ourTeamCard .roleInfo {
+            font-size: 16px;
+            font-weight: 700;
+            color: #CEA03E;
+        }
+
+        .ourTeamCard .roleInfo:last-child {
+            margin-bottom: 0;
+        }
+
+        /* meet our team end */
+
+
+        /* global team from nations start */
+        .nationsSec .mapCountries_wrap {
+            padding-top: 70px;
+        }
+
+        .nationsSec .mapCountries_inner {
+            position: relative;
+
+        }
+
+        .mapCountries_inner .map_area {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .countries_area .each_country_row {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 -15px 30px;
+        }
+
+        .countries_area .each_country_row:last-child {
+            margin-bottom: 0;
+        }
+
+        .each_country_row .each_country_wrap {
+            padding: 0 15px;
+        }
+
+        .each_country_row .each_country {
+            padding: 9px 8px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            border: 1px solid #E0E0E0;
+            border-radius: 10px;
+        }
+
+        .each_country_row .each_country figure {
+            width: 65px;
+            flex-basis: 65px;
+            margin-bottom: 0;
+        }
+
+        .each_country_row .each_country .each_country_text {
+            padding-left: 20px;
+            width: calc(100% - 65px);
+            flex-basis: calc(100% - 65px);
+        }
+
+        .each_country .each_country_text h5 {
+            color: #132020;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .countries_area .each_country_row:first-child,
+        .countries_area .each_country_row:last-child {
+            padding: 0 123px;
+        }
+
+        .countries_area .each_country_row:nth-child(-2n+4) {
+            padding: 0 46px;
+        }
+
+        /* global team from nations end */
+
+
+        /* Virtual Office & Equipments start */
+        .OfficeEquipmentsSec {
+            overflow: hidden;
+            position: relative;
+            padding: 137px 0 158px;
+        }
+        .OfficeEquipmentsContent .nenefitPerksList{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .OfficeEquipmentsContent .nenefitPerksList li{
+            display: flex;
+            font-size: 18px;
+            font-weight: 400;
+            color: #121212;
+            margin-bottom: 17px;
+        }
+        .OfficeEquipmentsContent .nenefitPerksList li:last-child{
+            margin-bottom: 0;
+        }
+        .OfficeEquipmentsContent .nenefitPerksList li .tick_icon{
+            display: inline-flex;
+            margin-right: 12px;
+        }
+        .OfficeEquipmentsContent .OfficeEquipmentsContent_inner{
+            max-width: 628px;
+        }
+        .OfficeEquipments_animations{
+            position: absolute;
+            right: -27%;
+            top: 0;
+            width: 100%;
+            transform: rotate(-60deg);
+            z-index: -1;
     
+        }
+
+        .officeAnimatin_each {
+            display: flex;
+            margin: 0 -10px 16px;
+            min-width: 100%;
+        }
+
+        .officeAnimatin_each:last-child {
+            margin-bottom: 0;
+        }
+
+        .officeAnimatin_each .officeAnimatin_eachImg {
+            padding: 0 10px;
+        }
+        .officeAnimatin_each .officeAnimatin_eachImg figure{
+            margin: 0;
+            border-radius: 24px;
+            overflow: hidden;
+        }
+        .officeAnimatin_each .officeAnimatin_eachImg figure img{
+            width: 100%;
+            min-width: 360px;
+            height: 250px;
+            object-fit: cover;
+        }
+        .animation_down {
+            animation: moveDown 12s linear 0s infinite ;
+        }
+        .animation_up{
+            animation: moveDown 12s linear 0s infinite ;
+            animation-direction: reverse;
+            animation-delay: calc(12s / -2);
+        }
+
+       
+        /* animation down */
+        @keyframes moveDown {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+
+        /* Virtual Office & Equipments end */
+    </style>
+    <!-- custom javascript -->
+    <script>
+
+        // show more / show less start
+
+        var elements = document.getElementsByClassName("show-more");
+
+        var click_event = function () {
+            var linkText = this.innerHTML.toUpperCase();
+            if (linkText === "SHOW MORE") {
+                this.innerHTML = "Show less";
+                this.previousElementSibling.classList.remove("hideContent");
+                this.previousElementSibling.classList.add("showContent");
+
+            }
+            else {
+                this.innerHTML = "Show more";
+                this.previousElementSibling.classList.remove("showContent");
+                this.previousElementSibling.classList.add("hideContent");
+            }
+        };
+
+
+
+        window.addEventListener('load', function () {
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].addEventListener('click', click_event, true);
+            }
+        })
+
+        // show more / show less end
+    </script>
+
+
+</head>
+
+<body>
+    <div class="jobsSec cmn_gap">
+        <div class="container-fluid">
+            <div class="cmnSection_head">
+                <h6>Benefits and Perks! </h6>
+                <h2>Explore Exciting Opportunities!</h2>
+                <p>Our employee architecture promotes collaboration, talent development, inclusivity, diversity, and
+                    well-being</p>
+            </div>
+            <div class="jobsTabWrap cmnTabsWrap">
+                <div class="nav nav-tabs job-tabs" id="jobs-tab" role="tablist">
+                    <button class="nav-link active" id="job-online-tab" data-bs-toggle="tab"
+                        data-bs-target="#job-online" type="button" role="tab" aria-controls="job-online"
+                        aria-selected="true">Onsite Jobs</button>
+                    <button class="nav-link" id="job-virtual-tab" data-bs-toggle="tab" data-bs-target="#job-virtual"
+                        type="button" role="tab" aria-controls="job-virtual" aria-selected="false">Virtual Jobs</button>
+                </div>
+
+                <div class="tab-content" id="jobs-tabContent">
+                    <div class="tab-pane fade show active" id="job-online" role="tabpanel"
+                        aria-labelledby="job-online-tab">
+                        <div class="eachJob">
+                            <p class="jobAppliation_date">Application date 24-05-2024</p>
+                            <h3 class="jobTitle">Advisor Manager</h3>
+                            <p>
+                                We are seeking a dynamic and experienced Advisor Manager to join our team. The Advisor
+                                Manager will play a crucial role in overseeing a team of advisors who provide
+                                personalized assistance and guidance to immigrants throughout their relocation process.
+                                This role requires a deep understanding of immigrant needs, excellent leadership skills,
+                                and a passion for making a positive impact. We are seeking a dynamic and experienced
+                                Advisor Manager to join our team. The Advisor Manager will play a crucial role in
+                                overseeing a team!
+                                <span class="content hideContent">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                </span>
+                                <button class="show-more">Show more</button>
+                            </p>
+                            <ul class="jobLocationTypeList">
+                                <li>
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.5625 10.6603C9.5625 9.79832 9.90491 8.97167 10.5144 8.36218C11.1239 7.75269 11.9505 7.41028 12.8125 7.41028C13.6745 7.41028 14.5011 7.75269 15.1106 8.36218C15.7201 8.97167 16.0625 9.79832 16.0625 10.6603C16.0625 11.5222 15.7201 12.3489 15.1106 12.9584C14.5011 13.5679 13.6745 13.9103 12.8125 13.9103C11.9505 13.9103 11.1239 13.5679 10.5144 12.9584C9.90491 12.3489 9.5625 11.5222 9.5625 10.6603Z"
+                                                fill="#7C7C7C" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M4.5841 9.53728C4.74998 7.52686 5.66574 5.65231 7.14957 4.28573C8.63341 2.91916 10.5768 2.16047 12.5941 2.16028H13.0261C15.0433 2.16047 16.9868 2.91916 18.4706 4.28573C19.9545 5.65231 20.8702 7.52686 21.0361 9.53728C21.2214 11.7818 20.5284 14.0106 19.1031 15.7543L14.3101 21.6163C14.1284 21.8386 13.8996 22.0178 13.6402 22.1409C13.3808 22.2639 13.0972 22.3277 12.8101 22.3277C12.523 22.3277 12.2394 22.2639 11.98 22.1409C11.7206 22.0178 11.4918 21.8386 11.3101 21.6163L6.5181 15.7543C5.0924 14.0107 4.39905 11.7819 4.5841 9.53728ZM12.8101 5.91028C11.5503 5.91028 10.3421 6.41072 9.45134 7.30152C8.56054 8.19232 8.0601 9.4005 8.0601 10.6603C8.0601 11.9201 8.56054 13.1282 9.45134 14.019C10.3421 14.9098 11.5503 15.4103 12.8101 15.4103C14.0699 15.4103 15.2781 14.9098 16.1689 14.019C17.0597 13.1282 17.5601 11.9201 17.5601 10.6603C17.5601 9.4005 17.0597 8.19232 16.1689 7.30152C15.2781 6.41072 14.0699 5.91028 12.8101 5.91028Z"
+                                                fill="#7C7C7C" />
+                                        </svg>
+                                    </span>
+                                    Lime Peru
+                                </li>
+                                <li>
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12.8125 2.66028C11.4993 2.66028 10.1989 2.91894 8.98567 3.42148C7.77241 3.92403 6.67002 4.66062 5.74143 5.58921C3.86607 7.46457 2.8125 10.0081 2.8125 12.6603C2.8125 15.3124 3.86607 17.856 5.74143 19.7313C6.67002 20.6599 7.77241 21.3965 8.98567 21.8991C10.1989 22.4016 11.4993 22.6603 12.8125 22.6603C15.4647 22.6603 18.0082 21.6067 19.8836 19.7313C21.7589 17.856 22.8125 15.3124 22.8125 12.6603C22.8125 11.3471 22.5538 10.0467 22.0513 8.83344C21.5487 7.62019 20.8122 6.5178 19.8836 5.58921C18.955 4.66062 17.8526 3.92403 16.6393 3.42148C15.4261 2.91894 14.1257 2.66028 12.8125 2.66028ZM17.0125 16.8603L11.8125 13.6603V7.66028H13.3125V12.8603L17.8125 15.5603L17.0125 16.8603Z"
+                                                fill="#7C7C7C" />
+                                        </svg>
+                                    </span>
+                                    Full Time
+                                </li>
+                            </ul>
+
+                            <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">Apply
+                                Now</button>
+                        </div>
+                        <div class="eachJob">
+                            <p class="jobAppliation_date">Application date 24-05-2024</p>
+                            <h3 class="jobTitle">Advisor Manager</h3>
+                            <p>
+                                We are seeking a dynamic and experienced Advisor Manager to join our team. The Advisor
+                                Manager will play a crucial role in overseeing a team of advisors who provide
+                                personalized assistance and guidance to immigrants throughout their relocation process.
+                                This role requires a deep understanding of immigrant needs, excellent leadership skills,
+                                and a passion for making a positive impact. We are seeking a dynamic and experienced
+                                Advisor Manager to join our team. The Advisor Manager will play a crucial role in
+                                overseeing a team!
+                                <span class="content hideContent">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                </span>
+                                <button class="show-more">Show more</button>
+                            </p>
+                            <ul class="jobLocationTypeList">
+                                <li>
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.5625 10.6603C9.5625 9.79832 9.90491 8.97167 10.5144 8.36218C11.1239 7.75269 11.9505 7.41028 12.8125 7.41028C13.6745 7.41028 14.5011 7.75269 15.1106 8.36218C15.7201 8.97167 16.0625 9.79832 16.0625 10.6603C16.0625 11.5222 15.7201 12.3489 15.1106 12.9584C14.5011 13.5679 13.6745 13.9103 12.8125 13.9103C11.9505 13.9103 11.1239 13.5679 10.5144 12.9584C9.90491 12.3489 9.5625 11.5222 9.5625 10.6603Z"
+                                                fill="#7C7C7C" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M4.5841 9.53728C4.74998 7.52686 5.66574 5.65231 7.14957 4.28573C8.63341 2.91916 10.5768 2.16047 12.5941 2.16028H13.0261C15.0433 2.16047 16.9868 2.91916 18.4706 4.28573C19.9545 5.65231 20.8702 7.52686 21.0361 9.53728C21.2214 11.7818 20.5284 14.0106 19.1031 15.7543L14.3101 21.6163C14.1284 21.8386 13.8996 22.0178 13.6402 22.1409C13.3808 22.2639 13.0972 22.3277 12.8101 22.3277C12.523 22.3277 12.2394 22.2639 11.98 22.1409C11.7206 22.0178 11.4918 21.8386 11.3101 21.6163L6.5181 15.7543C5.0924 14.0107 4.39905 11.7819 4.5841 9.53728ZM12.8101 5.91028C11.5503 5.91028 10.3421 6.41072 9.45134 7.30152C8.56054 8.19232 8.0601 9.4005 8.0601 10.6603C8.0601 11.9201 8.56054 13.1282 9.45134 14.019C10.3421 14.9098 11.5503 15.4103 12.8101 15.4103C14.0699 15.4103 15.2781 14.9098 16.1689 14.019C17.0597 13.1282 17.5601 11.9201 17.5601 10.6603C17.5601 9.4005 17.0597 8.19232 16.1689 7.30152C15.2781 6.41072 14.0699 5.91028 12.8101 5.91028Z"
+                                                fill="#7C7C7C" />
+                                        </svg>
+                                    </span>
+                                    Lime Peru
+                                </li>
+                                <li>
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12.8125 2.66028C11.4993 2.66028 10.1989 2.91894 8.98567 3.42148C7.77241 3.92403 6.67002 4.66062 5.74143 5.58921C3.86607 7.46457 2.8125 10.0081 2.8125 12.6603C2.8125 15.3124 3.86607 17.856 5.74143 19.7313C6.67002 20.6599 7.77241 21.3965 8.98567 21.8991C10.1989 22.4016 11.4993 22.6603 12.8125 22.6603C15.4647 22.6603 18.0082 21.6067 19.8836 19.7313C21.7589 17.856 22.8125 15.3124 22.8125 12.6603C22.8125 11.3471 22.5538 10.0467 22.0513 8.83344C21.5487 7.62019 20.8122 6.5178 19.8836 5.58921C18.955 4.66062 17.8526 3.92403 16.6393 3.42148C15.4261 2.91894 14.1257 2.66028 12.8125 2.66028ZM17.0125 16.8603L11.8125 13.6603V7.66028H13.3125V12.8603L17.8125 15.5603L17.0125 16.8603Z"
+                                                fill="#7C7C7C" />
+                                        </svg>
+                                    </span>
+                                    Full Time
+                                </li>
+                            </ul>
+
+                            <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">Apply
+                                Now</button>
+                        </div>
+                        <div class="eachJob">
+                            <p class="jobAppliation_date">Application date 24-05-2024</p>
+                            <h3 class="jobTitle">Advisor Manager</h3>
+                            <p>
+                                We are seeking a dynamic and experienced Advisor Manager to join our team. The Advisor
+                                Manager will play a crucial role in overseeing a team of advisors who provide
+                                personalized assistance and guidance to immigrants throughout their relocation process.
+                                This role requires a deep understanding of immigrant needs, excellent leadership skills,
+                                and a passion for making a positive impact. We are seeking a dynamic and experienced
+                                Advisor Manager to join our team. The Advisor Manager will play a crucial role in
+                                overseeing a team!
+                                <span class="content hideContent">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                </span>
+                                <button class="show-more">Show more</button>
+                            </p>
+                            <ul class="jobLocationTypeList">
+                                <li>
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.5625 10.6603C9.5625 9.79832 9.90491 8.97167 10.5144 8.36218C11.1239 7.75269 11.9505 7.41028 12.8125 7.41028C13.6745 7.41028 14.5011 7.75269 15.1106 8.36218C15.7201 8.97167 16.0625 9.79832 16.0625 10.6603C16.0625 11.5222 15.7201 12.3489 15.1106 12.9584C14.5011 13.5679 13.6745 13.9103 12.8125 13.9103C11.9505 13.9103 11.1239 13.5679 10.5144 12.9584C9.90491 12.3489 9.5625 11.5222 9.5625 10.6603Z"
+                                                fill="#7C7C7C" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M4.5841 9.53728C4.74998 7.52686 5.66574 5.65231 7.14957 4.28573C8.63341 2.91916 10.5768 2.16047 12.5941 2.16028H13.0261C15.0433 2.16047 16.9868 2.91916 18.4706 4.28573C19.9545 5.65231 20.8702 7.52686 21.0361 9.53728C21.2214 11.7818 20.5284 14.0106 19.1031 15.7543L14.3101 21.6163C14.1284 21.8386 13.8996 22.0178 13.6402 22.1409C13.3808 22.2639 13.0972 22.3277 12.8101 22.3277C12.523 22.3277 12.2394 22.2639 11.98 22.1409C11.7206 22.0178 11.4918 21.8386 11.3101 21.6163L6.5181 15.7543C5.0924 14.0107 4.39905 11.7819 4.5841 9.53728ZM12.8101 5.91028C11.5503 5.91028 10.3421 6.41072 9.45134 7.30152C8.56054 8.19232 8.0601 9.4005 8.0601 10.6603C8.0601 11.9201 8.56054 13.1282 9.45134 14.019C10.3421 14.9098 11.5503 15.4103 12.8101 15.4103C14.0699 15.4103 15.2781 14.9098 16.1689 14.019C17.0597 13.1282 17.5601 11.9201 17.5601 10.6603C17.5601 9.4005 17.0597 8.19232 16.1689 7.30152C15.2781 6.41072 14.0699 5.91028 12.8101 5.91028Z"
+                                                fill="#7C7C7C" />
+                                        </svg>
+                                    </span>
+                                    Lime Peru
+                                </li>
+                                <li>
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12.8125 2.66028C11.4993 2.66028 10.1989 2.91894 8.98567 3.42148C7.77241 3.92403 6.67002 4.66062 5.74143 5.58921C3.86607 7.46457 2.8125 10.0081 2.8125 12.6603C2.8125 15.3124 3.86607 17.856 5.74143 19.7313C6.67002 20.6599 7.77241 21.3965 8.98567 21.8991C10.1989 22.4016 11.4993 22.6603 12.8125 22.6603C15.4647 22.6603 18.0082 21.6067 19.8836 19.7313C21.7589 17.856 22.8125 15.3124 22.8125 12.6603C22.8125 11.3471 22.5538 10.0467 22.0513 8.83344C21.5487 7.62019 20.8122 6.5178 19.8836 5.58921C18.955 4.66062 17.8526 3.92403 16.6393 3.42148C15.4261 2.91894 14.1257 2.66028 12.8125 2.66028ZM17.0125 16.8603L11.8125 13.6603V7.66028H13.3125V12.8603L17.8125 15.5603L17.0125 16.8603Z"
+                                                fill="#7C7C7C" />
+                                        </svg>
+                                    </span>
+                                    Full Time
+                                </li>
+                            </ul>
+
+                            <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">Apply
+                                Now</button>
+                        </div>
+
+                        <div class="jobLoadMore_wrap">
+                            <button class="loadMoreJob_btn">Load More</button>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="job-virtual" role="tabpanel" aria-labelledby="job-virtual-tab">
+                        <div class="eachJob">
+                            <p class="jobAppliation_date">Application date 24-05-2024</p>
+                            <h3 class="jobTitle">Advisor Manager</h3>
+                            <p>
+                                We are seeking a dynamic and experienced Advisor Manager to join our team. The Advisor
+                                Manager will play a crucial role in overseeing a team of advisors who provide
+                                personalized assistance and guidance to immigrants throughout their relocation process.
+                                This role requires a deep understanding of immigrant needs, excellent leadership skills,
+                                and a passion for making a positive impact. We are seeking a dynamic and experienced
+                                Advisor Manager to join our team. The Advisor Manager will play a crucial role in
+                                overseeing a team!
+                                <span class="content hideContent">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                </span>
+                                <button class="show-more">Show more</button>
+                            </p>
+                            <ul class="jobLocationTypeList">
+                                <li>
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.5625 10.6603C9.5625 9.79832 9.90491 8.97167 10.5144 8.36218C11.1239 7.75269 11.9505 7.41028 12.8125 7.41028C13.6745 7.41028 14.5011 7.75269 15.1106 8.36218C15.7201 8.97167 16.0625 9.79832 16.0625 10.6603C16.0625 11.5222 15.7201 12.3489 15.1106 12.9584C14.5011 13.5679 13.6745 13.9103 12.8125 13.9103C11.9505 13.9103 11.1239 13.5679 10.5144 12.9584C9.90491 12.3489 9.5625 11.5222 9.5625 10.6603Z"
+                                                fill="#7C7C7C" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M4.5841 9.53728C4.74998 7.52686 5.66574 5.65231 7.14957 4.28573C8.63341 2.91916 10.5768 2.16047 12.5941 2.16028H13.0261C15.0433 2.16047 16.9868 2.91916 18.4706 4.28573C19.9545 5.65231 20.8702 7.52686 21.0361 9.53728C21.2214 11.7818 20.5284 14.0106 19.1031 15.7543L14.3101 21.6163C14.1284 21.8386 13.8996 22.0178 13.6402 22.1409C13.3808 22.2639 13.0972 22.3277 12.8101 22.3277C12.523 22.3277 12.2394 22.2639 11.98 22.1409C11.7206 22.0178 11.4918 21.8386 11.3101 21.6163L6.5181 15.7543C5.0924 14.0107 4.39905 11.7819 4.5841 9.53728ZM12.8101 5.91028C11.5503 5.91028 10.3421 6.41072 9.45134 7.30152C8.56054 8.19232 8.0601 9.4005 8.0601 10.6603C8.0601 11.9201 8.56054 13.1282 9.45134 14.019C10.3421 14.9098 11.5503 15.4103 12.8101 15.4103C14.0699 15.4103 15.2781 14.9098 16.1689 14.019C17.0597 13.1282 17.5601 11.9201 17.5601 10.6603C17.5601 9.4005 17.0597 8.19232 16.1689 7.30152C15.2781 6.41072 14.0699 5.91028 12.8101 5.91028Z"
+                                                fill="#7C7C7C" />
+                                        </svg>
+                                    </span>
+                                    Lime Peru
+                                </li>
+                                <li>
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12.8125 2.66028C11.4993 2.66028 10.1989 2.91894 8.98567 3.42148C7.77241 3.92403 6.67002 4.66062 5.74143 5.58921C3.86607 7.46457 2.8125 10.0081 2.8125 12.6603C2.8125 15.3124 3.86607 17.856 5.74143 19.7313C6.67002 20.6599 7.77241 21.3965 8.98567 21.8991C10.1989 22.4016 11.4993 22.6603 12.8125 22.6603C15.4647 22.6603 18.0082 21.6067 19.8836 19.7313C21.7589 17.856 22.8125 15.3124 22.8125 12.6603C22.8125 11.3471 22.5538 10.0467 22.0513 8.83344C21.5487 7.62019 20.8122 6.5178 19.8836 5.58921C18.955 4.66062 17.8526 3.92403 16.6393 3.42148C15.4261 2.91894 14.1257 2.66028 12.8125 2.66028ZM17.0125 16.8603L11.8125 13.6603V7.66028H13.3125V12.8603L17.8125 15.5603L17.0125 16.8603Z"
+                                                fill="#7C7C7C" />
+                                        </svg>
+                                    </span>
+                                    Full Time
+                                </li>
+                            </ul>
+
+                            <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">Apply
+                                Now</button>
+                        </div>
+                        <div class="eachJob">
+                            <p class="jobAppliation_date">Application date 24-05-2024</p>
+                            <h3 class="jobTitle">Advisor Manager</h3>
+                            <p>
+                                We are seeking a dynamic and experienced Advisor Manager to join our team. The Advisor
+                                Manager will play a crucial role in overseeing a team of advisors who provide
+                                personalized assistance and guidance to immigrants throughout their relocation process.
+                                This role requires a deep understanding of immigrant needs, excellent leadership skills,
+                                and a passion for making a positive impact. We are seeking a dynamic and experienced
+                                Advisor Manager to join our team. The Advisor Manager will play a crucial role in
+                                overseeing a team!
+                                <span class="content hideContent">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                </span>
+                                <button class="show-more">Show more</button>
+                            </p>
+                            <ul class="jobLocationTypeList">
+                                <li>
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.5625 10.6603C9.5625 9.79832 9.90491 8.97167 10.5144 8.36218C11.1239 7.75269 11.9505 7.41028 12.8125 7.41028C13.6745 7.41028 14.5011 7.75269 15.1106 8.36218C15.7201 8.97167 16.0625 9.79832 16.0625 10.6603C16.0625 11.5222 15.7201 12.3489 15.1106 12.9584C14.5011 13.5679 13.6745 13.9103 12.8125 13.9103C11.9505 13.9103 11.1239 13.5679 10.5144 12.9584C9.90491 12.3489 9.5625 11.5222 9.5625 10.6603Z"
+                                                fill="#7C7C7C" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M4.5841 9.53728C4.74998 7.52686 5.66574 5.65231 7.14957 4.28573C8.63341 2.91916 10.5768 2.16047 12.5941 2.16028H13.0261C15.0433 2.16047 16.9868 2.91916 18.4706 4.28573C19.9545 5.65231 20.8702 7.52686 21.0361 9.53728C21.2214 11.7818 20.5284 14.0106 19.1031 15.7543L14.3101 21.6163C14.1284 21.8386 13.8996 22.0178 13.6402 22.1409C13.3808 22.2639 13.0972 22.3277 12.8101 22.3277C12.523 22.3277 12.2394 22.2639 11.98 22.1409C11.7206 22.0178 11.4918 21.8386 11.3101 21.6163L6.5181 15.7543C5.0924 14.0107 4.39905 11.7819 4.5841 9.53728ZM12.8101 5.91028C11.5503 5.91028 10.3421 6.41072 9.45134 7.30152C8.56054 8.19232 8.0601 9.4005 8.0601 10.6603C8.0601 11.9201 8.56054 13.1282 9.45134 14.019C10.3421 14.9098 11.5503 15.4103 12.8101 15.4103C14.0699 15.4103 15.2781 14.9098 16.1689 14.019C17.0597 13.1282 17.5601 11.9201 17.5601 10.6603C17.5601 9.4005 17.0597 8.19232 16.1689 7.30152C15.2781 6.41072 14.0699 5.91028 12.8101 5.91028Z"
+                                                fill="#7C7C7C" />
+                                        </svg>
+                                    </span>
+                                    Lime Peru
+                                </li>
+                                <li>
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12.8125 2.66028C11.4993 2.66028 10.1989 2.91894 8.98567 3.42148C7.77241 3.92403 6.67002 4.66062 5.74143 5.58921C3.86607 7.46457 2.8125 10.0081 2.8125 12.6603C2.8125 15.3124 3.86607 17.856 5.74143 19.7313C6.67002 20.6599 7.77241 21.3965 8.98567 21.8991C10.1989 22.4016 11.4993 22.6603 12.8125 22.6603C15.4647 22.6603 18.0082 21.6067 19.8836 19.7313C21.7589 17.856 22.8125 15.3124 22.8125 12.6603C22.8125 11.3471 22.5538 10.0467 22.0513 8.83344C21.5487 7.62019 20.8122 6.5178 19.8836 5.58921C18.955 4.66062 17.8526 3.92403 16.6393 3.42148C15.4261 2.91894 14.1257 2.66028 12.8125 2.66028ZM17.0125 16.8603L11.8125 13.6603V7.66028H13.3125V12.8603L17.8125 15.5603L17.0125 16.8603Z"
+                                                fill="#7C7C7C" />
+                                        </svg>
+                                    </span>
+                                    Full Time
+                                </li>
+                            </ul>
+
+                            <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">Apply
+                                Now</button>
+                        </div>
+                        <div class="eachJob">
+                            <p class="jobAppliation_date">Application date 24-05-2024</p>
+                            <h3 class="jobTitle">Advisor Manager</h3>
+                            <p>
+                                We are seeking a dynamic and experienced Advisor Manager to join our team. The Advisor
+                                Manager will play a crucial role in overseeing a team of advisors who provide
+                                personalized assistance and guidance to immigrants throughout their relocation process.
+                                This role requires a deep understanding of immigrant needs, excellent leadership skills,
+                                and a passion for making a positive impact. We are seeking a dynamic and experienced
+                                Advisor Manager to join our team. The Advisor Manager will play a crucial role in
+                                overseeing a team!
+                                <span class="content hideContent">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                </span>
+                                <button class="show-more">Show more</button>
+                            </p>
+                            <ul class="jobLocationTypeList">
+                                <li>
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.5625 10.6603C9.5625 9.79832 9.90491 8.97167 10.5144 8.36218C11.1239 7.75269 11.9505 7.41028 12.8125 7.41028C13.6745 7.41028 14.5011 7.75269 15.1106 8.36218C15.7201 8.97167 16.0625 9.79832 16.0625 10.6603C16.0625 11.5222 15.7201 12.3489 15.1106 12.9584C14.5011 13.5679 13.6745 13.9103 12.8125 13.9103C11.9505 13.9103 11.1239 13.5679 10.5144 12.9584C9.90491 12.3489 9.5625 11.5222 9.5625 10.6603Z"
+                                                fill="#7C7C7C" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M4.5841 9.53728C4.74998 7.52686 5.66574 5.65231 7.14957 4.28573C8.63341 2.91916 10.5768 2.16047 12.5941 2.16028H13.0261C15.0433 2.16047 16.9868 2.91916 18.4706 4.28573C19.9545 5.65231 20.8702 7.52686 21.0361 9.53728C21.2214 11.7818 20.5284 14.0106 19.1031 15.7543L14.3101 21.6163C14.1284 21.8386 13.8996 22.0178 13.6402 22.1409C13.3808 22.2639 13.0972 22.3277 12.8101 22.3277C12.523 22.3277 12.2394 22.2639 11.98 22.1409C11.7206 22.0178 11.4918 21.8386 11.3101 21.6163L6.5181 15.7543C5.0924 14.0107 4.39905 11.7819 4.5841 9.53728ZM12.8101 5.91028C11.5503 5.91028 10.3421 6.41072 9.45134 7.30152C8.56054 8.19232 8.0601 9.4005 8.0601 10.6603C8.0601 11.9201 8.56054 13.1282 9.45134 14.019C10.3421 14.9098 11.5503 15.4103 12.8101 15.4103C14.0699 15.4103 15.2781 14.9098 16.1689 14.019C17.0597 13.1282 17.5601 11.9201 17.5601 10.6603C17.5601 9.4005 17.0597 8.19232 16.1689 7.30152C15.2781 6.41072 14.0699 5.91028 12.8101 5.91028Z"
+                                                fill="#7C7C7C" />
+                                        </svg>
+                                    </span>
+                                    Lime Peru
+                                </li>
+                                <li>
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12.8125 2.66028C11.4993 2.66028 10.1989 2.91894 8.98567 3.42148C7.77241 3.92403 6.67002 4.66062 5.74143 5.58921C3.86607 7.46457 2.8125 10.0081 2.8125 12.6603C2.8125 15.3124 3.86607 17.856 5.74143 19.7313C6.67002 20.6599 7.77241 21.3965 8.98567 21.8991C10.1989 22.4016 11.4993 22.6603 12.8125 22.6603C15.4647 22.6603 18.0082 21.6067 19.8836 19.7313C21.7589 17.856 22.8125 15.3124 22.8125 12.6603C22.8125 11.3471 22.5538 10.0467 22.0513 8.83344C21.5487 7.62019 20.8122 6.5178 19.8836 5.58921C18.955 4.66062 17.8526 3.92403 16.6393 3.42148C15.4261 2.91894 14.1257 2.66028 12.8125 2.66028ZM17.0125 16.8603L11.8125 13.6603V7.66028H13.3125V12.8603L17.8125 15.5603L17.0125 16.8603Z"
+                                                fill="#7C7C7C" />
+                                        </svg>
+                                    </span>
+                                    Full Time
+                                </li>
+                            </ul>
+
+                            <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">Apply
+                                Now</button>
+                        </div>
+
+                        <div class="jobLoadMore_wrap">
+                            <button class="loadMoreJob_btn">Load More</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="successStoriesSec cmn_gap pt-0">
+        <div class="cmnSecHead_withImg">
+            <figure>
+                <img src="./images/commonHeadingBg.png" alt="">
+            </figure>
+            <div class="container-fluid">
+                <div class="cmnSecHead_withImg_content">
+                    <h2>Client success Stories</h2>
+                    <p>
+                        At commitment, we're more than a company; we are supportive community dedicated to empowering
+                        immigrant attorneys
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="testimonialSlider">
+            <div class="container-fluid">
+                <div class="testimonialSlider_inner">
+                    <div id="testimonialSliderControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="testimonialSlider_each">
+                                    <div class="testimonialSlider_left">
+                                        <figure>
+                                            <img src="./images/testimonialClient.png" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="testimonialSlider_right">
+                                        <div class="cmn_innerTitle">
+                                            <h3>Client Success <br> Story</h3>
+                                        </div>
+
+                                        <div class="quoteIcon">
+                                            <svg width="88" height="66" viewBox="0 0 88 66" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M71.109 33.7597C80.8281 33.7597 87.3776 40.1634 87.3776 49.6516C87.3776 58.1898 79.85 65.303 69.6543 65.303C58.4866 65.303 50.2347 56.7648 50.2347 43.7229C50.2347 14.0796 73.0528 2.22229 87.3776 0.797302V13.8392C77.6647 15.4987 66.7447 24.7465 66.2557 34.9501C66.7447 34.7156 68.6824 33.7597 71.109 33.7597ZM21.5914 33.7597C31.2981 33.7597 37.8538 40.1634 37.8538 49.6516C37.8538 58.1898 30.3262 65.303 20.1305 65.303C8.96284 65.303 0.710938 56.7648 0.710938 43.7229C0.710938 14.0796 23.529 2.22229 37.8538 0.797302V13.8392C28.1409 15.4987 17.2209 24.7465 16.7319 34.9501C17.2209 34.7156 19.1586 33.7597 21.5914 33.7597Z"
+                                                    fill="#050505" />
+                                            </svg>
+
+                                        </div>
+                                        <div class="testimonialText">
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur. Adipiscing ut nisi leo nibh eros
+                                                in. Sed nulla quis scelerisque vitae. Fringilla massa facilisis non
+                                                mattis mauris nisl. Dui ut hendrerit fames imperdiet proin nisl sit
+                                                mauris.Lorem ipsum dolor sit amet consectetur. Adipiscing ut nisi leo
+                                                nibh eros in. Sed nulla quis scelerisque vitae. Fringilla massa
+                                                facilisis non mattis mauris nisl.
+                                            </p>
+                                        </div>
+                                        <div class="testimonialInfo">
+                                            <h6>Francis Towne</h6>
+                                            <p>
+                                                Future Response Technician
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonialSlider_each">
+                                    <div class="testimonialSlider_left">
+                                        <figure>
+                                            <img src="./images/testimonialClient.png" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="testimonialSlider_right">
+                                        <div class="cmn_innerTitle">
+                                            <h3>Client Success <br> Story</h3>
+                                        </div>
+
+                                        <div class="quoteIcon">
+                                            <svg width="88" height="66" viewBox="0 0 88 66" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M71.109 33.7597C80.8281 33.7597 87.3776 40.1634 87.3776 49.6516C87.3776 58.1898 79.85 65.303 69.6543 65.303C58.4866 65.303 50.2347 56.7648 50.2347 43.7229C50.2347 14.0796 73.0528 2.22229 87.3776 0.797302V13.8392C77.6647 15.4987 66.7447 24.7465 66.2557 34.9501C66.7447 34.7156 68.6824 33.7597 71.109 33.7597ZM21.5914 33.7597C31.2981 33.7597 37.8538 40.1634 37.8538 49.6516C37.8538 58.1898 30.3262 65.303 20.1305 65.303C8.96284 65.303 0.710938 56.7648 0.710938 43.7229C0.710938 14.0796 23.529 2.22229 37.8538 0.797302V13.8392C28.1409 15.4987 17.2209 24.7465 16.7319 34.9501C17.2209 34.7156 19.1586 33.7597 21.5914 33.7597Z"
+                                                    fill="#050505" />
+                                            </svg>
+
+                                        </div>
+                                        <div class="testimonialText">
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur. Adipiscing ut nisi leo nibh eros
+                                                in. Sed nulla quis scelerisque vitae. Fringilla massa facilisis non
+                                                mattis mauris nisl. Dui ut hendrerit fames imperdiet proin nisl sit
+                                                mauris.Lorem ipsum dolor sit amet consectetur. Adipiscing ut nisi leo
+                                                nibh eros in. Sed nulla quis scelerisque vitae. Fringilla massa
+                                                facilisis non mattis mauris nisl.
+                                            </p>
+                                        </div>
+                                        <div class="testimonialInfo">
+                                            <h6>Francis Towne</h6>
+                                            <p>
+                                                Future Response Technician
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonialSlider_each">
+                                    <div class="testimonialSlider_left">
+                                        <figure>
+                                            <img src="./images/testimonialClient.png" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="testimonialSlider_right">
+                                        <div class="cmn_innerTitle">
+                                            <h3>Client Success <br> Story</h3>
+                                        </div>
+
+                                        <div class="quoteIcon">
+                                            <svg width="88" height="66" viewBox="0 0 88 66" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M71.109 33.7597C80.8281 33.7597 87.3776 40.1634 87.3776 49.6516C87.3776 58.1898 79.85 65.303 69.6543 65.303C58.4866 65.303 50.2347 56.7648 50.2347 43.7229C50.2347 14.0796 73.0528 2.22229 87.3776 0.797302V13.8392C77.6647 15.4987 66.7447 24.7465 66.2557 34.9501C66.7447 34.7156 68.6824 33.7597 71.109 33.7597ZM21.5914 33.7597C31.2981 33.7597 37.8538 40.1634 37.8538 49.6516C37.8538 58.1898 30.3262 65.303 20.1305 65.303C8.96284 65.303 0.710938 56.7648 0.710938 43.7229C0.710938 14.0796 23.529 2.22229 37.8538 0.797302V13.8392C28.1409 15.4987 17.2209 24.7465 16.7319 34.9501C17.2209 34.7156 19.1586 33.7597 21.5914 33.7597Z"
+                                                    fill="#050505" />
+                                            </svg>
+
+                                        </div>
+                                        <div class="testimonialText">
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur. Adipiscing ut nisi leo nibh eros
+                                                in. Sed nulla quis scelerisque vitae. Fringilla massa facilisis non
+                                                mattis mauris nisl. Dui ut hendrerit fames imperdiet proin nisl sit
+                                                mauris.Lorem ipsum dolor sit amet consectetur. Adipiscing ut nisi leo
+                                                nibh eros in. Sed nulla quis scelerisque vitae. Fringilla massa
+                                                facilisis non mattis mauris nisl.
+                                            </p>
+                                        </div>
+                                        <div class="testimonialInfo">
+                                            <h6>Francis Towne</h6>
+                                            <p>
+                                                Future Response Technician
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonialSlider_bot">
+                            <div class="testimonialSlider_bot_Left">
+                                <button class="testimonialSliderControls_prev testimonialSliderControls_arrow"
+                                    type="button" data-bs-target="#testimonialSliderControls" data-bs-slide="prev">
+                                    <span class="testimonialSliderIcon">
+                                        <svg width="8" height="13" viewBox="0 0 8 13" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M2.38866 6.42717L6.87162 10.737C6.99506 10.8553 7.06296 11.0136 7.06296 11.1824C7.06296 11.3513 6.99506 11.5095 6.87162 11.628L6.4788 12.0055C6.35556 12.1242 6.19081 12.1896 6.01525 12.1896C5.83968 12.1896 5.67513 12.1242 5.55179 12.0055L0.214116 6.8743C0.0902874 6.75535 0.022479 6.59641 0.0229661 6.42745C0.0224789 6.25774 0.0901899 6.09899 0.214116 5.97995L5.54682 0.853739C5.67016 0.73498 5.83471 0.669606 6.01037 0.669606C6.18593 0.669606 6.35049 0.73498 6.47393 0.853739L6.86665 1.23118C7.1222 1.47685 7.1222 1.87677 6.86665 2.12234L2.38866 6.42717Z"
+                                                fill="white" />
+                                        </svg>
+
+                                    </span>
+                                    <!-- Previous -->
+                                </button>
+                                <button class="testimonialSliderControls_next testimonialSliderControls_arrow"
+                                    type="button" data-bs-target="#testimonialSliderControls" data-bs-slide="next">
+                                    <!-- Next -->
+                                    <span class="testimonialSliderIcon">
+                                        <svg width="8" height="13" viewBox="0 0 8 13" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M4.69728 6.43202L0.214319 2.12223C0.0908797 2.00385 0.0229737 1.84556 0.0229737 1.67679C0.0229737 1.50792 0.0908796 1.34974 0.214318 1.23116L0.607139 0.85372C0.730382 0.734961 0.89513 0.669587 1.07069 0.669587C1.24625 0.669587 1.41081 0.734961 1.53415 0.85372L6.87182 5.98489C6.99565 6.10384 7.06346 6.26278 7.06297 6.43174C7.06346 6.60145 6.99575 6.7602 6.87182 6.87924L1.53912 12.0055C1.41578 12.1242 1.25122 12.1896 1.07556 12.1896C0.900004 12.1896 0.735451 12.1242 0.612012 12.0055L0.219288 11.628C-0.0362597 11.3823 -0.0362598 10.9824 0.219288 10.7368L4.69728 6.43202Z"
+                                                fill="white" />
+                                        </svg>
+
+                                    </span>
+
+                                </button>
+                            </div>
+                            <div class="testimonialSlider_bot_right">
+                                <svg width="190" height="39" viewBox="0 0 190 39" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M48.293 13.2605V10.101H63.1775V13.2605H57.629V28.2227H53.8415V13.2605H48.293Z"
+                                        fill="#202020" />
+                                    <path
+                                        d="M71.7554 28.488C70.3651 28.488 69.1657 28.2031 68.1557 27.6334C67.1457 27.0636 66.3688 26.2576 65.8249 25.212C65.2843 24.1631 65.0156 22.9233 65.0156 21.4892C65.0156 20.0907 65.2843 18.8655 65.8249 17.8118C66.3688 16.7548 67.1344 15.931 68.1233 15.3386C69.1107 14.7478 70.2728 14.4516 71.6065 14.4516C72.801 14.4516 73.8806 14.7073 74.8437 15.2155C75.81 15.7205 76.5756 16.4878 77.1421 17.5139C77.7118 18.5369 77.9967 19.8172 77.9967 21.3532V22.3891H68.7384V22.4021C68.7384 23.4169 69.0135 24.2149 69.5671 24.7976C70.1239 25.3803 70.8749 25.6716 71.8202 25.6716C72.4498 25.6716 72.9937 25.5405 73.4517 25.2767C73.913 25.0096 74.2384 24.6163 74.4293 24.0984L77.9125 24.3314C77.6487 25.5923 76.977 26.6007 75.899 27.355C74.8194 28.1108 73.4388 28.488 71.7554 28.488ZM68.7384 20.0519H74.4488C74.4391 19.2458 74.1785 18.5806 73.6654 18.0578C73.1507 17.5317 72.4838 17.2679 71.6648 17.2679C70.8264 17.2679 70.1401 17.5398 69.6059 18.0837C69.0702 18.6243 68.7805 19.2798 68.7384 20.0519Z"
+                                        fill="#202020" />
+                                    <path
+                                        d="M91.7605 18.5045L88.3096 18.7182C88.2141 18.2828 87.9746 17.9089 87.591 17.5981C87.2106 17.2841 86.6927 17.1255 86.0371 17.1255C85.4545 17.1255 84.9592 17.2485 84.5545 17.4945C84.1482 17.7373 83.9492 18.0626 83.9589 18.4721C83.9492 18.7959 84.077 19.071 84.3409 19.2944C84.6031 19.5194 85.0498 19.699 85.6811 19.8318L88.1413 20.3303C90.757 20.866 92.0664 22.0913 92.0712 24.0077C92.0712 24.9012 91.809 25.6846 91.2879 26.3579C90.765 27.028 90.048 27.5492 89.1384 27.9247C88.232 28.3002 87.1912 28.488 86.0177 28.488C84.2178 28.488 82.7822 28.1125 81.7123 27.3614C80.6456 26.6072 80.0241 25.581 79.8477 24.2861L83.5575 24.0919C83.674 24.6454 83.9459 25.063 84.3732 25.3479C84.8038 25.6296 85.3541 25.7687 86.0242 25.7687C86.6878 25.7687 87.222 25.6393 87.6234 25.3803C88.028 25.1213 88.2336 24.7911 88.2384 24.3897C88.2206 23.7164 87.6395 23.2664 86.4968 23.0366L84.1402 22.5704C81.5116 22.0444 80.2005 20.7495 80.2102 18.6858C80.2054 17.3747 80.7298 16.3405 81.7835 15.5846C82.8356 14.8303 84.2324 14.4516 85.9724 14.4516C87.6897 14.4516 89.0429 14.8141 90.0318 15.5393C91.0192 16.2644 91.5954 17.2533 91.7605 18.5045Z"
+                                        fill="#202020" />
+                                    <path
+                                        d="M101.68 14.633V17.4623H99.1223V24.0467C99.1223 24.5646 99.2388 24.9175 99.4719 25.102C99.7082 25.2833 100.017 25.3739 100.398 25.3739C100.574 25.3739 100.751 25.3594 100.929 25.3286C101.105 25.2946 101.241 25.2687 101.337 25.2509L101.926 28.0543C101.74 28.1158 101.474 28.1838 101.129 28.2615C100.788 28.3424 100.373 28.3926 99.8863 28.4104C98.5137 28.4654 97.4131 28.1692 96.5844 27.517C95.7556 26.8663 95.3445 25.8725 95.3542 24.5387V17.4623H93.4961V14.633H95.3542V11.3764H99.1223V14.633H101.68Z"
+                                        fill="#202020" />
+                                    <path
+                                        d="M104.128 28.223V14.6333H107.903V28.223H104.128ZM105.838 12.8787C105.284 12.8787 104.808 12.691 104.407 12.3155C104.005 11.94 103.805 11.4916 103.805 10.9688C103.805 10.4428 104.005 9.99441 104.407 9.62213C104.808 9.25148 105.284 9.06534 105.838 9.06534C106.398 9.06534 106.88 9.25148 107.281 9.62213C107.683 9.99441 107.884 10.4428 107.884 10.9688C107.884 11.4916 107.683 11.94 107.281 12.3155C106.88 12.691 106.398 12.8787 105.838 12.8787Z"
+                                        fill="#202020" />
+                                    <path
+                                        d="M110.906 28.2225V14.6329H114.5V17.0284H114.661C114.946 16.2255 115.419 15.5959 116.079 15.1379C116.743 14.6814 117.533 14.4516 118.449 14.4516C119.381 14.4516 120.173 14.6846 120.825 15.1508C121.48 15.6137 121.919 16.2385 122.139 17.0284H122.282C122.557 16.2514 123.06 15.6283 123.79 15.1573C124.519 14.6879 125.383 14.4516 126.38 14.4516C127.644 14.4516 128.674 14.8562 129.468 15.6623C130.261 16.4651 130.66 17.6046 130.66 19.0807V28.2225H126.898V19.8253C126.898 19.071 126.697 18.5045 126.296 18.129C125.894 17.7503 125.393 17.5593 124.794 17.5593C124.107 17.5593 123.572 17.7778 123.188 18.2132C122.808 18.6502 122.618 19.2199 122.618 19.9224V28.2225H118.96V19.7476C118.96 19.0791 118.769 18.5482 118.391 18.1549C118.01 17.7583 117.51 17.5593 116.889 17.5593C116.262 17.5593 115.738 17.7891 115.315 18.2455C114.891 18.7036 114.681 19.3106 114.681 20.0648V28.2225H110.906Z"
+                                        fill="#202020" />
+                                    <path
+                                        d="M139.774 28.488C138.397 28.488 137.207 28.195 136.207 27.6075C135.21 27.0215 134.439 26.2009 133.895 25.1472C133.355 24.0951 133.086 22.8715 133.086 21.4762C133.086 20.0746 133.355 18.846 133.895 17.7923C134.439 16.7403 135.21 15.9196 136.207 15.3321C137.207 14.7462 138.397 14.4516 139.774 14.4516C141.147 14.4516 142.333 14.7462 143.335 15.3321C144.335 15.9196 145.106 16.7403 145.646 17.7923C146.19 18.846 146.462 20.0746 146.462 21.4762C146.462 22.8715 146.19 24.0951 145.646 25.1472C145.106 26.2009 144.335 27.0215 143.335 27.6075C142.333 28.195 141.147 28.488 139.774 28.488ZM139.793 25.568C140.726 25.568 141.431 25.1796 141.91 24.4027C142.39 23.6225 142.629 22.6384 142.629 21.4504C142.629 20.2688 142.39 19.2863 141.91 18.5045C141.431 17.7195 140.726 17.3262 139.793 17.3262C138.843 17.3262 138.125 17.7195 137.637 18.5045C137.153 19.2863 136.912 20.2688 136.912 21.4504C136.912 22.6384 137.153 23.6225 137.637 24.4027C138.125 25.1796 138.843 25.568 139.793 25.568Z"
+                                        fill="#202020" />
+                                    <path
+                                        d="M152.693 20.3627V28.2225H148.918V14.6329H152.511V17.0284H152.673C152.979 16.2385 153.484 15.6137 154.188 15.1508C154.895 14.6846 155.752 14.4516 156.758 14.4516C158.173 14.4516 159.309 14.9096 160.164 15.8241C161.022 16.7354 161.452 17.9833 161.452 19.5663V28.2225H157.684V20.2396C157.687 19.4077 157.474 18.757 157.043 18.2909C156.611 17.8215 156.017 17.5852 155.263 17.5852C154.502 17.5852 153.885 17.8296 153.411 18.3168C152.935 18.8056 152.696 19.487 152.693 20.3627Z"
+                                        fill="#202020" />
+                                    <path
+                                        d="M164.414 28.223V14.6333H168.188V28.223H164.414ZM166.123 12.8787C165.569 12.8787 165.093 12.691 164.692 12.3155C164.291 11.94 164.09 11.4916 164.09 10.9688C164.09 10.4428 164.291 9.99441 164.692 9.62213C165.093 9.25148 165.569 9.06534 166.123 9.06534C166.683 9.06534 167.165 9.25148 167.567 9.62213C167.968 9.99441 168.169 10.4428 168.169 10.9688C168.169 11.4916 167.968 11.94 167.567 12.3155C167.165 12.691 166.683 12.8787 166.123 12.8787Z"
+                                        fill="#202020" />
+                                    <path
+                                        d="M175.067 28.4815C173.768 28.4815 172.691 28.1432 171.837 27.465C170.982 26.7836 170.555 25.772 170.555 24.4286C170.555 23.4153 170.791 22.619 171.267 22.0395C171.746 21.4617 172.374 21.0392 173.151 20.7705C173.928 20.4986 174.765 20.3222 175.663 20.2396C176.841 20.1231 177.683 20.0001 178.188 19.8706C178.696 19.7411 178.952 19.4562 178.952 19.016V18.9642C178.952 18.4042 178.774 17.9704 178.421 17.6629C178.071 17.3569 177.575 17.2032 176.932 17.2032C176.254 17.2032 175.715 17.3521 175.313 17.6499C174.912 17.9445 174.646 18.3168 174.517 18.77L171.034 18.4851C171.293 17.2469 171.935 16.2644 172.963 15.5393C173.994 14.8141 175.323 14.4516 176.951 14.4516C177.961 14.4516 178.903 14.6118 179.781 14.9307C180.661 15.2512 181.37 15.7497 181.911 16.4262C182.45 17.0996 182.72 17.9769 182.72 19.0548V28.2225H179.146V26.3385H179.043C178.709 26.9697 178.214 27.4845 177.553 27.8859C176.896 28.2824 176.068 28.4815 175.067 28.4815ZM176.149 25.8788C176.972 25.8788 177.651 25.6393 178.181 25.1602C178.712 24.6778 178.978 24.0789 178.978 23.3668V21.923C178.831 22.0233 178.602 22.1107 178.292 22.1884C177.981 22.2661 177.651 22.3341 177.301 22.3891C176.951 22.4458 176.637 22.4927 176.362 22.5316C175.702 22.6271 175.168 22.8132 174.763 23.0884C174.357 23.3651 174.154 23.7682 174.154 24.2991C174.154 24.8219 174.342 25.2168 174.718 25.4839C175.093 25.7477 175.569 25.8788 176.149 25.8788Z"
+                                        fill="#202020" />
+                                    <path d="M189.423 10.1009V28.2226H185.648V10.1009H189.423Z" fill="#202020" />
+                                    <path
+                                        d="M19.1114 0.205963C8.55815 0.205963 0.00390625 8.76183 0.00390625 19.3134C0.00390625 29.8666 8.55815 38.4209 19.1114 38.4209C29.6629 38.4209 38.2188 29.865 38.2188 19.3134C38.2188 8.76183 29.6629 0.205963 19.1114 0.205963ZM14.4304 24.4443C14.4304 25.477 13.5936 26.3122 12.5625 26.3122C11.5299 26.3122 10.6947 25.477 10.6947 24.4443V16.4809C10.6947 15.4482 11.5299 14.6114 12.5625 14.6114C13.5936 14.6114 14.4304 15.4482 14.4304 16.4809V24.4443ZM27.6251 24.31C27.6251 25.77 26.7721 26.2928 25.3122 26.2928H18.595C17.1351 26.2928 15.9519 25.1096 15.9519 23.6496V17.0425C15.9519 17.0425 15.8208 15.9435 17.0379 14.9109C17.7258 14.3265 18.7472 13.2113 19.461 11.8582C20.8789 9.16971 21.727 8.38632 22.3728 8.59673C24.7651 9.37204 23.569 12.9184 22.7969 14.3994H24.982C26.4403 14.3994 27.6251 15.5826 27.6251 17.0425V24.31Z"
+                                        fill="#5D5DFF" />
+                                </svg>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="OfficeEquipmentsSec">
+        <div class="OfficeEquipments_animations">
+            <div class="officeAnimatin_each animation_down">
+                <div class="officeAnimatin_eachImg">
+                    <figure>
+                        <img src="./images/ani-down1.png" alt="">
+                    </figure>
+                </div>
+                <div class="officeAnimatin_eachImg">
+                    <figure>
+                        <img src="./images/ani-down2.png" alt="">
+                    </figure>
+                </div>
+                <div class="officeAnimatin_eachImg">
+                    <figure>
+                        <img src="./images/ani-down3.png" alt="">
+                    </figure>
+                </div>
+                <div class="officeAnimatin_eachImg">
+                    <figure>
+                        <img src="./images/ani-down1.png" alt="">
+                    </figure>
+                </div>
+                <div class="officeAnimatin_eachImg">
+                    <figure>
+                        <img src="./images/ani-down2.png" alt="">
+                    </figure>
+                </div>
+                <div class="officeAnimatin_eachImg">
+                    <figure>
+                        <img src="./images/ani-down3.png" alt="">
+                    </figure>
+                </div>
+            </div>
+            <div class="officeAnimatin_each animation_up">
+                <div class="officeAnimatin_eachImg">
+                    <figure>
+                        <img src="./images/ani-down1.png" alt="">
+                    </figure>
+                </div>
+                <div class="officeAnimatin_eachImg">
+                    <figure>
+                        <img src="./images/ani-down2.png" alt="">
+                    </figure>
+                </div>
+                <div class="officeAnimatin_eachImg">
+                    <figure>
+                        <img src="./images/ani-down3.png" alt="">
+                    </figure>
+                </div>
+                <div class="officeAnimatin_eachImg">
+                    <figure>
+                        <img src="./images/ani-down1.png" alt="">
+                    </figure>
+                </div>
+                <div class="officeAnimatin_eachImg">
+                    <figure>
+                        <img src="./images/ani-down2.png" alt="">
+                    </figure>
+                </div>
+                <div class="officeAnimatin_eachImg">
+                    <figure>
+                        <img src="./images/ani-down3.png" alt="">
+                    </figure>
+                </div>
+            </div>
+            <div class="officeAnimatin_each animation_down">
+                <div class="officeAnimatin_eachImg">
+                    <figure>
+                        <img src="./images/ani-down1.png" alt="">
+                    </figure>
+                </div>
+                <div class="officeAnimatin_eachImg">
+                    <figure>
+                        <img src="./images/ani-down2.png" alt="">
+                    </figure>
+                </div>
+                <div class="officeAnimatin_eachImg">
+                    <figure>
+                        <img src="./images/ani-down3.png" alt="">
+                    </figure>
+                </div>
+                <div class="officeAnimatin_eachImg">
+                    <figure>
+                        <img src="./images/ani-down1.png" alt="">
+                    </figure>
+                </div>
+                <div class="officeAnimatin_eachImg">
+                    <figure>
+                        <img src="./images/ani-down2.png" alt="">
+                    </figure>
+                </div>
+                <div class="officeAnimatin_eachImg">
+                    <figure>
+                        <img src="./images/ani-down3.png" alt="">
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="OfficeEquipmentsContent">
+            <div class="container-fluid">
+                <div class="OfficeEquipmentsContent_inner">
+                    <div class="cmn_innerTitle">
+                        <h3>Virtual Office & Equipments</h3>
+                        <p>
+                            Benefits and Perks! 
+                        </p>
+                    </div>
+                    <ul class="nenefitPerksList">
+                        <li>
+                            <span class="tick_icon">
+                                <img src="./images/tick-icon.svg" alt="">
+                            </span>
+                            A Professional Business address
+                        </li>
+                        <li>
+                            <span class="tick_icon">
+                                <img src="./images/tick-icon.svg" alt="">
+                            </span>
+                            Mail Handling 
+                        </li>
+                        <li>
+                            <span class="tick_icon">
+                                <img src="./images/tick-icon.svg" alt="">
+                            </span>
+                            Virtual Receptionist
+                        </li>
+                        <li>
+                            <span class="tick_icon">
+                                <img src="./images/tick-icon.svg" alt="">
+                            </span>
+                            Meeting with Room Rental
+                        </li>
+                        <li>
+                            <span class="tick_icon">
+                                <img src="./images/tick-icon.svg" alt="">
+                            </span>
+                            Mail Handling 
+                        </li>
+                        <li>
+                            <span class="tick_icon">
+                                <img src="./images/tick-icon.svg" alt="">
+                            </span>
+                            Virtual Receptionist
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nationsSec cmn_gap pt-0">
+        <div class="cmnSecHead_withImg">
+            <figure>
+                <img src="./images/commonHeadingBg.png" alt="">
+            </figure>
+            <div class="container-fluid">
+                <div class="cmnSecHead_withImg_content">
+                    <h2>Global Team From Diverse Nations</h2>
+                    <p>
+                        At commitment, we're more than a company; we are supportive community dedicated to empowering
+                        immigrant attorneys
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="mapCountries_wrap">
+            <div class="container-fluid">
+                <div class="mapCountries_inner">
+                    <div class="map_area">
+                        <figure>
+                            <img src="./images/map.svg" alt="">
+                        </figure>
+                    </div>
+                    <div class="countries_area">
+                        <div class="each_country_row">
+                            <div class="each_country_wrap">
+                                <div class="each_country">
+                                    <figure>
+                                        <img src="./images/country1.svg" alt="">
+                                    </figure>
+                                    <div class="each_country_text">
+                                        <h5>Canada</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="each_country_wrap">
+                                <div class="each_country">
+                                    <figure>
+                                        <img src="./images/country1.svg" alt="">
+                                    </figure>
+                                    <div class="each_country_text">
+                                        <h5>Canada</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="each_country_row">
+                            <div class="each_country_wrap">
+                                <div class="each_country">
+                                    <figure>
+                                        <img src="./images/country2.svg" alt="">
+                                    </figure>
+                                    <div class="each_country_text">
+                                        <h5>Brazil</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="each_country_wrap">
+                                <div class="each_country">
+                                    <figure>
+                                        <img src="./images/country2.svg" alt="">
+                                    </figure>
+                                    <div class="each_country_text">
+                                        <h5>Brazil</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="each_country_row">
+                            <div class="each_country_wrap">
+                                <div class="each_country">
+                                    <figure>
+                                        <img src="./images/country1.svg" alt="">
+                                    </figure>
+                                    <div class="each_country_text">
+                                        <h5>Canada</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="each_country_wrap">
+                                <div class="each_country">
+                                    <figure>
+                                        <img src="./images/country1.svg" alt="">
+                                    </figure>
+                                    <div class="each_country_text">
+                                        <h5>Canada</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="each_country_row">
+                            <div class="each_country_wrap">
+                                <div class="each_country">
+                                    <figure>
+                                        <img src="./images/country1.svg" alt="">
+                                    </figure>
+                                    <div class="each_country_text">
+                                        <h5>Canada</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="each_country_wrap">
+                                <div class="each_country">
+                                    <figure>
+                                        <img src="./images/country1.svg" alt="">
+                                    </figure>
+                                    <div class="each_country_text">
+                                        <h5>Canada</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="each_country_row">
+                            <div class="each_country_wrap">
+                                <div class="each_country">
+                                    <figure>
+                                        <img src="./images/country2.svg" alt="">
+                                    </figure>
+                                    <div class="each_country_text">
+                                        <h5>Brazil</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="each_country_wrap">
+                                <div class="each_country">
+                                    <figure>
+                                        <img src="./images/country2.svg" alt="">
+                                    </figure>
+                                    <div class="each_country_text">
+                                        <h5>Brazil</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="outTeamSec cmn_gap">
+        <div class="container-fluid">
+            <div class="cmnSection_head">
+                <h6>Our Experts</h6>
+                <h2>Meet our Team</h2>
+
+            </div>
+
+            <div class="ourTeamTabWrap cmnTabsWrap">
+
+                <div class="nav nav-tabs" id="ourTeam-tab" role="tablist">
+                    <button class="nav-link active" id="ourTeam-all-tab" data-bs-toggle="tab"
+                        data-bs-target="#ourTeam-all" type="button" role="tab" aria-controls="ourTeam-all"
+                        aria-selected="true">All</button>
+                    <button class="nav-link" id="ourTeam-legalTeam-tab" data-bs-toggle="tab"
+                        data-bs-target="#ourTeam-legalTeam" type="button" role="tab" aria-controls="ourTeam-legalTeam"
+                        aria-selected="false">Legal Team </button>
+                    <button class="nav-link" id="ourTeam-sales-tab" data-bs-toggle="tab" data-bs-target="#ourTeam-sales"
+                        type="button" role="tab" aria-controls="ourTeam-sales" aria-selected="false">Sales Team
+                    </button>
+                    <button class="nav-link" id="ourTeam-marketing-tab" data-bs-toggle="tab"
+                        data-bs-target="#ourTeam-marketing" type="button" role="tab" aria-controls="ourTeam-marketing"
+                        aria-selected="false">Marketing Team </button>
+                    <button class="nav-link" id="ourTeam-billing-tab" data-bs-toggle="tab"
+                        data-bs-target="#ourTeam-billing" type="button" role="tab" aria-controls="ourTeam-billing"
+                        aria-selected="false">Billing Team</button>
+                </div>
+
+                <div class="tab-content" id="ourTeam-tabContent">
+                    <div class="tab-pane fade show active" id="ourTeam-all" role="tabpanel"
+                        aria-labelledby="ourTeam-all-tab">
+                        <div class="row ourTeam_row">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t1.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <h6 class="roleInfo">
+                                        Lead Manager
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t2.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t3.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t4.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t1.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <h6 class="roleInfo">
+                                        Lead Manager
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t2.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t3.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t4.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="ourTeam-legalTeam" role="tabpanel"
+                        aria-labelledby="ourTeam-legalTeam-tab">
+                        <div class="row ourTeam_row">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t1.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <h6 class="roleInfo">
+                                        Lead Manager
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t2.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t3.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t4.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t1.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <h6 class="roleInfo">
+                                        Lead Manager
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t2.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t3.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t4.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="ourTeam-sales" role="tabpanel" aria-labelledby="ourTeam-sales-tab">
+                        <div class="row ourTeam_row">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t1.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <h6 class="roleInfo">
+                                        Lead Manager
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t2.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t3.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t4.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t1.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <h6 class="roleInfo">
+                                        Lead Manager
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t2.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t3.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t4.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="ourTeam-marketing" role="tabpanel"
+                        aria-labelledby="ourTeam-marketing-tab">
+                        <div class="row ourTeam_row">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t1.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <h6 class="roleInfo">
+                                        Lead Manager
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t2.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t3.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t4.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t1.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <h6 class="roleInfo">
+                                        Lead Manager
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t2.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t3.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t4.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="ourTeam-billing" role="tabpanel"
+                        aria-labelledby="ourTeam-billing-tab">
+                        <div class="row ourTeam_row">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t1.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <h6 class="roleInfo">
+                                        Lead Manager
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t2.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t3.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t4.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t1.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <h6 class="roleInfo">
+                                        Lead Manager
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t2.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t3.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                                <div class="ourTeamCard">
+                                    <figure>
+                                        <img src="./images/t4.png" alt="">
+                                    </figure>
+                                    <h5>Cameron Williamson</h5>
+                                    <p class="roleInfo">
+                                        Lead Manager
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- apply job modal -->
+    <div class="modal fade applyJobModal" id="applyJobModal" tabindex="-1" aria-labelledby="applyJobModal"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Aplly Job</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Demo Text
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="cmn_btn">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
