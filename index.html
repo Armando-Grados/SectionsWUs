@@ -127,6 +127,7 @@
             color: #121212;
             margin-bottom: 25px;
         }
+
         .cmn_innerTitle p {
             font-size: 18px;
             font-weight: 400;
@@ -162,6 +163,10 @@
             border-bottom-color: #006634;
             font-weight: 700;
             color: #006634;
+        }
+
+        .forMobile {
+            display: none;
         }
 
         /* common styles end */
@@ -290,9 +295,11 @@
             padding: 32px 32px;
             margin: 0 -32px;
         }
-        .testimonialSlider .carousel-item{
+
+        .testimonialSlider .carousel-item {
             padding: 32px 0 95px;
         }
+
         .testimonialSlider .testimonialSlider_each {
             display: flex;
             flex-wrap: wrap;
@@ -306,6 +313,10 @@
             left: 0;
             top: 0;
             height: 100%;
+        }
+
+        .testimonialSlider_each .testimonialSlider_left figure {
+            margin-bottom: 0;
         }
 
         .testimonialSlider_each .testimonialSlider_right {
@@ -381,7 +392,7 @@
         .testimonialSlider_inner {
             position: relative;
         }
-    
+
         .testimonialSlider_inner .testimonialSlider_bot {
             position: absolute;
             right: 0;
@@ -496,6 +507,10 @@
 
         }
 
+        .mapCountries_inner .map_area figure {
+            margin-bottom: 0;
+        }
+
         .countries_area .each_country_row {
             display: flex;
             justify-content: space-between;
@@ -555,36 +570,42 @@
             position: relative;
             padding: 137px 0 158px;
         }
-        .OfficeEquipmentsContent .nenefitPerksList{
+
+        .OfficeEquipmentsContent .nenefitPerksList {
             list-style: none;
             margin: 0;
             padding: 0;
         }
-        .OfficeEquipmentsContent .nenefitPerksList li{
+
+        .OfficeEquipmentsContent .nenefitPerksList li {
             display: flex;
             font-size: 18px;
             font-weight: 400;
             color: #121212;
             margin-bottom: 17px;
         }
-        .OfficeEquipmentsContent .nenefitPerksList li:last-child{
+
+        .OfficeEquipmentsContent .nenefitPerksList li:last-child {
             margin-bottom: 0;
         }
-        .OfficeEquipmentsContent .nenefitPerksList li .tick_icon{
+
+        .OfficeEquipmentsContent .nenefitPerksList li .tick_icon {
             display: inline-flex;
             margin-right: 12px;
         }
-        .OfficeEquipmentsContent .OfficeEquipmentsContent_inner{
+
+        .OfficeEquipmentsContent .OfficeEquipmentsContent_inner {
             max-width: 628px;
         }
-        .OfficeEquipments_animations{
+
+        .OfficeEquipments_animations {
             position: absolute;
             right: -27%;
             top: 0;
             width: 100%;
             transform: rotate(-60deg);
             z-index: -1;
-    
+
         }
 
         .officeAnimatin_each {
@@ -600,27 +621,31 @@
         .officeAnimatin_each .officeAnimatin_eachImg {
             padding: 0 10px;
         }
-        .officeAnimatin_each .officeAnimatin_eachImg figure{
+
+        .officeAnimatin_each .officeAnimatin_eachImg figure {
             margin: 0;
             border-radius: 24px;
             overflow: hidden;
         }
-        .officeAnimatin_each .officeAnimatin_eachImg figure img{
+
+        .officeAnimatin_each .officeAnimatin_eachImg figure img {
             width: 100%;
             min-width: 360px;
             height: 250px;
             object-fit: cover;
         }
+
         .animation_down {
-            animation: moveDown 12s linear 0s infinite ;
+            animation: moveDown 12s linear 0s infinite;
         }
-        .animation_up{
-            animation: moveDown 12s linear 0s infinite ;
+
+        .animation_up {
+            animation: moveDown 12s linear 0s infinite;
             animation-direction: reverse;
             animation-delay: calc(12s / -2);
         }
 
-       
+
         /* animation down */
         @keyframes moveDown {
             0% {
@@ -634,6 +659,388 @@
 
 
         /* Virtual Office & Equipments end */
+
+
+        /* media queries start */
+        @media (max-width: 1199px) {
+            .cmnSection_head h2 {
+                font-size: 35px;
+            }
+
+            .cmnSecHead_withImg .cmnSecHead_withImg_content h2 {
+                font-size: 35px;
+                margin-bottom: 15px;
+            }
+
+            .testimonialSlider_each .testimonialSlider_left {
+                width: 400px;
+                flex-basis: 400px;
+            }
+
+            .testimonialSlider_each .testimonialSlider_right {
+                width: calc(100% - 400px);
+                flex-basis: calc(100% - 400px);
+            }
+
+            .testimonialSlider_inner .testimonialSlider_bot {
+                max-width: calc(100% - 400px);
+            }
+
+            .cmn_innerTitle h3 {
+                font-size: 35px;
+            }
+
+            .testimonialSlider .carousel-item {
+                padding-top: 0;
+            }
+
+            .testimonialSlider_each .testimonialSlider_right .quoteIcon {
+                margin-bottom: 15px;
+            }
+
+            .officeAnimatin_each .officeAnimatin_eachImg figure img {
+                min-width: 230px;
+                height: 150px;
+            }
+
+            .OfficeEquipmentsSec {
+                padding: 90px 0;
+            }
+
+            .OfficeEquipments_animations {
+                right: -35%;
+            }
+
+            .OfficeEquipmentsContent .OfficeEquipmentsContent_inner {
+                max-width: 450px;
+            }
+
+            .each_country_row .each_country figure {
+                width: 50px;
+                flex-basis: 50px;
+                display: flex;
+            }
+
+            .each_country_row .each_country figure img {
+                width: 100%;
+            }
+
+            .each_country_row .each_country .each_country_text {
+                padding-left: 15px;
+                width: calc(100% - 50px);
+                flex-basis: calc(100% - 50px);
+            }
+
+            .mapCountries_inner .map_area figure img {
+                max-width: 350px;
+            }
+
+            .ourTeam_col .ourTeamCard {
+                padding: 12px;
+            }
+
+            .ourTeam_row .ourTeam_col {
+                padding: 0 10px;
+                margin-bottom: 10px;
+            }
+
+            .outTeamSec .ourTeam_row {
+                margin: 0 -10px -10px;
+            }
+
+
+        }
+
+        @media (max-width: 991px) {
+            .container-fluid {
+                padding: 0 15px;
+            }
+
+            .testimonialSlider_each .testimonialSlider_left {
+                position: static;
+                transform: initial;
+                width: 100%;
+                flex-basis: 100%;
+            }
+
+            .testimonialSlider_each .testimonialSlider_right {
+                width: 100%;
+                flex-basis: 100%;
+                padding-left: 0;
+                padding-top: 40px;
+            }
+
+            .testimonialSlider_each .testimonialSlider_left figure {
+                padding: 23px;
+            }
+
+            .testimonialSlider_each .testimonialSlider_left figure::before {
+                left: 0;
+                top: 0;
+            }
+
+            .testimonialSlider_each .testimonialSlider_left figure::after {
+                right: 0;
+                bottom: 0;
+            }
+
+            .testimonialSlider .carousel-inner {
+                padding: 0;
+                margin: 0;
+            }
+
+            .testimonialSlider_each .testimonialSlider_left figure img {
+                height: 650px;
+                object-fit: cover;
+                object-position: top;
+            }
+
+            .testimonialSlider_inner .testimonialSlider_bot {
+                max-width: initial;
+                padding: 10px 0 0;
+                position: static;
+            }
+
+            .testimonialSlider .carousel-item {
+                padding-bottom: 0;
+            }
+
+            .cmn_innerTitle h3 br {
+                display: none;
+            }
+
+            .officeAnimatin_each .officeAnimatin_eachImg figure img {
+                min-width: 200px;
+                height: 136px;
+            }
+
+            .OfficeEquipments_animations {
+                right: -30%;
+                top: 120px;
+            }
+
+            .OfficeEquipmentsSec {
+                padding: 50px 0;
+            }
+
+            .mapCountries_inner .map_area figure img {
+                max-width: 220px;
+            }
+
+            .each_country_row .each_country figure {
+                width: 40px;
+                flex-basis: 40px;
+            }
+
+            .each_country_row .each_country .each_country_text {
+                width: calc(100% - 40px);
+                flex-basis: calc(100% - 40px);
+            }
+
+            .cmnTabsWrap .nav-tabs {
+                flex-wrap: nowrap;
+                overflow: hidden;
+                overflow-x: auto;
+                justify-content: initial;
+            }
+
+            .cmnTabsWrap .nav-tabs .nav-link {
+                white-space: nowrap;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .eachJob .cmn_btn {
+                position: static;
+            }
+
+            .eachJob .jobLocationTypeList {
+                margin-bottom: 24px;
+            }
+
+            .cmnTabsWrap .nav-tabs .nav-link {
+                font-size: 16px;
+                padding: 0 15px 10px;
+            }
+
+            .cmnSection_head h2 {
+                font-size: 24px;
+            }
+
+            .cmnSection_head h6 {
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+
+            .cmnSection_head p {
+                font-size: 16px;
+            }
+
+            .eachJob .jobTitle {
+                font-size: 24px;
+            }
+
+            .cmnSecHead_withImg .cmnSecHead_withImg_content h2 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            .cmnSecHead_withImg .cmnSecHead_withImg_content p {
+                font-size: 16px;
+            }
+
+            .forDesktop {
+                display: none;
+            }
+
+            .forMobile {
+                display: block;
+            }
+
+            .cmnSecHead_withImg {
+                margin-bottom: 50px;
+            }
+
+            .testimonialSlider_each .testimonialSlider_left figure::before {
+                max-width: 260px;
+                height: 310px;
+            }
+
+            .testimonialSlider_each .testimonialSlider_left figure::after {
+                max-width: 260px;
+                height: 310px;
+            }
+
+            .testimonialSlider_each .testimonialSlider_left figure img {
+                height: 465px;
+            }
+
+            .testimonialSlider_each .testimonialSlider_right .quoteIcon {
+                margin-bottom: 25px;
+            }
+
+            .OfficeEquipments_animations {
+                position: static;
+            }
+
+            .OfficeEquipments_animations_wrap {
+                overflow: hidden;
+                height: 350px;
+                margin-bottom: 40px;
+            }
+
+            .OfficeEquipmentsSec {
+                padding-top: 0;
+            }
+
+            .mapCountries_inner .map_area {
+                display: none;
+            }
+
+            .nationsSec .mapCountries_wrap {
+                padding-top: 0;
+            }
+
+            .countries_area .each_country_row:first-child,
+            .countries_area .each_country_row:last-child {
+                padding: 0;
+            }
+
+            .countries_area .each_country_row:nth-child(-2n+4) {
+                padding: 0;
+            }
+
+            .each_country_row .each_country_wrap {
+                width: 50%;
+                text-align: center;
+            }
+
+            .each_country_row .each_country .each_country_text {
+                width: 100%;
+                flex-basis: 100%;
+                padding-left: 0;
+            }
+
+            .each_country_row .each_country figure {
+                width: 40px;
+                flex-basis: 40px;
+                margin: 0 auto 12px;
+            }
+
+            .each_country_row .each_country {
+                box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+                border-radius: 8px;
+            }
+
+            .countries_area .each_country_row {
+                margin: 0 -8px 16px;
+            }
+
+            .countries_area .each_country_row:last-child {
+                margin-bottom: 0;
+            }
+
+            .each_country_row .each_country_wrap {
+                padding: 0 8px;
+            }
+
+            .outTeamSec {
+                padding-top: 0;
+            }
+
+            .each_country .each_country_text h5 {
+                font-size: 20px;
+            }
+
+            .ourTeam_col .ourTeamCard {
+                padding: 0;
+            }
+
+            .ourTeamCard figure img {
+                height: 130px;
+            }
+
+            .ourTeamCard figure {
+                min-height: initial;
+                padding: 15px 0 0;
+                margin-bottom: 15px;
+            }
+
+            .ourTeamCard h5 {
+                font-size: 14px;
+            }
+
+            .ourTeamCard .roleInfo {
+                font-size: 12px;
+            }
+
+            .ourTeam_row .ourTeam_col {
+                margin-bottom: 30px;
+            }
+
+            .outTeamSec .ourTeam_row {
+                margin-bottom: -30px;
+            }
+            .cmnSecHead_withImg .cmnSecHead_withImg_content{
+                top: 45px;
+            }
+            .cmn_innerTitle h3{
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .testimonialSlider_bot_right{
+                display: flex;
+                justify-content: flex-end;
+            }
+            .testimonialSlider_bot_right svg{
+                max-width: 70%;
+            }
+        }
+
+        /* media queries end */
     </style>
     <!-- custom javascript -->
     <script>
@@ -1023,11 +1430,14 @@
 
     <div class="successStoriesSec cmn_gap pt-0">
         <div class="cmnSecHead_withImg">
-            <figure>
+            <figure class="forDesktop">
                 <img src="./images/commonHeadingBg.png" alt="">
             </figure>
-            <div class="container-fluid">
-                <div class="cmnSecHead_withImg_content">
+            <figure class="forMobile">
+                <img src="./images/commonHeadingBg-mobile.png" alt="">
+            </figure>
+            <div class="cmnSecHead_withImg_content">
+                <div class="container-fluid">
                     <h2>Client success Stories</h2>
                     <p>
                         At commitment, we're more than a company; we are supportive community dedicated to empowering
@@ -1041,7 +1451,8 @@
         <div class="testimonialSlider">
             <div class="container-fluid">
                 <div class="testimonialSlider_inner">
-                    <div id="testimonialSliderControls" class="carousel slide testimonialSlider_carousel" data-bs-ride="carousel">
+                    <div id="testimonialSliderControls" class="carousel slide testimonialSlider_carousel"
+                        data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="testimonialSlider_each">
@@ -1164,7 +1575,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="testimonialSlider_bot">
                             <div class="testimonialSlider_bot_Left">
                                 <button class="testimonialSliderControls_prev testimonialSliderControls_arrow"
@@ -1176,7 +1587,7 @@
                                                 d="M2.38866 6.42717L6.87162 10.737C6.99506 10.8553 7.06296 11.0136 7.06296 11.1824C7.06296 11.3513 6.99506 11.5095 6.87162 11.628L6.4788 12.0055C6.35556 12.1242 6.19081 12.1896 6.01525 12.1896C5.83968 12.1896 5.67513 12.1242 5.55179 12.0055L0.214116 6.8743C0.0902874 6.75535 0.022479 6.59641 0.0229661 6.42745C0.0224789 6.25774 0.0901899 6.09899 0.214116 5.97995L5.54682 0.853739C5.67016 0.73498 5.83471 0.669606 6.01037 0.669606C6.18593 0.669606 6.35049 0.73498 6.47393 0.853739L6.86665 1.23118C7.1222 1.47685 7.1222 1.87677 6.86665 2.12234L2.38866 6.42717Z"
                                                 fill="white" />
                                         </svg>
-    
+
                                     </span>
                                     <!-- Previous -->
                                 </button>
@@ -1190,9 +1601,9 @@
                                                 d="M4.69728 6.43202L0.214319 2.12223C0.0908797 2.00385 0.0229737 1.84556 0.0229737 1.67679C0.0229737 1.50792 0.0908796 1.34974 0.214318 1.23116L0.607139 0.85372C0.730382 0.734961 0.89513 0.669587 1.07069 0.669587C1.24625 0.669587 1.41081 0.734961 1.53415 0.85372L6.87182 5.98489C6.99565 6.10384 7.06346 6.26278 7.06297 6.43174C7.06346 6.60145 6.99575 6.7602 6.87182 6.87924L1.53912 12.0055C1.41578 12.1242 1.25122 12.1896 1.07556 12.1896C0.900004 12.1896 0.735451 12.1242 0.612012 12.0055L0.219288 11.628C-0.0362597 11.3823 -0.0362598 10.9824 0.219288 10.7368L4.69728 6.43202Z"
                                                 fill="white" />
                                         </svg>
-    
+
                                     </span>
-    
+
                                 </button>
                             </div>
                             <div class="testimonialSlider_bot_right">
@@ -1233,7 +1644,7 @@
                                         d="M19.1114 0.205963C8.55815 0.205963 0.00390625 8.76183 0.00390625 19.3134C0.00390625 29.8666 8.55815 38.4209 19.1114 38.4209C29.6629 38.4209 38.2188 29.865 38.2188 19.3134C38.2188 8.76183 29.6629 0.205963 19.1114 0.205963ZM14.4304 24.4443C14.4304 25.477 13.5936 26.3122 12.5625 26.3122C11.5299 26.3122 10.6947 25.477 10.6947 24.4443V16.4809C10.6947 15.4482 11.5299 14.6114 12.5625 14.6114C13.5936 14.6114 14.4304 15.4482 14.4304 16.4809V24.4443ZM27.6251 24.31C27.6251 25.77 26.7721 26.2928 25.3122 26.2928H18.595C17.1351 26.2928 15.9519 25.1096 15.9519 23.6496V17.0425C15.9519 17.0425 15.8208 15.9435 17.0379 14.9109C17.7258 14.3265 18.7472 13.2113 19.461 11.8582C20.8789 9.16971 21.727 8.38632 22.3728 8.59673C24.7651 9.37204 23.569 12.9184 22.7969 14.3994H24.982C26.4403 14.3994 27.6251 15.5826 27.6251 17.0425V24.31Z"
                                         fill="#5D5DFF" />
                                 </svg>
-    
+
                             </div>
                         </div>
 
@@ -1245,101 +1656,103 @@
     </div>
 
     <div class="OfficeEquipmentsSec">
-        <div class="OfficeEquipments_animations">
-            <div class="officeAnimatin_each animation_down">
-                <div class="officeAnimatin_eachImg">
-                    <figure>
-                        <img src="./images/ani-down1.png" alt="">
-                    </figure>
+        <div class="OfficeEquipments_animations_wrap">
+            <div class="OfficeEquipments_animations">
+                <div class="officeAnimatin_each animation_down">
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down1.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down2.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down3.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down1.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down2.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down3.png" alt="">
+                        </figure>
+                    </div>
                 </div>
-                <div class="officeAnimatin_eachImg">
-                    <figure>
-                        <img src="./images/ani-down2.png" alt="">
-                    </figure>
+                <div class="officeAnimatin_each animation_up">
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down1.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down2.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down3.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down1.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down2.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down3.png" alt="">
+                        </figure>
+                    </div>
                 </div>
-                <div class="officeAnimatin_eachImg">
-                    <figure>
-                        <img src="./images/ani-down3.png" alt="">
-                    </figure>
-                </div>
-                <div class="officeAnimatin_eachImg">
-                    <figure>
-                        <img src="./images/ani-down1.png" alt="">
-                    </figure>
-                </div>
-                <div class="officeAnimatin_eachImg">
-                    <figure>
-                        <img src="./images/ani-down2.png" alt="">
-                    </figure>
-                </div>
-                <div class="officeAnimatin_eachImg">
-                    <figure>
-                        <img src="./images/ani-down3.png" alt="">
-                    </figure>
-                </div>
-            </div>
-            <div class="officeAnimatin_each animation_up">
-                <div class="officeAnimatin_eachImg">
-                    <figure>
-                        <img src="./images/ani-down1.png" alt="">
-                    </figure>
-                </div>
-                <div class="officeAnimatin_eachImg">
-                    <figure>
-                        <img src="./images/ani-down2.png" alt="">
-                    </figure>
-                </div>
-                <div class="officeAnimatin_eachImg">
-                    <figure>
-                        <img src="./images/ani-down3.png" alt="">
-                    </figure>
-                </div>
-                <div class="officeAnimatin_eachImg">
-                    <figure>
-                        <img src="./images/ani-down1.png" alt="">
-                    </figure>
-                </div>
-                <div class="officeAnimatin_eachImg">
-                    <figure>
-                        <img src="./images/ani-down2.png" alt="">
-                    </figure>
-                </div>
-                <div class="officeAnimatin_eachImg">
-                    <figure>
-                        <img src="./images/ani-down3.png" alt="">
-                    </figure>
-                </div>
-            </div>
-            <div class="officeAnimatin_each animation_down">
-                <div class="officeAnimatin_eachImg">
-                    <figure>
-                        <img src="./images/ani-down1.png" alt="">
-                    </figure>
-                </div>
-                <div class="officeAnimatin_eachImg">
-                    <figure>
-                        <img src="./images/ani-down2.png" alt="">
-                    </figure>
-                </div>
-                <div class="officeAnimatin_eachImg">
-                    <figure>
-                        <img src="./images/ani-down3.png" alt="">
-                    </figure>
-                </div>
-                <div class="officeAnimatin_eachImg">
-                    <figure>
-                        <img src="./images/ani-down1.png" alt="">
-                    </figure>
-                </div>
-                <div class="officeAnimatin_eachImg">
-                    <figure>
-                        <img src="./images/ani-down2.png" alt="">
-                    </figure>
-                </div>
-                <div class="officeAnimatin_eachImg">
-                    <figure>
-                        <img src="./images/ani-down3.png" alt="">
-                    </figure>
+                <div class="officeAnimatin_each animation_down">
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down1.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down2.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down3.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down1.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down2.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down3.png" alt="">
+                        </figure>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1349,7 +1762,7 @@
                     <div class="cmn_innerTitle">
                         <h3>Virtual Office & Equipments</h3>
                         <p>
-                            Benefits and Perks! 
+                            Benefits and Perks!
                         </p>
                     </div>
                     <ul class="nenefitPerksList">
@@ -1363,7 +1776,7 @@
                             <span class="tick_icon">
                                 <img src="./images/tick-icon.svg" alt="">
                             </span>
-                            Mail Handling 
+                            Mail Handling
                         </li>
                         <li>
                             <span class="tick_icon">
@@ -1381,7 +1794,7 @@
                             <span class="tick_icon">
                                 <img src="./images/tick-icon.svg" alt="">
                             </span>
-                            Mail Handling 
+                            Mail Handling
                         </li>
                         <li>
                             <span class="tick_icon">
@@ -1397,11 +1810,14 @@
 
     <div class="nationsSec cmn_gap pt-0">
         <div class="cmnSecHead_withImg">
-            <figure>
+            <figure class="forDesktop">
                 <img src="./images/commonHeadingBg.png" alt="">
             </figure>
-            <div class="container-fluid">
-                <div class="cmnSecHead_withImg_content">
+            <figure class="forMobile">
+                <img src="./images/commonHeadingBg-mobile.png" alt="">
+            </figure>
+            <div class="cmnSecHead_withImg_content">
+                <div class="container-fluid">
                     <h2>Global Team From Diverse Nations</h2>
                     <p>
                         At commitment, we're more than a company; we are supportive community dedicated to empowering
@@ -1569,7 +1985,7 @@
                     <div class="tab-pane fade show active" id="ourTeam-all" role="tabpanel"
                         aria-labelledby="ourTeam-all-tab">
                         <div class="row ourTeam_row">
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t1.png" alt="">
@@ -1580,7 +1996,7 @@
                                     </h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t2.png" alt="">
@@ -1591,7 +2007,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t3.png" alt="">
@@ -1602,7 +2018,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t4.png" alt="">
@@ -1613,7 +2029,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t1.png" alt="">
@@ -1624,7 +2040,7 @@
                                     </h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t2.png" alt="">
@@ -1635,7 +2051,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t3.png" alt="">
@@ -1646,7 +2062,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t4.png" alt="">
@@ -1662,7 +2078,7 @@
                     <div class="tab-pane fade" id="ourTeam-legalTeam" role="tabpanel"
                         aria-labelledby="ourTeam-legalTeam-tab">
                         <div class="row ourTeam_row">
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t1.png" alt="">
@@ -1673,7 +2089,7 @@
                                     </h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t2.png" alt="">
@@ -1684,7 +2100,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t3.png" alt="">
@@ -1695,7 +2111,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t4.png" alt="">
@@ -1706,7 +2122,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t1.png" alt="">
@@ -1717,7 +2133,7 @@
                                     </h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t2.png" alt="">
@@ -1728,7 +2144,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t3.png" alt="">
@@ -1739,7 +2155,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t4.png" alt="">
@@ -1754,7 +2170,7 @@
                     </div>
                     <div class="tab-pane fade" id="ourTeam-sales" role="tabpanel" aria-labelledby="ourTeam-sales-tab">
                         <div class="row ourTeam_row">
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t1.png" alt="">
@@ -1765,7 +2181,7 @@
                                     </h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t2.png" alt="">
@@ -1776,7 +2192,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t3.png" alt="">
@@ -1787,7 +2203,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t4.png" alt="">
@@ -1798,7 +2214,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t1.png" alt="">
@@ -1809,7 +2225,7 @@
                                     </h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t2.png" alt="">
@@ -1820,7 +2236,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t3.png" alt="">
@@ -1831,7 +2247,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t4.png" alt="">
@@ -1847,7 +2263,7 @@
                     <div class="tab-pane fade" id="ourTeam-marketing" role="tabpanel"
                         aria-labelledby="ourTeam-marketing-tab">
                         <div class="row ourTeam_row">
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t1.png" alt="">
@@ -1858,7 +2274,7 @@
                                     </h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t2.png" alt="">
@@ -1869,7 +2285,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t3.png" alt="">
@@ -1880,7 +2296,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t4.png" alt="">
@@ -1891,7 +2307,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t1.png" alt="">
@@ -1902,7 +2318,7 @@
                                     </h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t2.png" alt="">
@@ -1913,7 +2329,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t3.png" alt="">
@@ -1924,7 +2340,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t4.png" alt="">
@@ -1940,7 +2356,7 @@
                     <div class="tab-pane fade" id="ourTeam-billing" role="tabpanel"
                         aria-labelledby="ourTeam-billing-tab">
                         <div class="row ourTeam_row">
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t1.png" alt="">
@@ -1951,7 +2367,7 @@
                                     </h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t2.png" alt="">
@@ -1962,7 +2378,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t3.png" alt="">
@@ -1973,7 +2389,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t4.png" alt="">
@@ -1984,7 +2400,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t1.png" alt="">
@@ -1995,7 +2411,7 @@
                                     </h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t2.png" alt="">
@@ -2006,7 +2422,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t3.png" alt="">
@@ -2017,7 +2433,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/t4.png" alt="">
