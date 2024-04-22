@@ -100,7 +100,7 @@
             right: 0;
             top: 52px;
             text-align: center;
-            max-width: 824px;
+            max-width: 984px;
             margin: 0 auto;
         }
 
@@ -636,13 +636,16 @@
         }
 
         .animation_down {
-            animation: moveDown 12s linear 0s infinite;
+            animation: moveDown 40s linear 0s infinite running;
+            /* animation: 3s linear 0s infinite running slidein; */
+            transition: all ease 3s;
+            animation-fill-mode: none;
         }
 
         .animation_up {
-            animation: moveDown 12s linear 0s infinite;
+            animation: moveDown 40s linear 0s infinite running;
             animation-direction: reverse;
-            animation-delay: calc(12s / -2);
+            animation-delay: calc(40s / -2);
         }
 
 
@@ -667,10 +670,12 @@
                 min-width: 260px;
                 height: 180px;
             }
-            .OfficeEquipments_animations{
+
+            .OfficeEquipments_animations {
                 right: -35%;
             }
         }
+
         @media (max-width: 1199px) {
             .cmnSection_head h2 {
                 font-size: 35px;
@@ -1030,26 +1035,41 @@
             .outTeamSec .ourTeam_row {
                 margin-bottom: -30px;
             }
-            .cmnSecHead_withImg .cmnSecHead_withImg_content{
+
+            .cmnSecHead_withImg .cmnSecHead_withImg_content {
                 top: 45px;
             }
-            .cmn_innerTitle h3{
+
+            .cmn_innerTitle h3 {
                 font-size: 24px;
                 margin-bottom: 10px;
             }
+
         }
 
         @media (max-width: 375px) {
-            .testimonialSlider_bot_right{
+            .testimonialSlider_bot_right {
                 display: flex;
                 justify-content: flex-end;
             }
-            .testimonialSlider_bot_right svg{
+
+            .testimonialSlider_bot_right svg {
                 max-width: 70%;
             }
         }
 
         /* media queries end */
+
+        .hiddenStyle {
+            position: absolute;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            width: 1px;
+            margin: -1px;
+            padding: 0;
+            border: 0;
+        }
     </style>
     <!-- custom javascript -->
     <script>
@@ -1079,6 +1099,75 @@
             for (var i = 0; i < elements.length; i++) {
                 elements[i].addEventListener('click', click_event, true);
             }
+
+            // load more functionality
+            var work = document.querySelector("#job-online");
+            var items = Array.from(work.querySelectorAll(".eachJob"));
+            var loadMore = document.getElementById("loadMoreVirtual");
+            maxItems = 3;
+            loadItems = 3;
+            hiddenClass = "hiddenStyle";
+            hiddenItems = Array.from(work.querySelectorAll(".hiddenStyle"));
+
+            items.forEach(function (item, index) {
+                console.log(item.innerText, index);
+                if (index > maxItems - 1) {
+                    item.classList.add(hiddenClass);
+                }
+            });
+
+            if (work.querySelectorAll("." + hiddenClass).length <= 2) {
+                loadMore.style.display = "none";
+            }
+
+            loadMore.addEventListener("click", function () {
+                [].forEach.call(work.querySelectorAll("." + hiddenClass), function (
+                    item,
+                    index
+                ) {
+                    if (index < loadItems) {
+                        item.classList.remove(hiddenClass);
+                    }
+
+                    if (work.querySelectorAll("." + hiddenClass).length === 0 ) {
+                        loadMore.style.display = "none";
+                    }
+                });
+            });
+
+            var work2 = document.querySelector("#job-virtual");
+            var items2 = Array.from(work2.querySelectorAll(".eachJob"));
+            var loadMore2 = document.getElementById("loadMoreOnsite");
+            maxItems = 3;
+            loadItems = 3;
+            hiddenClass = "hiddenStyle";
+            hiddenItems2 = Array.from(work2.querySelectorAll(".hiddenStyle"));
+
+            items2.forEach(function (item, index) {
+                console.log(item.innerText, index);
+                if (index > maxItems - 1) {
+                    item.classList.add(hiddenClass);
+                }
+            });
+            if (work2.querySelectorAll("." + hiddenClass).length <= 2) {
+                        loadMore.style.display = "none";
+                    }
+
+            loadMore2.addEventListener("click", function () {
+                [].forEach.call(work2.querySelectorAll("." + hiddenClass), function (
+                    item,
+                    index
+                ) {
+                    if (index < loadItems) {
+                        item.classList.remove(hiddenClass);
+                    }
+
+                    if (work2.querySelectorAll("." + hiddenClass).length === 0) {
+                        loadMore2.style.display = "none";
+                    }
+                });
+            });
+
         })
 
         // show more / show less end
@@ -1126,6 +1215,87 @@
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
                                     ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
                                     aperiam, at praesentium maiores reiciendis.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                </span>
+                                <button class="show-more">Show more</button>
+                            </p>
+                            <ul class="jobLocationTypeList">
+                                <li>
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.5625 10.6603C9.5625 9.79832 9.90491 8.97167 10.5144 8.36218C11.1239 7.75269 11.9505 7.41028 12.8125 7.41028C13.6745 7.41028 14.5011 7.75269 15.1106 8.36218C15.7201 8.97167 16.0625 9.79832 16.0625 10.6603C16.0625 11.5222 15.7201 12.3489 15.1106 12.9584C14.5011 13.5679 13.6745 13.9103 12.8125 13.9103C11.9505 13.9103 11.1239 13.5679 10.5144 12.9584C9.90491 12.3489 9.5625 11.5222 9.5625 10.6603Z"
+                                                fill="#7C7C7C" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M4.5841 9.53728C4.74998 7.52686 5.66574 5.65231 7.14957 4.28573C8.63341 2.91916 10.5768 2.16047 12.5941 2.16028H13.0261C15.0433 2.16047 16.9868 2.91916 18.4706 4.28573C19.9545 5.65231 20.8702 7.52686 21.0361 9.53728C21.2214 11.7818 20.5284 14.0106 19.1031 15.7543L14.3101 21.6163C14.1284 21.8386 13.8996 22.0178 13.6402 22.1409C13.3808 22.2639 13.0972 22.3277 12.8101 22.3277C12.523 22.3277 12.2394 22.2639 11.98 22.1409C11.7206 22.0178 11.4918 21.8386 11.3101 21.6163L6.5181 15.7543C5.0924 14.0107 4.39905 11.7819 4.5841 9.53728ZM12.8101 5.91028C11.5503 5.91028 10.3421 6.41072 9.45134 7.30152C8.56054 8.19232 8.0601 9.4005 8.0601 10.6603C8.0601 11.9201 8.56054 13.1282 9.45134 14.019C10.3421 14.9098 11.5503 15.4103 12.8101 15.4103C14.0699 15.4103 15.2781 14.9098 16.1689 14.019C17.0597 13.1282 17.5601 11.9201 17.5601 10.6603C17.5601 9.4005 17.0597 8.19232 16.1689 7.30152C15.2781 6.41072 14.0699 5.91028 12.8101 5.91028Z"
+                                                fill="#7C7C7C" />
+                                        </svg>
+                                    </span>
+                                    Lime Peru
+                                </li>
+                                <li>
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12.8125 2.66028C11.4993 2.66028 10.1989 2.91894 8.98567 3.42148C7.77241 3.92403 6.67002 4.66062 5.74143 5.58921C3.86607 7.46457 2.8125 10.0081 2.8125 12.6603C2.8125 15.3124 3.86607 17.856 5.74143 19.7313C6.67002 20.6599 7.77241 21.3965 8.98567 21.8991C10.1989 22.4016 11.4993 22.6603 12.8125 22.6603C15.4647 22.6603 18.0082 21.6067 19.8836 19.7313C21.7589 17.856 22.8125 15.3124 22.8125 12.6603C22.8125 11.3471 22.5538 10.0467 22.0513 8.83344C21.5487 7.62019 20.8122 6.5178 19.8836 5.58921C18.955 4.66062 17.8526 3.92403 16.6393 3.42148C15.4261 2.91894 14.1257 2.66028 12.8125 2.66028ZM17.0125 16.8603L11.8125 13.6603V7.66028H13.3125V12.8603L17.8125 15.5603L17.0125 16.8603Z"
+                                                fill="#7C7C7C" />
+                                        </svg>
+                                    </span>
+                                    Full Time
+                                </li>
+                            </ul>
+
+                            <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">Apply
+                                Now
+                            </button>
+                        </div>
+                        <div class="eachJob">
+                            <p class="jobAppliation_date">Application date 24-05-2024</p>
+                            <h3 class="jobTitle">Advisor Manager</h3>
+                            <p>
+                                We are seeking a dynamic and experienced Advisor Manager to join our team. The Advisor
+                                Manager will play a crucial role in overseeing a team of advisors who provide
+                                personalized assistance and guidance to immigrants throughout their relocation process.
+                                This role requires a deep understanding of immigrant needs, excellent leadership skills,
+                                and a passion for making a positive impact. We are seeking a dynamic and experienced
+                                Advisor Manager to join our team. The Advisor Manager will play a crucial role in
+                                overseeing a team!
+                                <span class="content hideContent">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
                                 </span>
                                 <button class="show-more">Show more</button>
                             </p>
@@ -1178,6 +1348,20 @@
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
                                     ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
                                     aperiam, at praesentium maiores reiciendis.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
                                 </span>
                                 <button class="show-more">Show more</button>
                             </p>
@@ -1230,6 +1414,20 @@
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
                                     ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
                                     aperiam, at praesentium maiores reiciendis.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
                                 </span>
                                 <button class="show-more">Show more</button>
                             </p>
@@ -1264,9 +1462,142 @@
                             <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">Apply
                                 Now</button>
                         </div>
+                        <div class="eachJob">
+                            <p class="jobAppliation_date">Application date 24-05-2024</p>
+                            <h3 class="jobTitle">Advisor Manager</h3>
+                            <p>
+                                We are seeking a dynamic and experienced Advisor Manager to join our team. The Advisor
+                                Manager will play a crucial role in overseeing a team of advisors who provide
+                                personalized assistance and guidance to immigrants throughout their relocation process.
+                                This role requires a deep understanding of immigrant needs, excellent leadership skills,
+                                and a passion for making a positive impact. We are seeking a dynamic and experienced
+                                Advisor Manager to join our team. The Advisor Manager will play a crucial role in
+                                overseeing a team!
+                                <span class="content hideContent">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                </span>
+                                <button class="show-more">Show more</button>
+                            </p>
+                            <ul class="jobLocationTypeList">
+                                <li>
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.5625 10.6603C9.5625 9.79832 9.90491 8.97167 10.5144 8.36218C11.1239 7.75269 11.9505 7.41028 12.8125 7.41028C13.6745 7.41028 14.5011 7.75269 15.1106 8.36218C15.7201 8.97167 16.0625 9.79832 16.0625 10.6603C16.0625 11.5222 15.7201 12.3489 15.1106 12.9584C14.5011 13.5679 13.6745 13.9103 12.8125 13.9103C11.9505 13.9103 11.1239 13.5679 10.5144 12.9584C9.90491 12.3489 9.5625 11.5222 9.5625 10.6603Z"
+                                                fill="#7C7C7C" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M4.5841 9.53728C4.74998 7.52686 5.66574 5.65231 7.14957 4.28573C8.63341 2.91916 10.5768 2.16047 12.5941 2.16028H13.0261C15.0433 2.16047 16.9868 2.91916 18.4706 4.28573C19.9545 5.65231 20.8702 7.52686 21.0361 9.53728C21.2214 11.7818 20.5284 14.0106 19.1031 15.7543L14.3101 21.6163C14.1284 21.8386 13.8996 22.0178 13.6402 22.1409C13.3808 22.2639 13.0972 22.3277 12.8101 22.3277C12.523 22.3277 12.2394 22.2639 11.98 22.1409C11.7206 22.0178 11.4918 21.8386 11.3101 21.6163L6.5181 15.7543C5.0924 14.0107 4.39905 11.7819 4.5841 9.53728ZM12.8101 5.91028C11.5503 5.91028 10.3421 6.41072 9.45134 7.30152C8.56054 8.19232 8.0601 9.4005 8.0601 10.6603C8.0601 11.9201 8.56054 13.1282 9.45134 14.019C10.3421 14.9098 11.5503 15.4103 12.8101 15.4103C14.0699 15.4103 15.2781 14.9098 16.1689 14.019C17.0597 13.1282 17.5601 11.9201 17.5601 10.6603C17.5601 9.4005 17.0597 8.19232 16.1689 7.30152C15.2781 6.41072 14.0699 5.91028 12.8101 5.91028Z"
+                                                fill="#7C7C7C" />
+                                        </svg>
+                                    </span>
+                                    Lime Peru
+                                </li>
+                                <li>
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12.8125 2.66028C11.4993 2.66028 10.1989 2.91894 8.98567 3.42148C7.77241 3.92403 6.67002 4.66062 5.74143 5.58921C3.86607 7.46457 2.8125 10.0081 2.8125 12.6603C2.8125 15.3124 3.86607 17.856 5.74143 19.7313C6.67002 20.6599 7.77241 21.3965 8.98567 21.8991C10.1989 22.4016 11.4993 22.6603 12.8125 22.6603C15.4647 22.6603 18.0082 21.6067 19.8836 19.7313C21.7589 17.856 22.8125 15.3124 22.8125 12.6603C22.8125 11.3471 22.5538 10.0467 22.0513 8.83344C21.5487 7.62019 20.8122 6.5178 19.8836 5.58921C18.955 4.66062 17.8526 3.92403 16.6393 3.42148C15.4261 2.91894 14.1257 2.66028 12.8125 2.66028ZM17.0125 16.8603L11.8125 13.6603V7.66028H13.3125V12.8603L17.8125 15.5603L17.0125 16.8603Z"
+                                                fill="#7C7C7C" />
+                                        </svg>
+                                    </span>
+                                    Full Time
+                                </li>
+                            </ul>
+
+                            <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">Apply
+                                Now</button>
+                        </div>
+                        <div class="eachJob">
+                            <p class="jobAppliation_date">Application date 24-05-2024</p>
+                            <h3 class="jobTitle">Advisor Manager</h3>
+                            <p>
+                                We are seeking a dynamic and experienced Advisor Manager to join our team. The Advisor
+                                Manager will play a crucial role in overseeing a team of advisors who provide
+                                personalized assistance and guidance to immigrants throughout their relocation process.
+                                This role requires a deep understanding of immigrant needs, excellent leadership skills,
+                                and a passion for making a positive impact. We are seeking a dynamic and experienced
+                                Advisor Manager to join our team. The Advisor Manager will play a crucial role in
+                                overseeing a team!
+                                <span class="content hideContent">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                </span>
+                                <button class="show-more">Show more</button>
+                            </p>
+                            <ul class="jobLocationTypeList">
+                                <li>
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.5625 10.6603C9.5625 9.79832 9.90491 8.97167 10.5144 8.36218C11.1239 7.75269 11.9505 7.41028 12.8125 7.41028C13.6745 7.41028 14.5011 7.75269 15.1106 8.36218C15.7201 8.97167 16.0625 9.79832 16.0625 10.6603C16.0625 11.5222 15.7201 12.3489 15.1106 12.9584C14.5011 13.5679 13.6745 13.9103 12.8125 13.9103C11.9505 13.9103 11.1239 13.5679 10.5144 12.9584C9.90491 12.3489 9.5625 11.5222 9.5625 10.6603Z"
+                                                fill="#7C7C7C" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M4.5841 9.53728C4.74998 7.52686 5.66574 5.65231 7.14957 4.28573C8.63341 2.91916 10.5768 2.16047 12.5941 2.16028H13.0261C15.0433 2.16047 16.9868 2.91916 18.4706 4.28573C19.9545 5.65231 20.8702 7.52686 21.0361 9.53728C21.2214 11.7818 20.5284 14.0106 19.1031 15.7543L14.3101 21.6163C14.1284 21.8386 13.8996 22.0178 13.6402 22.1409C13.3808 22.2639 13.0972 22.3277 12.8101 22.3277C12.523 22.3277 12.2394 22.2639 11.98 22.1409C11.7206 22.0178 11.4918 21.8386 11.3101 21.6163L6.5181 15.7543C5.0924 14.0107 4.39905 11.7819 4.5841 9.53728ZM12.8101 5.91028C11.5503 5.91028 10.3421 6.41072 9.45134 7.30152C8.56054 8.19232 8.0601 9.4005 8.0601 10.6603C8.0601 11.9201 8.56054 13.1282 9.45134 14.019C10.3421 14.9098 11.5503 15.4103 12.8101 15.4103C14.0699 15.4103 15.2781 14.9098 16.1689 14.019C17.0597 13.1282 17.5601 11.9201 17.5601 10.6603C17.5601 9.4005 17.0597 8.19232 16.1689 7.30152C15.2781 6.41072 14.0699 5.91028 12.8101 5.91028Z"
+                                                fill="#7C7C7C" />
+                                        </svg>
+                                    </span>
+                                    Lime Peru
+                                </li>
+                                <li>
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12.8125 2.66028C11.4993 2.66028 10.1989 2.91894 8.98567 3.42148C7.77241 3.92403 6.67002 4.66062 5.74143 5.58921C3.86607 7.46457 2.8125 10.0081 2.8125 12.6603C2.8125 15.3124 3.86607 17.856 5.74143 19.7313C6.67002 20.6599 7.77241 21.3965 8.98567 21.8991C10.1989 22.4016 11.4993 22.6603 12.8125 22.6603C15.4647 22.6603 18.0082 21.6067 19.8836 19.7313C21.7589 17.856 22.8125 15.3124 22.8125 12.6603C22.8125 11.3471 22.5538 10.0467 22.0513 8.83344C21.5487 7.62019 20.8122 6.5178 19.8836 5.58921C18.955 4.66062 17.8526 3.92403 16.6393 3.42148C15.4261 2.91894 14.1257 2.66028 12.8125 2.66028ZM17.0125 16.8603L11.8125 13.6603V7.66028H13.3125V12.8603L17.8125 15.5603L17.0125 16.8603Z"
+                                                fill="#7C7C7C" />
+                                        </svg>
+                                    </span>
+                                    Full Time
+                                </li>
+                            </ul>
+
+                            <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">Apply
+                                Now</button>
+                        </div>
+
 
                         <div class="jobLoadMore_wrap">
-                            <button class="loadMoreJob_btn">Load More</button>
+                            <button class="loadMoreJob_btn" id="loadMoreVirtual">Load More</button>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="job-virtual" role="tabpanel" aria-labelledby="job-virtual-tab">
@@ -1288,6 +1619,20 @@
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
                                     ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
                                     aperiam, at praesentium maiores reiciendis.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
                                 </span>
                                 <button class="show-more">Show more</button>
                             </p>
@@ -1320,7 +1665,8 @@
                             </ul>
 
                             <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">Apply
-                                Now</button>
+                                Now
+                            </button>
                         </div>
                         <div class="eachJob">
                             <p class="jobAppliation_date">Application date 24-05-2024</p>
@@ -1334,6 +1680,20 @@
                                 Advisor Manager to join our team. The Advisor Manager will play a crucial role in
                                 overseeing a team!
                                 <span class="content hideContent">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
                                     ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
                                     aperiam, at praesentium maiores reiciendis.
@@ -1386,6 +1746,218 @@
                                 Advisor Manager to join our team. The Advisor Manager will play a crucial role in
                                 overseeing a team!
                                 <span class="content hideContent">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                </span>
+                                <button class="show-more">Show more</button>
+                            </p>
+                            <ul class="jobLocationTypeList">
+                                <li>
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.5625 10.6603C9.5625 9.79832 9.90491 8.97167 10.5144 8.36218C11.1239 7.75269 11.9505 7.41028 12.8125 7.41028C13.6745 7.41028 14.5011 7.75269 15.1106 8.36218C15.7201 8.97167 16.0625 9.79832 16.0625 10.6603C16.0625 11.5222 15.7201 12.3489 15.1106 12.9584C14.5011 13.5679 13.6745 13.9103 12.8125 13.9103C11.9505 13.9103 11.1239 13.5679 10.5144 12.9584C9.90491 12.3489 9.5625 11.5222 9.5625 10.6603Z"
+                                                fill="#7C7C7C" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M4.5841 9.53728C4.74998 7.52686 5.66574 5.65231 7.14957 4.28573C8.63341 2.91916 10.5768 2.16047 12.5941 2.16028H13.0261C15.0433 2.16047 16.9868 2.91916 18.4706 4.28573C19.9545 5.65231 20.8702 7.52686 21.0361 9.53728C21.2214 11.7818 20.5284 14.0106 19.1031 15.7543L14.3101 21.6163C14.1284 21.8386 13.8996 22.0178 13.6402 22.1409C13.3808 22.2639 13.0972 22.3277 12.8101 22.3277C12.523 22.3277 12.2394 22.2639 11.98 22.1409C11.7206 22.0178 11.4918 21.8386 11.3101 21.6163L6.5181 15.7543C5.0924 14.0107 4.39905 11.7819 4.5841 9.53728ZM12.8101 5.91028C11.5503 5.91028 10.3421 6.41072 9.45134 7.30152C8.56054 8.19232 8.0601 9.4005 8.0601 10.6603C8.0601 11.9201 8.56054 13.1282 9.45134 14.019C10.3421 14.9098 11.5503 15.4103 12.8101 15.4103C14.0699 15.4103 15.2781 14.9098 16.1689 14.019C17.0597 13.1282 17.5601 11.9201 17.5601 10.6603C17.5601 9.4005 17.0597 8.19232 16.1689 7.30152C15.2781 6.41072 14.0699 5.91028 12.8101 5.91028Z"
+                                                fill="#7C7C7C" />
+                                        </svg>
+                                    </span>
+                                    Lime Peru
+                                </li>
+                                <li>
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12.8125 2.66028C11.4993 2.66028 10.1989 2.91894 8.98567 3.42148C7.77241 3.92403 6.67002 4.66062 5.74143 5.58921C3.86607 7.46457 2.8125 10.0081 2.8125 12.6603C2.8125 15.3124 3.86607 17.856 5.74143 19.7313C6.67002 20.6599 7.77241 21.3965 8.98567 21.8991C10.1989 22.4016 11.4993 22.6603 12.8125 22.6603C15.4647 22.6603 18.0082 21.6067 19.8836 19.7313C21.7589 17.856 22.8125 15.3124 22.8125 12.6603C22.8125 11.3471 22.5538 10.0467 22.0513 8.83344C21.5487 7.62019 20.8122 6.5178 19.8836 5.58921C18.955 4.66062 17.8526 3.92403 16.6393 3.42148C15.4261 2.91894 14.1257 2.66028 12.8125 2.66028ZM17.0125 16.8603L11.8125 13.6603V7.66028H13.3125V12.8603L17.8125 15.5603L17.0125 16.8603Z"
+                                                fill="#7C7C7C" />
+                                        </svg>
+                                    </span>
+                                    Full Time
+                                </li>
+                            </ul>
+
+                            <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">Apply
+                                Now</button>
+                        </div>
+                        <div class="eachJob">
+                            <p class="jobAppliation_date">Application date 24-05-2024</p>
+                            <h3 class="jobTitle">Advisor Manager</h3>
+                            <p>
+                                We are seeking a dynamic and experienced Advisor Manager to join our team. The Advisor
+                                Manager will play a crucial role in overseeing a team of advisors who provide
+                                personalized assistance and guidance to immigrants throughout their relocation process.
+                                This role requires a deep understanding of immigrant needs, excellent leadership skills,
+                                and a passion for making a positive impact. We are seeking a dynamic and experienced
+                                Advisor Manager to join our team. The Advisor Manager will play a crucial role in
+                                overseeing a team!
+                                <span class="content hideContent">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                </span>
+                                <button class="show-more">Show more</button>
+                            </p>
+                            <ul class="jobLocationTypeList">
+                                <li>
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.5625 10.6603C9.5625 9.79832 9.90491 8.97167 10.5144 8.36218C11.1239 7.75269 11.9505 7.41028 12.8125 7.41028C13.6745 7.41028 14.5011 7.75269 15.1106 8.36218C15.7201 8.97167 16.0625 9.79832 16.0625 10.6603C16.0625 11.5222 15.7201 12.3489 15.1106 12.9584C14.5011 13.5679 13.6745 13.9103 12.8125 13.9103C11.9505 13.9103 11.1239 13.5679 10.5144 12.9584C9.90491 12.3489 9.5625 11.5222 9.5625 10.6603Z"
+                                                fill="#7C7C7C" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M4.5841 9.53728C4.74998 7.52686 5.66574 5.65231 7.14957 4.28573C8.63341 2.91916 10.5768 2.16047 12.5941 2.16028H13.0261C15.0433 2.16047 16.9868 2.91916 18.4706 4.28573C19.9545 5.65231 20.8702 7.52686 21.0361 9.53728C21.2214 11.7818 20.5284 14.0106 19.1031 15.7543L14.3101 21.6163C14.1284 21.8386 13.8996 22.0178 13.6402 22.1409C13.3808 22.2639 13.0972 22.3277 12.8101 22.3277C12.523 22.3277 12.2394 22.2639 11.98 22.1409C11.7206 22.0178 11.4918 21.8386 11.3101 21.6163L6.5181 15.7543C5.0924 14.0107 4.39905 11.7819 4.5841 9.53728ZM12.8101 5.91028C11.5503 5.91028 10.3421 6.41072 9.45134 7.30152C8.56054 8.19232 8.0601 9.4005 8.0601 10.6603C8.0601 11.9201 8.56054 13.1282 9.45134 14.019C10.3421 14.9098 11.5503 15.4103 12.8101 15.4103C14.0699 15.4103 15.2781 14.9098 16.1689 14.019C17.0597 13.1282 17.5601 11.9201 17.5601 10.6603C17.5601 9.4005 17.0597 8.19232 16.1689 7.30152C15.2781 6.41072 14.0699 5.91028 12.8101 5.91028Z"
+                                                fill="#7C7C7C" />
+                                        </svg>
+                                    </span>
+                                    Lime Peru
+                                </li>
+                                <li>
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12.8125 2.66028C11.4993 2.66028 10.1989 2.91894 8.98567 3.42148C7.77241 3.92403 6.67002 4.66062 5.74143 5.58921C3.86607 7.46457 2.8125 10.0081 2.8125 12.6603C2.8125 15.3124 3.86607 17.856 5.74143 19.7313C6.67002 20.6599 7.77241 21.3965 8.98567 21.8991C10.1989 22.4016 11.4993 22.6603 12.8125 22.6603C15.4647 22.6603 18.0082 21.6067 19.8836 19.7313C21.7589 17.856 22.8125 15.3124 22.8125 12.6603C22.8125 11.3471 22.5538 10.0467 22.0513 8.83344C21.5487 7.62019 20.8122 6.5178 19.8836 5.58921C18.955 4.66062 17.8526 3.92403 16.6393 3.42148C15.4261 2.91894 14.1257 2.66028 12.8125 2.66028ZM17.0125 16.8603L11.8125 13.6603V7.66028H13.3125V12.8603L17.8125 15.5603L17.0125 16.8603Z"
+                                                fill="#7C7C7C" />
+                                        </svg>
+                                    </span>
+                                    Full Time
+                                </li>
+                            </ul>
+
+                            <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">Apply
+                                Now</button>
+                        </div>
+                        <div class="eachJob">
+                            <p class="jobAppliation_date">Application date 24-05-2024</p>
+                            <h3 class="jobTitle">Advisor Manager</h3>
+                            <p>
+                                We are seeking a dynamic and experienced Advisor Manager to join our team. The Advisor
+                                Manager will play a crucial role in overseeing a team of advisors who provide
+                                personalized assistance and guidance to immigrants throughout their relocation process.
+                                This role requires a deep understanding of immigrant needs, excellent leadership skills,
+                                and a passion for making a positive impact. We are seeking a dynamic and experienced
+                                Advisor Manager to join our team. The Advisor Manager will play a crucial role in
+                                overseeing a team!
+                                <span class="content hideContent">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                </span>
+                                <button class="show-more">Show more</button>
+                            </p>
+                            <ul class="jobLocationTypeList">
+                                <li>
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.5625 10.6603C9.5625 9.79832 9.90491 8.97167 10.5144 8.36218C11.1239 7.75269 11.9505 7.41028 12.8125 7.41028C13.6745 7.41028 14.5011 7.75269 15.1106 8.36218C15.7201 8.97167 16.0625 9.79832 16.0625 10.6603C16.0625 11.5222 15.7201 12.3489 15.1106 12.9584C14.5011 13.5679 13.6745 13.9103 12.8125 13.9103C11.9505 13.9103 11.1239 13.5679 10.5144 12.9584C9.90491 12.3489 9.5625 11.5222 9.5625 10.6603Z"
+                                                fill="#7C7C7C" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M4.5841 9.53728C4.74998 7.52686 5.66574 5.65231 7.14957 4.28573C8.63341 2.91916 10.5768 2.16047 12.5941 2.16028H13.0261C15.0433 2.16047 16.9868 2.91916 18.4706 4.28573C19.9545 5.65231 20.8702 7.52686 21.0361 9.53728C21.2214 11.7818 20.5284 14.0106 19.1031 15.7543L14.3101 21.6163C14.1284 21.8386 13.8996 22.0178 13.6402 22.1409C13.3808 22.2639 13.0972 22.3277 12.8101 22.3277C12.523 22.3277 12.2394 22.2639 11.98 22.1409C11.7206 22.0178 11.4918 21.8386 11.3101 21.6163L6.5181 15.7543C5.0924 14.0107 4.39905 11.7819 4.5841 9.53728ZM12.8101 5.91028C11.5503 5.91028 10.3421 6.41072 9.45134 7.30152C8.56054 8.19232 8.0601 9.4005 8.0601 10.6603C8.0601 11.9201 8.56054 13.1282 9.45134 14.019C10.3421 14.9098 11.5503 15.4103 12.8101 15.4103C14.0699 15.4103 15.2781 14.9098 16.1689 14.019C17.0597 13.1282 17.5601 11.9201 17.5601 10.6603C17.5601 9.4005 17.0597 8.19232 16.1689 7.30152C15.2781 6.41072 14.0699 5.91028 12.8101 5.91028Z"
+                                                fill="#7C7C7C" />
+                                        </svg>
+                                    </span>
+                                    Lime Peru
+                                </li>
+                                <li>
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12.8125 2.66028C11.4993 2.66028 10.1989 2.91894 8.98567 3.42148C7.77241 3.92403 6.67002 4.66062 5.74143 5.58921C3.86607 7.46457 2.8125 10.0081 2.8125 12.6603C2.8125 15.3124 3.86607 17.856 5.74143 19.7313C6.67002 20.6599 7.77241 21.3965 8.98567 21.8991C10.1989 22.4016 11.4993 22.6603 12.8125 22.6603C15.4647 22.6603 18.0082 21.6067 19.8836 19.7313C21.7589 17.856 22.8125 15.3124 22.8125 12.6603C22.8125 11.3471 22.5538 10.0467 22.0513 8.83344C21.5487 7.62019 20.8122 6.5178 19.8836 5.58921C18.955 4.66062 17.8526 3.92403 16.6393 3.42148C15.4261 2.91894 14.1257 2.66028 12.8125 2.66028ZM17.0125 16.8603L11.8125 13.6603V7.66028H13.3125V12.8603L17.8125 15.5603L17.0125 16.8603Z"
+                                                fill="#7C7C7C" />
+                                        </svg>
+                                    </span>
+                                    Full Time
+                                </li>
+                            </ul>
+
+                            <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">Apply
+                                Now</button>
+                        </div>
+                        <div class="eachJob">
+                            <p class="jobAppliation_date">Application date 24-05-2024</p>
+                            <h3 class="jobTitle">Advisor Manager</h3>
+                            <p>
+                                We are seeking a dynamic and experienced Advisor Manager to join our team. The Advisor
+                                Manager will play a crucial role in overseeing a team of advisors who provide
+                                personalized assistance and guidance to immigrants throughout their relocation process.
+                                This role requires a deep understanding of immigrant needs, excellent leadership skills,
+                                and a passion for making a positive impact. We are seeking a dynamic and experienced
+                                Advisor Manager to join our team. The Advisor Manager will play a crucial role in
+                                overseeing a team!
+                                <span class="content hideContent">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
+                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
+                                    aperiam, at praesentium maiores reiciendis.
+
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
                                     ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
                                     aperiam, at praesentium maiores reiciendis.
@@ -1428,7 +2000,7 @@
                         </div>
 
                         <div class="jobLoadMore_wrap">
-                            <button class="loadMoreJob_btn">Load More</button>
+                            <button class="loadMoreJob_btn" id="loadMoreOnsite">Load More</button>
                         </div>
                     </div>
 
@@ -1698,8 +2270,68 @@
                             <img src="./images/ani-down3.png" alt="">
                         </figure>
                     </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down1.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down2.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down3.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down1.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down2.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down3.png" alt="">
+                        </figure>
+                    </div>
                 </div>
                 <div class="officeAnimatin_each animation_up">
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down1.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down2.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down3.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down1.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down2.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="officeAnimatin_eachImg">
+                        <figure>
+                            <img src="./images/ani-down3.png" alt="">
+                        </figure>
+                    </div>
                     <div class="officeAnimatin_eachImg">
                         <figure>
                             <img src="./images/ani-down1.png" alt="">
@@ -2593,7 +3225,7 @@
                                     </p>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                     <div class="tab-pane fade" id="ourTeam-billing" role="tabpanel"
@@ -2632,7 +3264,7 @@
                                     </p>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -2650,16 +3282,13 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Aplly Job</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Apply Job</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     Demo Text
                 </div>
-                <div class="modal-footer">
 
-                    <button type="button" class="cmn_btn">Apply</button>
-                </div>
             </div>
         </div>
     </div>
