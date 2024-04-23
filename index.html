@@ -271,6 +271,9 @@
             padding: 5px 10px 7px 10px;
             color: #132020;
         }
+        .jobLoadMore_wrap .loadMoreJob_btn.hidden{
+            display: none;
+        }
 
         .jobLoadMore_wrap .loadMoreJob_btn:hover {
             background-color: #CEA03E;
@@ -281,6 +284,24 @@
         .applyJobModal .modal-footer {
             justify-content: center;
             border: 0;
+        }
+
+        .modal-header {
+            position: relative;
+        }
+
+        .modal-header .btn-close {
+            position: absolute;
+            top: 12px;
+            right: 10px;
+            margin: 0;
+            z-index: 1;
+
+        }
+
+        .modal-header .modal-title {
+            width: 100%;
+            text-align: center;
         }
 
         /* job section end */
@@ -440,34 +461,35 @@
 
         /* meet our team start */
         .outTeamSec .ourTeam_row {
-            margin: 0 -25px -30px;
+            margin: 0 -12px -30px;
         }
 
         .ourTeam_row .ourTeam_col {
-            padding: 0 25px;
+            padding: 0 12px;
             margin-bottom: 30px;
         }
 
         .ourTeam_col .ourTeamCard {
             text-align: center;
-            padding: 20px;
         }
 
         .ourTeamCard figure {
             background: #537D7D;
             border-radius: 20px;
             overflow: hidden;
-            margin-bottom: 20px;
+            margin-bottom: 0;
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: flex-end;
             min-height: 230px;
+           min-height: 282px;
         }
 
         .ourTeamCard figure img {
-            height: 215px;
-            object-fit: contain;
+            height: 282px;
+            object-fit: cover;
+            width: 100%;
         }
 
         .ourTeamCard h5 {
@@ -749,12 +771,10 @@
                 max-width: 350px;
             }
 
-            .ourTeam_col .ourTeamCard {
-                padding: 12px;
-            }
+            
 
             .ourTeam_row .ourTeam_col {
-                padding: 0 10px;
+               
                 margin-bottom: 10px;
             }
 
@@ -1006,18 +1026,13 @@
                 font-size: 20px;
             }
 
-            .ourTeam_col .ourTeamCard {
-                padding: 0;
-            }
+            
 
-            .ourTeamCard figure img {
-                height: 130px;
-            }
+           
 
             .ourTeamCard figure {
                 min-height: initial;
-                padding: 15px 0 0;
-                margin-bottom: 15px;
+                
             }
 
             .ourTeamCard h5 {
@@ -1060,15 +1075,8 @@
 
         /* media queries end */
 
-        .hiddenStyle {
-            position: absolute;
-            overflow: hidden;
-            clip: rect(0 0 0 0);
-            height: 1px;
-            width: 1px;
-            margin: -1px;
-            padding: 0;
-            border: 0;
+        .hidden {
+            display: none;
         }
     </style>
     <!-- custom javascript -->
@@ -1100,73 +1108,44 @@
                 elements[i].addEventListener('click', click_event, true);
             }
 
-            // load more functionality
-            var work = document.querySelector("#job-online");
-            var items = Array.from(work.querySelectorAll(".eachJob"));
-            var loadMore = document.getElementById("loadMoreVirtual");
-            maxItems = 3;
-            loadItems = 3;
-            hiddenClass = "hiddenStyle";
-            hiddenItems = Array.from(work.querySelectorAll(".hiddenStyle"));
+            const hiddenItems = [...document.getElementById("job-virtual").querySelectorAll('.eachJob.hidden')];
+            const loadMore = document.getElementById('loadMoreVirtual');
 
-            items.forEach(function (item, index) {
-                console.log(item.innerText, index);
-                if (index > maxItems - 1) {
-                    item.classList.add(hiddenClass);
+            hiddenItems.splice(0, 3).forEach(
+                elem => elem.classList.remove('hidden')
+            );
+
+            loadMore.addEventListener('click', function (e) {
+                e.preventDefault();
+                console.log(hiddenItems.length);
+                hiddenItems.splice(0, 3).forEach(
+                    elem => elem.classList.remove('hidden')
+                )
+                if (hiddenItems.length === 0) {
+                    loadMore.classList.add('hidden');
                 }
+                
             });
 
-            if (work.querySelectorAll("." + hiddenClass).length <= 2) {
-                loadMore.style.display = "none";
-            }
+            const hiddenItems2 = [...document.getElementById("job-online").querySelectorAll('.eachJob.hidden')];
+            const loadMore2 = document.getElementById('loadMoreOnsite');
 
-            loadMore.addEventListener("click", function () {
-                [].forEach.call(work.querySelectorAll("." + hiddenClass), function (
-                    item,
-                    index
-                ) {
-                    if (index < loadItems) {
-                        item.classList.remove(hiddenClass);
-                    }
+            hiddenItems2.splice(0, 3).forEach(
+                elem => elem.classList.remove('hidden')
+            );
 
-                    if (work.querySelectorAll("." + hiddenClass).length === 0 ) {
-                        loadMore.style.display = "none";
-                    }
-                });
-            });
-
-            var work2 = document.querySelector("#job-virtual");
-            var items2 = Array.from(work2.querySelectorAll(".eachJob"));
-            var loadMore2 = document.getElementById("loadMoreOnsite");
-            maxItems = 3;
-            loadItems = 3;
-            hiddenClass = "hiddenStyle";
-            hiddenItems2 = Array.from(work2.querySelectorAll(".hiddenStyle"));
-
-            items2.forEach(function (item, index) {
-                console.log(item.innerText, index);
-                if (index > maxItems - 1) {
-                    item.classList.add(hiddenClass);
+            loadMore2.addEventListener('click', function (e) {
+                e.preventDefault();
+                console.log(hiddenItems2.length);
+                hiddenItems2.splice(0, 3).forEach(
+                    elem => elem.classList.remove('hidden')
+                )
+                if (hiddenItems2.length === 0) {
+                    loadMore2.classList.add('hidden');
                 }
+                
             });
-            if (work2.querySelectorAll("." + hiddenClass).length <= 2) {
-                        loadMore.style.display = "none";
-                    }
-
-            loadMore2.addEventListener("click", function () {
-                [].forEach.call(work2.querySelectorAll("." + hiddenClass), function (
-                    item,
-                    index
-                ) {
-                    if (index < loadItems) {
-                        item.classList.remove(hiddenClass);
-                    }
-
-                    if (work2.querySelectorAll("." + hiddenClass).length === 0) {
-                        loadMore2.style.display = "none";
-                    }
-                });
-            });
+            
 
         })
 
@@ -1187,17 +1166,22 @@
             </div>
             <div class="jobsTabWrap cmnTabsWrap">
                 <div class="nav nav-tabs job-tabs" id="jobs-tab" role="tablist">
-                    <button class="nav-link active" id="job-online-tab" data-bs-toggle="tab"
-                        data-bs-target="#job-online" type="button" role="tab" aria-controls="job-online"
-                        aria-selected="true">Onsite Jobs</button>
-                    <button class="nav-link" id="job-virtual-tab" data-bs-toggle="tab" data-bs-target="#job-virtual"
-                        type="button" role="tab" aria-controls="job-virtual" aria-selected="false">Virtual Jobs</button>
+                    <!-- edit job list tab text for virtual jobs -->
+                    <button class="nav-link active" id="job-virtual-tab" data-bs-toggle="tab"
+                        data-bs-target="#job-virtual" type="button" role="tab" aria-controls="job-virtual"
+                        aria-selected="false">Virtual Jobs</button>
+                    <!-- edit job list tab text for onsite jobs -->
+                    <button class="nav-link " id="job-online-tab" data-bs-toggle="tab" data-bs-target="#job-online"
+                        type="button" role="tab" aria-controls="job-online" aria-selected="true">Onsite Jobs</button>
+
                 </div>
 
                 <div class="tab-content" id="jobs-tabContent">
-                    <div class="tab-pane fade show active" id="job-online" role="tabpanel"
-                        aria-labelledby="job-online-tab">
-                        <div class="eachJob">
+                    <!-- edit job list for virtual jobs -->
+                    <div class="tab-pane fade show active" id="job-virtual" role="tabpanel"
+                        aria-labelledby="job-virtual-tab">
+
+                        <div class="eachJob hidden">
                             <p class="jobAppliation_date">Application date 24-05-2024</p>
                             <h3 class="jobTitle">Advisor Manager</h3>
                             <p>
@@ -1260,11 +1244,13 @@
                                 </li>
                             </ul>
 
-                            <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">Apply
-                                Now
+                            <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">
+                                Apply Now
                             </button>
                         </div>
-                        <div class="eachJob">
+
+                        
+                        <div class="eachJob hidden">
                             <p class="jobAppliation_date">Application date 24-05-2024</p>
                             <h3 class="jobTitle">Advisor Manager</h3>
                             <p>
@@ -1330,7 +1316,7 @@
                             <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">Apply
                                 Now</button>
                         </div>
-                        <div class="eachJob">
+                        <div class="eachJob hidden">
                             <p class="jobAppliation_date">Application date 24-05-2024</p>
                             <h3 class="jobTitle">Advisor Manager</h3>
                             <p>
@@ -1396,7 +1382,7 @@
                             <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">Apply
                                 Now</button>
                         </div>
-                        <div class="eachJob">
+                        <div class="eachJob hidden">
                             <p class="jobAppliation_date">Application date 24-05-2024</p>
                             <h3 class="jobTitle">Advisor Manager</h3>
                             <p>
@@ -1462,146 +1448,16 @@
                             <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">Apply
                                 Now</button>
                         </div>
-                        <div class="eachJob">
-                            <p class="jobAppliation_date">Application date 24-05-2024</p>
-                            <h3 class="jobTitle">Advisor Manager</h3>
-                            <p>
-                                We are seeking a dynamic and experienced Advisor Manager to join our team. The Advisor
-                                Manager will play a crucial role in overseeing a team of advisors who provide
-                                personalized assistance and guidance to immigrants throughout their relocation process.
-                                This role requires a deep understanding of immigrant needs, excellent leadership skills,
-                                and a passion for making a positive impact. We are seeking a dynamic and experienced
-                                Advisor Manager to join our team. The Advisor Manager will play a crucial role in
-                                overseeing a team!
-                                <span class="content hideContent">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
-                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
-                                    aperiam, at praesentium maiores reiciendis.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
-                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
-                                    aperiam, at praesentium maiores reiciendis.
-
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
-                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
-                                    aperiam, at praesentium maiores reiciendis.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
-                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
-                                    aperiam, at praesentium maiores reiciendis.
-
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
-                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
-                                    aperiam, at praesentium maiores reiciendis.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
-                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
-                                    aperiam, at praesentium maiores reiciendis.
-                                </span>
-                                <button class="show-more">Show more</button>
-                            </p>
-                            <ul class="jobLocationTypeList">
-                                <li>
-                                    <span>
-                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M9.5625 10.6603C9.5625 9.79832 9.90491 8.97167 10.5144 8.36218C11.1239 7.75269 11.9505 7.41028 12.8125 7.41028C13.6745 7.41028 14.5011 7.75269 15.1106 8.36218C15.7201 8.97167 16.0625 9.79832 16.0625 10.6603C16.0625 11.5222 15.7201 12.3489 15.1106 12.9584C14.5011 13.5679 13.6745 13.9103 12.8125 13.9103C11.9505 13.9103 11.1239 13.5679 10.5144 12.9584C9.90491 12.3489 9.5625 11.5222 9.5625 10.6603Z"
-                                                fill="#7C7C7C" />
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M4.5841 9.53728C4.74998 7.52686 5.66574 5.65231 7.14957 4.28573C8.63341 2.91916 10.5768 2.16047 12.5941 2.16028H13.0261C15.0433 2.16047 16.9868 2.91916 18.4706 4.28573C19.9545 5.65231 20.8702 7.52686 21.0361 9.53728C21.2214 11.7818 20.5284 14.0106 19.1031 15.7543L14.3101 21.6163C14.1284 21.8386 13.8996 22.0178 13.6402 22.1409C13.3808 22.2639 13.0972 22.3277 12.8101 22.3277C12.523 22.3277 12.2394 22.2639 11.98 22.1409C11.7206 22.0178 11.4918 21.8386 11.3101 21.6163L6.5181 15.7543C5.0924 14.0107 4.39905 11.7819 4.5841 9.53728ZM12.8101 5.91028C11.5503 5.91028 10.3421 6.41072 9.45134 7.30152C8.56054 8.19232 8.0601 9.4005 8.0601 10.6603C8.0601 11.9201 8.56054 13.1282 9.45134 14.019C10.3421 14.9098 11.5503 15.4103 12.8101 15.4103C14.0699 15.4103 15.2781 14.9098 16.1689 14.019C17.0597 13.1282 17.5601 11.9201 17.5601 10.6603C17.5601 9.4005 17.0597 8.19232 16.1689 7.30152C15.2781 6.41072 14.0699 5.91028 12.8101 5.91028Z"
-                                                fill="#7C7C7C" />
-                                        </svg>
-                                    </span>
-                                    Lime Peru
-                                </li>
-                                <li>
-                                    <span>
-                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M12.8125 2.66028C11.4993 2.66028 10.1989 2.91894 8.98567 3.42148C7.77241 3.92403 6.67002 4.66062 5.74143 5.58921C3.86607 7.46457 2.8125 10.0081 2.8125 12.6603C2.8125 15.3124 3.86607 17.856 5.74143 19.7313C6.67002 20.6599 7.77241 21.3965 8.98567 21.8991C10.1989 22.4016 11.4993 22.6603 12.8125 22.6603C15.4647 22.6603 18.0082 21.6067 19.8836 19.7313C21.7589 17.856 22.8125 15.3124 22.8125 12.6603C22.8125 11.3471 22.5538 10.0467 22.0513 8.83344C21.5487 7.62019 20.8122 6.5178 19.8836 5.58921C18.955 4.66062 17.8526 3.92403 16.6393 3.42148C15.4261 2.91894 14.1257 2.66028 12.8125 2.66028ZM17.0125 16.8603L11.8125 13.6603V7.66028H13.3125V12.8603L17.8125 15.5603L17.0125 16.8603Z"
-                                                fill="#7C7C7C" />
-                                        </svg>
-                                    </span>
-                                    Full Time
-                                </li>
-                            </ul>
-
-                            <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">Apply
-                                Now</button>
-                        </div>
-                        <div class="eachJob">
-                            <p class="jobAppliation_date">Application date 24-05-2024</p>
-                            <h3 class="jobTitle">Advisor Manager</h3>
-                            <p>
-                                We are seeking a dynamic and experienced Advisor Manager to join our team. The Advisor
-                                Manager will play a crucial role in overseeing a team of advisors who provide
-                                personalized assistance and guidance to immigrants throughout their relocation process.
-                                This role requires a deep understanding of immigrant needs, excellent leadership skills,
-                                and a passion for making a positive impact. We are seeking a dynamic and experienced
-                                Advisor Manager to join our team. The Advisor Manager will play a crucial role in
-                                overseeing a team!
-                                <span class="content hideContent">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
-                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
-                                    aperiam, at praesentium maiores reiciendis.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
-                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
-                                    aperiam, at praesentium maiores reiciendis.
-
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
-                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
-                                    aperiam, at praesentium maiores reiciendis.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
-                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
-                                    aperiam, at praesentium maiores reiciendis.
-
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
-                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
-                                    aperiam, at praesentium maiores reiciendis.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde, odio quisquam
-                                    ipsa quaerat autem? Quasi inventore laborum id incidunt, in illo quo iure alias
-                                    aperiam, at praesentium maiores reiciendis.
-                                </span>
-                                <button class="show-more">Show more</button>
-                            </p>
-                            <ul class="jobLocationTypeList">
-                                <li>
-                                    <span>
-                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M9.5625 10.6603C9.5625 9.79832 9.90491 8.97167 10.5144 8.36218C11.1239 7.75269 11.9505 7.41028 12.8125 7.41028C13.6745 7.41028 14.5011 7.75269 15.1106 8.36218C15.7201 8.97167 16.0625 9.79832 16.0625 10.6603C16.0625 11.5222 15.7201 12.3489 15.1106 12.9584C14.5011 13.5679 13.6745 13.9103 12.8125 13.9103C11.9505 13.9103 11.1239 13.5679 10.5144 12.9584C9.90491 12.3489 9.5625 11.5222 9.5625 10.6603Z"
-                                                fill="#7C7C7C" />
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M4.5841 9.53728C4.74998 7.52686 5.66574 5.65231 7.14957 4.28573C8.63341 2.91916 10.5768 2.16047 12.5941 2.16028H13.0261C15.0433 2.16047 16.9868 2.91916 18.4706 4.28573C19.9545 5.65231 20.8702 7.52686 21.0361 9.53728C21.2214 11.7818 20.5284 14.0106 19.1031 15.7543L14.3101 21.6163C14.1284 21.8386 13.8996 22.0178 13.6402 22.1409C13.3808 22.2639 13.0972 22.3277 12.8101 22.3277C12.523 22.3277 12.2394 22.2639 11.98 22.1409C11.7206 22.0178 11.4918 21.8386 11.3101 21.6163L6.5181 15.7543C5.0924 14.0107 4.39905 11.7819 4.5841 9.53728ZM12.8101 5.91028C11.5503 5.91028 10.3421 6.41072 9.45134 7.30152C8.56054 8.19232 8.0601 9.4005 8.0601 10.6603C8.0601 11.9201 8.56054 13.1282 9.45134 14.019C10.3421 14.9098 11.5503 15.4103 12.8101 15.4103C14.0699 15.4103 15.2781 14.9098 16.1689 14.019C17.0597 13.1282 17.5601 11.9201 17.5601 10.6603C17.5601 9.4005 17.0597 8.19232 16.1689 7.30152C15.2781 6.41072 14.0699 5.91028 12.8101 5.91028Z"
-                                                fill="#7C7C7C" />
-                                        </svg>
-                                    </span>
-                                    Lime Peru
-                                </li>
-                                <li>
-                                    <span>
-                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M12.8125 2.66028C11.4993 2.66028 10.1989 2.91894 8.98567 3.42148C7.77241 3.92403 6.67002 4.66062 5.74143 5.58921C3.86607 7.46457 2.8125 10.0081 2.8125 12.6603C2.8125 15.3124 3.86607 17.856 5.74143 19.7313C6.67002 20.6599 7.77241 21.3965 8.98567 21.8991C10.1989 22.4016 11.4993 22.6603 12.8125 22.6603C15.4647 22.6603 18.0082 21.6067 19.8836 19.7313C21.7589 17.856 22.8125 15.3124 22.8125 12.6603C22.8125 11.3471 22.5538 10.0467 22.0513 8.83344C21.5487 7.62019 20.8122 6.5178 19.8836 5.58921C18.955 4.66062 17.8526 3.92403 16.6393 3.42148C15.4261 2.91894 14.1257 2.66028 12.8125 2.66028ZM17.0125 16.8603L11.8125 13.6603V7.66028H13.3125V12.8603L17.8125 15.5603L17.0125 16.8603Z"
-                                                fill="#7C7C7C" />
-                                        </svg>
-                                    </span>
-                                    Full Time
-                                </li>
-                            </ul>
-
-                            <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">Apply
-                                Now</button>
-                        </div>
-
 
                         <div class="jobLoadMore_wrap">
-                            <button class="loadMoreJob_btn" id="loadMoreVirtual">Load More</button>
+                            <button class="loadMoreJob_btn" id="loadMoreVirtual">
+                                Load More
+                            </button>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="job-virtual" role="tabpanel" aria-labelledby="job-virtual-tab">
-                        <div class="eachJob">
+                    <!-- edit job list for onsite jobs -->
+                    <div class="tab-pane fade " id="job-online" role="tabpanel" aria-labelledby="job-online-tab">
+                        <div class="eachJob hidden">
                             <p class="jobAppliation_date">Application date 24-05-2024</p>
                             <h3 class="jobTitle">Advisor Manager</h3>
                             <p>
@@ -1668,7 +1524,7 @@
                                 Now
                             </button>
                         </div>
-                        <div class="eachJob">
+                        <div class="eachJob hidden">
                             <p class="jobAppliation_date">Application date 24-05-2024</p>
                             <h3 class="jobTitle">Advisor Manager</h3>
                             <p>
@@ -1734,7 +1590,7 @@
                             <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">Apply
                                 Now</button>
                         </div>
-                        <div class="eachJob">
+                        <div class="eachJob hidden">
                             <p class="jobAppliation_date">Application date 24-05-2024</p>
                             <h3 class="jobTitle">Advisor Manager</h3>
                             <p>
@@ -1800,7 +1656,7 @@
                             <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">Apply
                                 Now</button>
                         </div>
-                        <div class="eachJob">
+                        <div class="eachJob hidden">
                             <p class="jobAppliation_date">Application date 24-05-2024</p>
                             <h3 class="jobTitle">Advisor Manager</h3>
                             <p>
@@ -1866,7 +1722,7 @@
                             <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">Apply
                                 Now</button>
                         </div>
-                        <div class="eachJob">
+                        <div class="eachJob hidden">
                             <p class="jobAppliation_date">Application date 24-05-2024</p>
                             <h3 class="jobTitle">Advisor Manager</h3>
                             <p>
@@ -1932,7 +1788,7 @@
                             <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">Apply
                                 Now</button>
                         </div>
-                        <div class="eachJob">
+                        <div class="eachJob hidden">
                             <p class="jobAppliation_date">Application date 24-05-2024</p>
                             <h3 class="jobTitle">Advisor Manager</h3>
                             <p>
@@ -1998,11 +1854,13 @@
                             <button class="cmn_btn" data-bs-toggle="modal" data-bs-target="#applyJobModal">Apply
                                 Now</button>
                         </div>
+
 
                         <div class="jobLoadMore_wrap">
                             <button class="loadMoreJob_btn" id="loadMoreOnsite">Load More</button>
                         </div>
                     </div>
+
 
                 </div>
             </div>
@@ -2626,313 +2484,229 @@
                     <div class="tab-pane fade show active" id="ourTeam-all" role="tabpanel"
                         aria-labelledby="ourTeam-all-tab">
                         <div class="row ourTeam_row">
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Javier.png" alt="">
                                     </figure>
-                                    <h5>Javier Amuchástegui</h5>
-                                    <p class="roleInfo">
-                                        Legal Supervisor
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Vanessa.png" alt="">
                                     </figure>
-                                    <h5>Vanessa Biava</h5>
-                                    <p class="roleInfo">
-                                        Paralegal
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Agustina.png" alt="">
                                     </figure>
-                                    <h5>Agustina Canterino</h5>
-                                    <p class="roleInfo">
-                                        Paralegal
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Emmanuel.png" alt="">
                                     </figure>
-                                    <h5>Emmanuel Lopez</h5>
-                                    <p class="roleInfo">
-                                        Paralegal
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Natalia-Hillar.png" alt="">
                                     </figure>
-                                    <h5>Natalia Hillar</h5>
-                                    <h6 class="roleInfo">
-                                        Paralegal
-                                    </h6>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Carlos.png" alt="">
                                     </figure>
-                                    <h5>Carlos Contreras</h5>
-                                    <p class="roleInfo">
-                                        Legal Assistant
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Fabian.png" alt="">
                                     </figure>
-                                    <h5>Fabian Silva</h5>
-                                    <p class="roleInfo">
-                                        Legal Assistant
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/" alt="">
                                     </figure>
-                                    <h5>Daniel Velazco</h5>
-                                    <p class="roleInfo">
-                                        Legal Assistant
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Amilcar-Gómez.png" alt="">
                                     </figure>
-                                    <h5>Amilcar Gomez</h5>
-                                    <p class="roleInfo">
-                                        Legal Assistant
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/akelvy.png" alt="">
                                     </figure>
-                                    <h5>Akelvy</h5>
-                                    <p class="roleInfo">
-                                        Sales supervisor
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Simón-Solórzano.png" alt="">
                                     </figure>
-                                    <h5>Simón</h5>
-                                    <p class="roleInfo">
-                                        Client Intake Specialist
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Wilmer.png" alt="">
                                     </figure>
-                                    <h5>Wilmer</h5>
-                                    <p class="roleInfo">
-                                        Client Intake Specialist
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Giullio.png" alt="">
                                     </figure>
-                                    <h5>Giullio</h5>
-                                    <p class="roleInfo">
-                                        Client Intake Specialist
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/" alt="">
                                     </figure>
-                                    <h5>Margheris</h5>
-                                    <p class="roleInfo">
-                                        Client Intake Specialist
-                                    </p>
+                                   
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Diveana-Ollarve.png" alt="">
                                     </figure>
-                                    <h5>Diveana</h5>
-                                    <p class="roleInfo">
-                                        Client Intake Specialist
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Josdarlin.png" alt="">
                                     </figure>
-                                    <h5>Josdarlin</h5>
-                                    <p class="roleInfo">
-                                        Client Intake Specialist
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Foto-Thalia.png" alt="">
                                     </figure>
-                                    <h5>Thalia</h5>
-                                    <p class="roleInfo">
-                                        Client Intake Specialist
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Leudy.png" alt="">
                                     </figure>
-                                    <h5>Leudis</h5>
-                                    <p class="roleInfo">
-                                        Client Intake Specialist
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/akilves.png" alt="">
                                     </figure>
-                                    <h5>Akilves</h5>
-                                    <h6 class="roleInfo">
-                                        Marketing Director
-                                    </h6>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/JHONMAR.png" alt="">
                                     </figure>
-                                    <h5>Jhonmar</h5>
-                                    <p class="roleInfo">
-                                        Creative designer
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/robert.png" alt="">
                                     </figure>
-                                    <h5>Robet</h5>
-                                    <p class="roleInfo">
-                                        Creative designer
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Thailys.png" alt="">
                                     </figure>
-                                    <h5>Thailys</h5>
-                                    <p class="roleInfo">
-                                        Creative designer
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Will.png" alt="">
                                     </figure>
-                                    <h5>Will</h5>
-                                    <h6 class="roleInfo">
-                                        Creative designer
-                                    </h6>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/José-Camacho.png" alt="">
                                     </figure>
-                                    <h5>José Camacho</h5>
-                                    <p class="roleInfo">
-                                        SEM Specialist
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Armando.png" alt="">
                                     </figure>
-                                    <h5>José Armando</h5>
-                                    <p class="roleInfo">
-                                        Web Developer
-                                    </p>
+                                    
                                 </div>
                             </div>
 
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Ana.png" alt="">
                                     </figure>
-                                    <h5>Ana Flores</h5>
-                                    <h6 class="roleInfo">
-                                        Director of Firm Administration
-                                    </h6>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Leidy.png" alt="">
                                     </figure>
-                                    <h5>Leidy Ortega</h5>
-                                    <p class="roleInfo">
-                                        Billing Specialist
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Anna-Vano.png" alt="">
                                     </figure>
-                                    <h5>Anna Vano</h5>
-                                    <p class="roleInfo">
-                                        Billing Specialist
-                                    </p>
+                                    
                                 </div>
                             </div>
 
@@ -2941,206 +2715,152 @@
                     <div class="tab-pane fade" id="ourTeam-legalTeam" role="tabpanel"
                         aria-labelledby="ourTeam-legalTeam-tab">
                         <div class="row ourTeam_row">
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Javier.png" alt="">
                                     </figure>
-                                    <h5>Javier Amuchástegui</h5>
-                                    <p class="roleInfo">
-                                        Legal Supervisor
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Vanessa.png" alt="">
                                     </figure>
-                                    <h5>Vanessa Biava</h5>
-                                    <p class="roleInfo">
-                                        Paralegal
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Agustina.png" alt="">
                                     </figure>
-                                    <h5>Agustina Canterino</h5>
-                                    <p class="roleInfo">
-                                        Paralegal
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Emmanuel.png" alt="">
                                     </figure>
-                                    <h5>Emmanuel Lopez</h5>
-                                    <p class="roleInfo">
-                                        Paralegal
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Natalia-Hillar.png" alt="">
                                     </figure>
-                                    <h5>Natalia Hillar</h5>
-                                    <h6 class="roleInfo">
-                                        Paralegal
-                                    </h6>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Carlos.png" alt="">
                                     </figure>
-                                    <h5>Carlos Contreras</h5>
-                                    <p class="roleInfo">
-                                        Legal Assistant
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Fabian.png" alt="">
                                     </figure>
-                                    <h5>Fabian Silva</h5>
-                                    <p class="roleInfo">
-                                        Legal Assistant
-                                    </p>
+                                   
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/" alt="">
                                     </figure>
-                                    <h5>Daniel Velazco</h5>
-                                    <p class="roleInfo">
-                                        Legal Assistant
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Amilcar-Gómez.png" alt="">
                                     </figure>
-                                    <h5>Amilcar Gomez</h5>
-                                    <p class="roleInfo">
-                                        Legal Assistant
-                                    </p>
+                                    
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="ourTeam-sales" role="tabpanel" aria-labelledby="ourTeam-sales-tab">
                         <div class="row ourTeam_row">
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/akelvy.png" alt="">
                                     </figure>
-                                    <h5>Akelvy</h5>
-                                    <p class="roleInfo">
-                                        Sales supervisor
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Simón-Solórzano.png" alt="">
                                     </figure>
-                                    <h5>Simón</h5>
-                                    <p class="roleInfo">
-                                        Client Intake Specialist
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Wilmer.png" alt="">
                                     </figure>
-                                    <h5>Wilmer</h5>
-                                    <p class="roleInfo">
-                                        Client Intake Specialist
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Giullio.png" alt="">
                                     </figure>
-                                    <h5>Giullio</h5>
-                                    <p class="roleInfo">
-                                        Client Intake Specialist
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/" alt="">
                                     </figure>
-                                    <h5>Margheris</h5>
-                                    <p class="roleInfo">
-                                        Client Intake Specialist
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Diveana-Ollarve.png" alt="">
                                     </figure>
-                                    <h5>Diveana</h5>
-                                    <p class="roleInfo">
-                                        Client Intake Specialist
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Josdarlin.png" alt="">
                                     </figure>
-                                    <h5>Josdarlin</h5>
-                                    <p class="roleInfo">
-                                        Client Intake Specialist
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Foto-Thalia.png" alt="">
                                     </figure>
-                                    <h5>Thalia</h5>
-                                    <p class="roleInfo">
-                                        Client Intake Specialist
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Leudy.png" alt="">
                                     </figure>
-                                    <h5>Leudis</h5>
-                                    <p class="roleInfo">
-                                        Client Intake Specialist
-                                    </p>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -3148,81 +2868,60 @@
                     <div class="tab-pane fade" id="ourTeam-marketing" role="tabpanel"
                         aria-labelledby="ourTeam-marketing-tab">
                         <div class="row ourTeam_row">
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/akilves.png" alt="">
                                     </figure>
-                                    <h5>Akilves</h5>
-                                    <h6 class="roleInfo">
-                                        Marketing Director
-                                    </h6>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/JHONMAR.png" alt="">
                                     </figure>
-                                    <h5>Jhonmar</h5>
-                                    <p class="roleInfo">
-                                        Creative designer
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/robert.png" alt="">
                                     </figure>
-                                    <h5>Robet</h5>
-                                    <p class="roleInfo">
-                                        Creative designer
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Thailys.png" alt="">
                                     </figure>
-                                    <h5>Thailys</h5>
-                                    <p class="roleInfo">
-                                        Creative designer
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Will.png" alt="">
                                     </figure>
-                                    <h5>Will</h5>
-                                    <h6 class="roleInfo">
-                                        Creative designer
-                                    </h6>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/José-Camacho.png" alt="">
                                     </figure>
-                                    <h5>José Camacho</h5>
-                                    <p class="roleInfo">
-                                        SEM Specialist
-                                    </p>
+                                   
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Armando.png" alt="">
                                     </figure>
-                                    <h5>José Armando</h5>
-                                    <p class="roleInfo">
-                                        Web Developer
-                                    </p>
+                                    
                                 </div>
                             </div>
 
@@ -3231,37 +2930,28 @@
                     <div class="tab-pane fade" id="ourTeam-billing" role="tabpanel"
                         aria-labelledby="ourTeam-billing-tab">
                         <div class="row ourTeam_row">
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Ana.png" alt="">
                                     </figure>
-                                    <h5>Ana Flores</h5>
-                                    <h6 class="roleInfo">
-                                        Director of Firm Administration
-                                    </h6>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Leidy.png" alt="">
                                     </figure>
-                                    <h5>Leidy Ortega</h5>
-                                    <p class="roleInfo">
-                                        Billing Specialist
-                                    </p>
+                                    
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-3 col-md-6 ourTeam_col">
+                            <div class="col-lg-3 col-md-6 ourTeam_col">
                                 <div class="ourTeamCard">
                                     <figure>
                                         <img src="./images/Anna-Vano.png" alt="">
                                     </figure>
-                                    <h5>Anna Vano</h5>
-                                    <p class="roleInfo">
-                                        Billing Specialist
-                                    </p>
+                                   
                                 </div>
                             </div>
 
@@ -3287,13 +2977,13 @@
                 </div>
                 <div class="modal-body">
                     <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-						<script>
-  hbspt.forms.create({
-    region: "na1",
-    portalId: "44518769",
-    formId: "520a0abb-0959-4a64-89d0-2c0bf4968d21"
-  });
-</script>
+                    <script>
+                        hbspt.forms.create({
+                            region: "na1",
+                            portalId: "44518769",
+                            formId: "520a0abb-0959-4a64-89d0-2c0bf4968d21"
+                        });
+                    </script>
                 </div>
 
             </div>
