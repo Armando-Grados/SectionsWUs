@@ -560,8 +560,11 @@
             width: 65px;
             flex-basis: 65px;
             margin-bottom: 0;
+            display: flex;
         }
-
+        .each_country_row .each_country figure img{
+            width: 100%;
+        }
         .each_country_row .each_country .each_country_text {
             padding-left: 20px;
             width: calc(100% - 65px);
@@ -686,6 +689,27 @@
         /* Virtual Office & Equipments end */
 
 
+        /* temp change start */
+        .cmnTabsWrap .jobTabs_nav {
+            display: flex;
+            justify-content: center;
+        }
+        .cmnTabsWrap .jobTabs_nav .job-tabs{
+            border-bottom: 0;
+            border-radius: 12px;
+            border: 1px solid #E0E0E0;
+            padding: 10px 12px;
+        }
+        .cmnTabsWrap .jobTabs_nav .job-tabs .nav-link{
+            border-bottom: 0;
+            padding: 4px 15px;
+        }
+        .cmnTabsWrap .jobTabs_nav .job-tabs .nav-link.active{
+            background-color: #006634;
+            color: #ffffff;
+            border-radius: 8px;
+        }
+        /* temp change end */
         /* media queries start */
         @media (max-width: 1399px) {
             .officeAnimatin_each .officeAnimatin_eachImg figure img {
@@ -1165,15 +1189,18 @@
                     well-being</p>
             </div>
             <div class="jobsTabWrap cmnTabsWrap">
-                <div class="nav nav-tabs job-tabs" id="jobs-tab" role="tablist">
-                    <!-- edit job list tab text for virtual jobs -->
-                    <button class="nav-link active" id="job-virtual-tab" data-bs-toggle="tab"
-                        data-bs-target="#job-virtual" type="button" role="tab" aria-controls="job-virtual"
-                        aria-selected="false">Virtual Jobs</button>
-                    <!-- edit job list tab text for onsite jobs -->
-                    <button class="nav-link " id="job-online-tab" data-bs-toggle="tab" data-bs-target="#job-online"
-                        type="button" role="tab" aria-controls="job-online" aria-selected="true">Onsite Jobs</button>
-
+                <!-- jobTabs_nav -->
+                <div class="jobTabs_nav">
+                    <div class="nav nav-tabs job-tabs" id="jobs-tab" role="tablist">
+                        <!-- edit job list tab text for virtual jobs -->
+                        <button class="nav-link active" id="job-virtual-tab" data-bs-toggle="tab"
+                            data-bs-target="#job-virtual" type="button" role="tab" aria-controls="job-virtual"
+                            aria-selected="false">Virtual Jobs</button>
+                        <!-- edit job list tab text for onsite jobs -->
+                        <button class="nav-link " id="job-online-tab" data-bs-toggle="tab" data-bs-target="#job-online"
+                            type="button" role="tab" aria-controls="job-online" aria-selected="true">Onsite Jobs</button>
+    
+                    </div>
                 </div>
 
                 <div class="tab-content" id="jobs-tabContent">
@@ -2338,20 +2365,20 @@
                             <div class="each_country_wrap">
                                 <div class="each_country">
                                     <figure>
-                                        <img src="./images/country1.svg" alt="">
+                                        <img src="./images/f1.png" alt="">
                                     </figure>
                                     <div class="each_country_text">
-                                        <h5>Canada</h5>
+                                        <h5>Estados Unidos</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="each_country_wrap">
                                 <div class="each_country">
                                     <figure>
-                                        <img src="./images/country1.svg" alt="">
+                                        <img src="./images/f2.png" alt="">
                                     </figure>
                                     <div class="each_country_text">
-                                        <h5>Canada</h5>
+                                        <h5>Peru</h5>
                                     </div>
                                 </div>
                             </div>
@@ -2360,20 +2387,20 @@
                             <div class="each_country_wrap">
                                 <div class="each_country">
                                     <figure>
-                                        <img src="./images/country2.svg" alt="">
+                                        <img src="./images/f3.png" alt="">
                                     </figure>
                                     <div class="each_country_text">
-                                        <h5>Brazil</h5>
+                                        <h5>Honduras</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="each_country_wrap">
                                 <div class="each_country">
                                     <figure>
-                                        <img src="./images/country2.svg" alt="">
+                                        <img src="./images/f4.png" alt="">
                                     </figure>
                                     <div class="each_country_text">
-                                        <h5>Brazil</h5>
+                                        <h5>Argentina</h5>
                                     </div>
                                 </div>
                             </div>
@@ -2383,42 +2410,20 @@
                             <div class="each_country_wrap">
                                 <div class="each_country">
                                     <figure>
-                                        <img src="./images/country1.svg" alt="">
+                                        <img src="./images/f5.png" alt="">
                                     </figure>
                                     <div class="each_country_text">
-                                        <h5>Canada</h5>
+                                        <h5>Puerto Rico</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="each_country_wrap">
                                 <div class="each_country">
                                     <figure>
-                                        <img src="./images/country1.svg" alt="">
+                                        <img src="./images/f6.png" alt="">
                                     </figure>
                                     <div class="each_country_text">
-                                        <h5>Canada</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="each_country_row">
-                            <div class="each_country_wrap">
-                                <div class="each_country">
-                                    <figure>
-                                        <img src="./images/country1.svg" alt="">
-                                    </figure>
-                                    <div class="each_country_text">
-                                        <h5>Canada</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="each_country_wrap">
-                                <div class="each_country">
-                                    <figure>
-                                        <img src="./images/country1.svg" alt="">
-                                    </figure>
-                                    <div class="each_country_text">
-                                        <h5>Canada</h5>
+                                        <h5>Espana</h5>
                                     </div>
                                 </div>
                             </div>
@@ -2427,20 +2432,42 @@
                             <div class="each_country_wrap">
                                 <div class="each_country">
                                     <figure>
-                                        <img src="./images/country2.svg" alt="">
+                                        <img src="./images/f7.png" alt="">
                                     </figure>
                                     <div class="each_country_text">
-                                        <h5>Brazil</h5>
+                                        <h5>Venezuela</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="each_country_wrap">
                                 <div class="each_country">
                                     <figure>
-                                        <img src="./images/country2.svg" alt="">
+                                        <img src="./images/f8.png" alt="">
                                     </figure>
                                     <div class="each_country_text">
-                                        <h5>Brazil</h5>
+                                        <h5>Mexico</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="each_country_row">
+                            <div class="each_country_wrap">
+                                <div class="each_country">
+                                    <figure>
+                                        <img src="./images/f9.png" alt="">
+                                    </figure>
+                                    <div class="each_country_text">
+                                        <h5>Colombia</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="each_country_wrap">
+                                <div class="each_country">
+                                    <figure>
+                                        <img src="./images/f10.png" alt="">
+                                    </figure>
+                                    <div class="each_country_text">
+                                        <h5>Republica Dominicana</h5>
                                     </div>
                                 </div>
                             </div>
