@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- custom css -->
+
+    <style>
+        body,html{
+            overflow-x: hidden;
+        }
+        body {
+            padding: 0;
+            
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .cmn_gap {
+            padding: 50px 0;
+        }
+
+        /* custom padding for bootstrap container */
+
+        .container-fluid {
+            padding: 0 80px;
+        }
+
+        /* common styles start */
+        .cmnSection_head {
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .cmnSection_head h6 {
+            font-weight: 700;
+            font-size: 18px;
+            color: #CEA03E;
+            margin-bottom: 0;
+        }
+
+        .cmnSection_head h2 {
+            font-weight: 700;
+            font-size: 48px;
+            margin-bottom: 15px;
+            color: #121212;
+        }
+
+        .cmnSection_head h2:last-child {
+            margin-bottom: 0;
+        }
+
+        .cmnSection_head p {
+            font-size: 24px;
+            color: #4A4A4A;
+        }
+
+        .cmn_btn {
+            font-size: 16px;
+            font-weight: 700;
+            color: #ffffff;
+            padding: 8px 24px;
+            min-width: 131px;
+            height: 44px;
+            background: linear-gradient(90deg, #EAB646 -2.63%, #966B33 100%);
+            border-radius: 4px;
+            border: 0;
+            transition: 0.4s all ease;
+        }
+
+        .cmn_btn:hover {
+            background: linear-gradient(90deg, #966B33 -2.63%, #EAB646 100%);
+        }
+
+        .cmn_innerTitle {
+            margin-bottom: 32px;
+        }
+
+        .cmn_innerTitle h3 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #121212;
+            margin-bottom: 25px;
+        }
+
+        .cmn_innerTitle p {
+            font-size: 18px;
+            font-weight: 400;
+            color: #CEA03E;
+        }
+
+        .cmn_innerTitle h3:last-child {
+            margin-bottom: 0;
+        }
+
+        .cmnSection_head {
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .cmnSection_head h6 {
+            font-weight: 700;
+            font-size: 18px;
+            color: #CEA03E;
+            margin-bottom: 0;
+        }
+
+        .cmnSection_head h2 {
+            font-weight: 700;
+            font-size: 48px;
+            margin-bottom: 15px;
+            color: #121212;
+        }
+
+        .cmnSection_head h2:last-child {
+            margin-bottom: 0;
+        }
+
+        .cmnSection_head p {
+            font-size: 24px;
+            color: #4A4A4A;
+        }
+
+
+        /* banner sec start */
+        .cmnBanner_sec {
+            position: relative;
+        }
+
+        .cmnBanner_sec figure {
+            margin-bottom: 0;
+        }
+
+        .cmnBanner_sec figure img {
+            width: 100%;
+            height: 332px;
+            object-fit: cover;
+        }
+
+        .cmnBanner_content {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            text-align: center;
+        }
+
+        .banner_title {
+            font-weight: 700;
+            color: #FFFFFF;
+            font-size: 56px;
+        }
+
+        /* banner sec end */
+
+        /* whatAsylum sec start */
+        .whatAsylum_right_img figure {
+            margin-bottom: 0;
+        }
+
+        .whatAsylum_right_img figure {
+            border-radius: 24px;
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+        }
+
+        .whatAsylum_right_img figure img {
+            width: 100%;
+            height: 100%;
+            max-height: 606px;
+            object-fit: cover;
+        }
+
+        .whatAsylum_sec {
+            font-size: 24px;
+        }
+
+        /* whatAsylum sec end */
+
+        /* apply Asylum sec start */
+        .applyAsylum_col_left figure {
+            margin-bottom: 25px;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .applyAsylum_col_left figure:last-child {
+            margin-bottom: 0;
+        }
+
+        .applyAsylum_col_left figure img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .applyAsylum_col_left figure.lgImg img {
+            height: 380px;
+        }
+
+        .applyAsylum_col_left figure.smImg img {
+            height: 178px;
+        }
+
+        .applyAsylum_col_right {
+            font-size: 24px;
+        }
+
+        /* apply Asylum sec end */
+
+        /* handle Asylum sec start */
+        .cmnSection_head.white h2 {
+            color: #ffffff;
+        }
+
+        .cmnSection_head.white p {
+            color: #ffffff;
+            max-width: 1220px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .handleAsylum_top {
+            padding: 50px 0 182px;
+            background: #006634;
+
+        }
+
+        .handleAsylum_card_each {
+            padding: 30px 24px;
+            background: #FFFFFF;
+            box-shadow: -4px 8px 35px rgba(0, 0, 0, 0.07);
+            border-radius: 16px;
+        }
+
+        .handleAsylum_card_each h4 {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .handleAsylum_card_each p {
+            font-size: 16px;
+            color: #7C7C7C;
+        }
+
+        .handleAsylum_card_wrap {
+            position: relative;
+            margin-top: -170px;
+        }
+
+        .handleAsylum_card_col{
+            margin-bottom: 24px;
+        }
+        .handleAsylum_card_row{
+            margin-bottom: -24px;
+        }
+
+        .handleAsylum_card_icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            background: #CEA03E;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* handle Asylum sec end */
+
+        /* meet experts sec start */
+        .meetExperts_cardWrap {
+            max-width: 905px;
+            margin: 0 auto;
+        }
+
+        .meetExperts_row {
+            margin: 0 -24px -30px;
+        }
+
+        .meetExperts_col {
+            padding: 0 24px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .meetExperts_col figure {
+            border-radius: 24px;
+            overflow: hidden;
+            margin-bottom: 25px;
+        }
+
+        .meetExperts_col figure img {
+            width: 100%;
+        }
+
+        .meetExperts_col h3 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .meetExperts_col p {
+            color: #7C7C7C;
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+
+        .exploneMore_btn {
+            display: inline-flex;
+            align-items: center;
+            color: #CEA03E;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .exploneMore_btn i {
+            margin-left: 6px;
+            transition: 0.3s all ease;
+        }
+
+        .exploneMore_btn:hover {
+            color: #CEA03E;
+        }
+
+        .exploneMore_btn:hover i {
+            transform: translateX(5px);
+        }
+
+        .meetExperts_card_content {
+            padding: 0 30px;
+        }
+
+        /* meet experts sec end */
+
+        /* application process start */
+        .applicationProcess_col {
+            margin-bottom: 25px;
+        }
+        .applicationProcess_row{
+            margin-bottom: -25px;
+        }
+        .applicationProcess_card {
+           
+            border-radius: 16px;
+            padding: 37px 32px;
+            color: #ffffff;
+        }
+        .applicationProcess_card.green{
+            background: #006634;
+        }
+        .applicationProcess_card.yellow{
+            background: #CEA03E;
+        }
+        .applicationProcess_card  figure{
+            margin-bottom: 35px;
+        }
+
+        .applicationProcess_card h3 {
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .applicationProcess_card p {
+            font-size: 24px;
+            margin-bottom: 35px;
+        }
+
+        .applyWhiteBtn {
+            padding: 14px 23px;
+            background: #ffffff;
+            color: #132020;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 700;
+            display: inline-block;
+            transition: 0.3s all ease;
+        }
+
+        .applyWhiteBtn:hover {
+            background: #132020;
+            color: #ffffff;
+        }
+
+        /* application process end */
+
+        /* faq section start */
+        .faq_accordion_wrap {
+            padding-top: 20px;
+        }
+
+        .accordion-item {
+            border: 0;
+            margin-bottom: 32px;
+        }
+
+        .accordion-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .accordion-item:first-of-type {
+            border-radius: 0;
+        }
+
+        .accordion-button {
+            color: #101828;
+            font-family: 'Helvetica';
+            font-size: 18px;
+            padding: 3px 0;
+        }
+
+        .accordion-button:not(.collapsed) {
+            box-shadow: none;
+            background: #ffffff;
+            color: #101828;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+
+        .accordion-body {
+            padding: 10px 0 0;
+            color: #7C7C7C;
+            font-size: 16px;
+        }
+
+        .accordion-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        .accordion-button::after {
+            background-image: url(./images/accordion-icon.svg);
+            background-size: contain;
+            width: 23px;
+            height: 23px;
+        }
+
+        .accordion-button:not(.collapsed)::after {
+            background-image: url(./images/accordion-expand-icon.svg);
+        }
+
+        .faq_row {
+            margin: 0 -38px -30px;
+        }
+
+        .faq_col {
+            padding: 0 38px;
+            margin-bottom: 30px;
+        }
+
+        .faq_right {
+            padding: 30px 24px;
+            background: #FFFFFF;
+            box-shadow: -4px 8px 35px rgba(0, 0, 0, 0.07);
+            border-radius: 16px;
+            height: 100%;
+        }
+
+        .faq_right h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #101828;
+            margin-bottom: 15px;
+        }
+
+        .faq_right p {
+            color: #7C7C7C;
+            font-size: 20px;
+        }
+
+        .faq_right p a {
+            color: #006634;
+            text-decoration: none;
+            transition: 0.3s all ease;
+        }
+
+        .faq_right p a:hover {
+            text-decoration: underline;
+        }
+
+        .stateNumber {
+            padding-top: 55px;
+            color: #394760;
+            font-size: 16px;
+        }
+
+        .stateNumber h3 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #000000;
+        }
+
+        .stateNumber .stateNumber_row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -17px -20px;
+        }
+
+        .stateNumber .stateNumber_col {
+            padding: 0 17px;
+            margin-bottom: 20px;
+        }
+
+        .stateNumber .stateNumber_col h4 {
+            color: #000000;
+        }
+
+        .stateNumber .stateNumber_col p {
+            font-weight: 500;
+        }
+
+        /* faq section end */
+
+        /* recent blog section start */
+        .recentBlogs_col{
+            margin-bottom: 25px;
+        }
+        .recentBlogs_row{
+            margin-bottom: -25px;
+        }
+        .blogsCard figure {
+            overflow: hidden;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin-bottom: 0;
+        }
+
+        .blogsCard figure img {
+            width: 100%;
+        }
+
+        .blogsCard_text {
+            padding: 16px 16px 20px;
+        }
+
+        .blogsCard_text h4 {
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .blogsCard_text h4 a {
+            color: #000000;
+            text-decoration: none;
+            transition: 0.3s all ease;
+        }
+
+        .blogsCard_text h4 a:hover {
+            color: #CEA03E;
+        }
+
+        .blogsCard_text p {
+            color: #7C7C7C;
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 24px;
+        }
+
+        .blogInfo_list {
+            list-style: none;
+            padding: 0;
+            margin: 0 -15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .blogInfo_list li {
+            display: flex;
+            width: 50%;
+            padding: 0 15px;
+            border-right: 1px solid #B8B8C0;
+            color: #333333;
+            font-size: 14px;
+        }
+
+        .blogInfo_list li>i {
+            margin-right: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .blogInfo_list li:last-child {
+            border: 0;
+            justify-content: flex-end;
+        }
+
+        .blogInfo_list li a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333333;
+        }
+
+        .blogInfo_list li a:hover {
+            text-decoration: underline;
+        }
+
+        .blogInfo_list li a i {
+            margin-right: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* recent blog section end */
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* media queries start */
+
+
+        @media (max-width: 1199px) {
+            .cmnSection_head h2 {
+                font-size: 35px;
+            }
+
+
+            .cmn_innerTitle h3 {
+                font-size: 35px;
+            }
+
+
+        }
+
+        @media (max-width: 991px) {
+            .container-fluid {
+                padding: 0 15px;
+            }
+
+            .cmn_innerTitle h3 br {
+                display: none;
+            }
+
+            .banner_title {
+                font-size: 40px;
+            }
+
+            .whatAsylum_col {
+                margin-bottom: 30px;
+            }
+
+            .whatAsylum_col:last-child {
+                margin-bottom: 0;
+            }
+            .applyAsylum_col {
+                margin-bottom: 30px;
+            }
+            .applyAsylum_col:last-child{
+                margin-bottom: 0;
+            }
+            .meetExperts_sec.cmn_gap {
+                padding-bottom: 0;
+            }
+            .faq_sec.cmn_gap {
+                padding-bottom: 0;
+            }
+            .applicationProcess_sec.cmn_gap {
+                padding-bottom: 0;
+            }
+            
+        }
+
+        @media (max-width: 767px) {
+
+
+            .cmnSection_head h2 {
+                font-size: 24px;
+            }
+
+            .cmnSection_head h6 {
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+
+            .cmnSection_head p {
+                font-size: 16px;
+            }
+
+            .forDesktop {
+                display: none;
+            }
+
+            .forMobile {
+                display: block;
+            }
+
+            .cmn_innerTitle h3 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            .cmnBanner_sec figure img {
+                height: 157px;
+            }
+
+            .banner_title {
+                font-size: 32px;
+            }
+
+            .whatAsylum_sec .cmn_innerTitle {
+                margin-bottom: 20px;
+            }
+
+            .whatAsylum_sec {
+                font-size: 16px;
+            }
+
+            .applyAsylum_col_left figure.lgImg img {
+                height: 216px;
+            }
+
+            .applyAsylum_col_left figure.smImg img {
+                height: 101px;
+            }
+            .applyAsylum_col_left figure{
+                margin-bottom: 14px;
+            }
+            .applyAsylum_col_right {
+                font-size:16px;
+            }
+
+            .handleAsylum_top{
+                padding: 50px 0 90px;
+            }
+            .handleAsylum_card_wrap{
+                margin-top: -85px;
+            }
+            .handleAsylum_card_each{
+                padding: 30px 16px;
+            }
+
+            .meetExperts_col figure{
+                margin-bottom: 16px;
+            }
+            .meetExperts_card_content {
+                padding: 0 10px;
+            }
+            .meetExperts_col p{
+                margin-bottom: 10px;
+            }
+
+            .applicationProcess_card h3{
+                font-size: 24px;
+            }
+            .applicationProcess_card p{
+                font-size: 16px;
+                margin-bottom: 25px;
+            }
+            .applicationProcess_card{
+                padding: 27px 12px 40px;
+            }
+            .faq_right{
+                padding: 30px 12px;
+            }
+        }
+
+        @media (max-width: 375px) {}
+
+        /* media queries end */
+    </style>
+</head>
+
+<body>
+    <div class="cmnBanner_sec">
+        <figure>
+            <img src="images/banner_img.png" alt="">
+        </figure>
+        <div class="cmnBanner_content">
+            <div class="container-fluid">
+                <h1 class="banner_title">
+                    Asylum
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="whatAsylum_sec cmn_gap">
+        <div class="container-fluid">
+            <div class="whatAsylum_inner">
+                <div class="row whatAsylum_row">
+                    <div class="col-lg-6 whatAsylum_col">
+                        <div class="cmn_innerTitle">
+                            <h3>What is Asylum?</h3>
+                        </div>
+                        <p>
+                            Asylum is a form of protection which allows an individual to remain in the United States
+                            instead of being removed (deported) to a country where he or she fears persecution or harm.
+                            Under U.S. law, people who flee their countries because they fear persecution can apply for
+                            asylum. If they are granted asylum, this gives them protection and the right to stay in the
+                            United States.
+                        </p>
+                        <p>
+                            Asylum is a form of protection which allows an individual to remain in the United States
+                            instead of being removed (deported) to a country where he or she fears persecution or harm.
+                            Under U.S. law, people who flee their countries because they fear persecution can apply for
+                            asylum. If they are granted asylum, this gives them protection and the right to stay in the
+                            United States.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 whatAsylum_col">
+                        <div class="whatAsylum_right_img">
+                            <figure>
+                                <img src="images/whatAsylum-right.png" alt="">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="applyAsylum_sec cmn_gap pt-0">
+        <div class="container-fluid">
+            <div class="applyAsylum_inner">
+                <div class="cmnSection_head">
+                    <h6>Asylum Types</h6>
+                    <h2>You Can Apply for Asylum if?</h2>
+                    <p>If you face any this type of Issue then you can apply for asylum and the following are the
+                        details</p>
+                </div>
+                <div class="applyAsylum_row row">
+                    <div class="applyAsylum_col col-lg-6">
+                        <div class="applyAsylum_col_left">
+                            <div class="row">
+                                <div class="col-lg-6 col-6">
+                                    <figure class="lgImg"><img src="images/applyAsylum1.png" alt=""></figure>
+                                    <figure class="smImg"><img src="images/applyAsylu2.png" alt=""></figure>
+                                </div>
+                                <div class="col-lg-6 col-6">
+                                    <figure class="smImg"><img src="images/applyAsylum3.png" alt=""></figure>
+                                    <figure class="smImg"><img src="images/applyAsylum4.png" alt=""></figure>
+                                    <figure class="smImg"><img src="images/applyAsylum5.png" alt=""></figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="applyAsylum_col col-lg-6">
+                        <div class="applyAsylum_col_right">
+                            <p>
+                                If you are in danger in your home country, whether due to a political situation,
+                                religious reasons, ethinic conflict, sexual orientation, membership in a particular
+                                social group, or any number of other reasons, you may have the right to come to the
+                                United States and apply for asylum.
+                            </p>
+                            <p>
+                                If you are already in the country (either legally or illegally), you can also request
+                                asylum to ensure you are able to remain here without any problems. Whenever petitioning
+                                for asylum, it is important to ensure everything is handled correctly to avoid any type
+                                of legal problems that could put your status in jeopardy.
+                            </p>
+                            <p>
+                                If you are already in the country (either legally or illegally), you can also request
+                                asylum to ensure you are able to remain here without any problems. Whenever petitioning
+                                for asylum, it is important to ensure!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="handleAsylum_sec cmn_gap pt-0">
+        <div class="handleAsylum_top ">
+            <div class="container-fluid">
+                <div class="cmnSection_head white">
+                    <h6>Our Expertise!</h6>
+                    <h2>How We Handle Asylum Cases</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur. Vel ullamcorper diam hendrerit velit eget ullamcorper
+                        volutpat. Velit cursus donec dictum egestas placerat ac.</p>
+                </div>
+            </div>
+        </div>
+        <div class="handleAsylum_card_wrap">
+            <div class="container-fluid">
+                <div class="row handleAsylum_card_row">
+                    <div class="col-lg-3 col-md-6 handleAsylum_card_col">
+                        <div class="handleAsylum_card_each">
+                            <figure class="handleAsylum_card_icon"><img src="images/handleAsylum_icon.svg" alt="">
+                            </figure>
+                            <h4>Providing Expert Legal Guidance</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur. Est mattis vitae urna elementum sit integer.
+                                Lorem ipsum dolor sit amet consectetur.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 handleAsylum_card_col">
+                        <div class="handleAsylum_card_each">
+                            <figure class="handleAsylum_card_icon"><img src="images/handleAsylum_icon.svg" alt="">
+                            </figure>
+                            <h4>Representing the Asylum Seeker</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur. Est mattis vitae urna elementum sit integer.
+                                Lorem ipsum dolor sit amet consectetur.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 handleAsylum_card_col">
+                        <div class="handleAsylum_card_each">
+                            <figure class="handleAsylum_card_icon"><img src="images/handleAsylum_icon.svg" alt="">
+                            </figure>
+                            <h4>Advocating on Behalf of the Asylum Seeker</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur. Est mattis vitae urna elementum sit integer.
+                                Lorem ipsum dolor sit amet consectetur.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 handleAsylum_card_col">
+                        <div class="handleAsylum_card_each">
+                            <figure class="handleAsylum_card_icon"><img src="images/handleAsylum_icon.svg" alt="">
+                            </figure>
+                            <h4>Advocating on Behalf of the Asylum Seeker</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur. Est mattis vitae urna elementum sit integer.
+                                Lorem ipsum dolor sit amet consectetur.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="meetExperts_sec cmn_gap pt-0">
+        <div class="container-fluid">
+            <div class="meetExperts_inner">
+                <div class="cmnSection_head">
+                    <h6>Asylum Types</h6>
+                    <h2>Meet out Asylum Experts</h2>
+                    <p>If you face any this type of Issue then you can apply for asylum and the following are the
+                        details</p>
+                </div>
+                <div class="meetExperts_cardWrap">
+                    <div class="meetExperts_row row">
+                        <div class="col-lg-6 col-md-6 meetExperts_col">
+                            <figure>
+                                <img src="images/meetExperts1.png" alt="">
+                            </figure>
+                            <div class="meetExperts_card_content">
+                                <h3>Magdalena Cuprys, Esq.</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur. Est mattis vitae urna elementum sit integer.
+                                    Lorem ipsum dolor sit amet consectetur.
+                                </p>
+                                <a href="#url" class="exploneMore_btn">Explore More <i><img
+                                            src="images/double-arrow-right.svg" alt=""></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 meetExperts_col">
+                            <figure>
+                                <img src="images/meetExperts2.png" alt="">
+                            </figure>
+                            <div class="meetExperts_card_content">
+                                <h3>Magdalena Cuprys, Esq.</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur. Est mattis vitae urna elementum sit integer.
+                                    Lorem ipsum dolor sit amet consectetur.
+                                </p>
+                                <a href="#url" class="exploneMore_btn">Explore More <i><img
+                                            src="images/double-arrow-right.svg" alt=""></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="applicationProcess_sec cmn_gap">
+        <div class="container-fluid">
+            <div class="applicationProcess_inner">
+                <div class="cmnSection_head">
+                    <h6>Asylum Types</h6>
+                    <h2>Asylum Application Process</h2>
+                    <p>At commitment, we’re more than a company; we are supportive community dedicated to <br>
+                        empowering immigrant attorneys</p>
+                </div>
+                <div class="applicationProcess_row row">
+                    <div class="applicationProcess_col col-lg-6">
+                        <div class="applicationProcess_card green">
+                            <figure>
+                                <svg width="61" height="62" viewBox="0 0 61 62" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M60.4764 48.6311L56.1618 44.4356L56.1562 44.2839C55.9561 38.4558 53.8442 32.9329 50.1582 28.4871V31.4111C50.1582 34.3672 47.753 36.7725 44.7969 36.7725C43.4966 36.7725 42.2749 36.4234 41.2227 35.8123V36.1781C44.3897 39.1218 44.7317 44.9787 41.0793 48.6311L38.1213 51.593C36.9248 52.7885 35.6333 53.8635 34.2734 54.8283C37.1054 55.956 40.0987 56.6401 43.1787 56.7271L47.72 61.3875C47.8857 61.5538 48.0827 61.6856 48.2995 61.7755C48.5164 61.8653 48.7489 61.9114 48.9836 61.9111C49.4406 61.9111 49.898 61.7366 50.2471 61.3875L60.476 51.1582C61.1746 50.4601 61.1746 49.3293 60.4764 48.6312V48.6311Z"
+                                        fill="#CEA03E" />
+                                    <path
+                                        d="M37.8704 46.7868C36.9419 47.262 35.9316 47.4951 34.9678 47.4951C33.2188 47.4951 31.636 46.7743 30.5 45.6139C29.364 46.7743 27.7807 47.4951 26.0322 47.4951C22.5837 47.4951 19.7773 44.6888 19.7773 41.2402V39.7431C18.94 40.1416 18.0241 40.3478 17.0967 40.3467C13.6482 40.3467 10.8418 37.5403 10.8418 34.0918V28.596C10.8418 28.5574 10.8455 28.5215 10.8455 28.4828C7.15725 32.9292 5.04346 38.4539 4.84331 44.2839L0.523623 48.6311C-0.174541 49.3293 -0.174541 50.4602 0.523623 51.1582L10.7529 61.3876C11.4505 62.0857 12.5818 62.0857 13.2799 61.3876L17.8208 56.7271C24.5346 56.5386 30.8211 53.8355 35.5923 49.0659L37.8704 46.7868Z"
+                                        fill="#CEA03E" />
+                                    <path
+                                        d="M17.0986 36.7725C18.5791 36.7725 19.7793 35.5722 19.7793 34.0918V27.6415C19.7793 26.6697 20.5668 25.8823 21.5385 25.8823H21.5943C22.5661 25.8823 23.3535 26.6698 23.3535 27.6414V41.2402C23.3535 42.7207 24.5537 43.9209 26.0342 43.9209C27.5146 43.9209 28.7148 42.7207 28.7148 41.2402V27.6694C28.7148 25.5066 32.2891 25.4978 32.2891 27.6694V41.2402C32.2891 42.7207 33.4893 43.9209 34.9697 43.9209C36.5488 43.9209 37.6504 42.9594 37.6504 40.3467V24.0952C37.6504 21.9324 41.2246 21.9236 41.2246 24.0952V29.624C41.2246 31.5977 42.8242 33.1978 44.7988 33.1982C45.7869 33.1982 46.5859 32.3988 46.5859 31.4111V26.7339C46.5859 20.076 44.0849 13.7304 39.5422 8.86103L39.4375 2.69824C39.4375 1.71057 38.6381 0.911133 37.6504 0.911133H23.3535C22.3655 0.911133 21.5664 1.71057 21.5664 2.69824V9.23978C16.1841 14.9316 14.418 21.348 14.418 28.5969V34.0918C14.418 35.5722 15.6182 36.7725 17.0986 36.7725Z"
+                                        fill="#CEA03E" />
+                                </svg>
+                            </figure>
+                            <h3>Affirmative Asylum</h3>
+                            <p>
+                                Those hoping to come to or stay in the United States to avoid persecution must seek
+                                asylum. There are two (2) ways you may choose to seek asylum—learn more about each
+                                option below.
+                            </p>
+                            <a href="#url" class="applyWhiteBtn">
+                                Apply Now
+                            </a>
+                        </div>
+                    </div>
+                    <div class="applicationProcess_col col-lg-6">
+                        <div class="applicationProcess_card yellow">
+                            <figure>
+                                <svg width="61" height="62" viewBox="0 0 61 62" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M60.4764 48.1336L56.1618 43.938L56.1562 43.7864C55.9561 37.9582 53.8442 32.4354 50.1582 27.9895V30.9136C50.1582 33.8697 47.753 36.2749 44.7969 36.2749C43.4966 36.2749 42.2749 35.9258 41.2227 35.3147V35.6805C44.3897 38.6242 44.7317 44.4812 41.0793 48.1336L38.1213 51.0954C36.9248 52.291 35.6333 53.366 34.2734 54.3308C37.1054 55.4584 40.0987 56.1426 43.1787 56.2295L47.72 60.89C47.8857 61.0562 48.0827 61.188 48.2995 61.2779C48.5164 61.3678 48.7489 61.4139 48.9836 61.4136C49.4406 61.4136 49.898 61.239 50.2471 60.89L60.476 50.6607C61.1746 49.9625 61.1746 48.8317 60.4764 48.1337V48.1336Z"
+                                        fill="white" />
+                                    <path
+                                        d="M37.8704 46.2893C36.9419 46.7644 35.9316 46.9976 34.9678 46.9976C33.2188 46.9976 31.636 46.2768 30.5 45.1163C29.364 46.2768 27.7807 46.9976 26.0322 46.9976C22.5837 46.9976 19.7773 44.1912 19.7773 40.7427V39.2456C18.94 39.644 18.0241 39.8503 17.0967 39.8491C13.6482 39.8491 10.8418 37.0428 10.8418 33.5942V28.0984C10.8418 28.0598 10.8455 28.0239 10.8455 27.9852C7.15725 32.4317 5.04346 37.9563 4.84331 43.7864L0.523623 48.1336C-0.174541 48.8317 -0.174541 49.9626 0.523623 50.6607L10.7529 60.8901C11.4505 61.5881 12.5818 61.5881 13.2799 60.8901L17.8208 56.2295C24.5346 56.041 30.8211 53.338 35.5923 48.5683L37.8704 46.2893Z"
+                                        fill="white" />
+                                    <path
+                                        d="M17.0986 36.2749C18.5791 36.2749 19.7793 35.0747 19.7793 33.5942V27.144C19.7793 26.1721 20.5668 25.3847 21.5385 25.3847H21.5943C22.5661 25.3847 23.3535 26.1723 23.3535 27.1438V40.7427C23.3535 42.2231 24.5537 43.4233 26.0342 43.4233C27.5146 43.4233 28.7148 42.2231 28.7148 40.7427V27.1718C28.7148 25.0091 32.2891 25.0003 32.2891 27.1718V40.7427C32.2891 42.2231 33.4893 43.4233 34.9697 43.4233C36.5488 43.4233 37.6504 42.4619 37.6504 39.8491V23.5976C37.6504 21.4349 41.2246 21.426 41.2246 23.5976V29.1265C41.2246 31.1001 42.8242 32.7002 44.7988 32.7007C45.7869 32.7007 46.5859 31.9013 46.5859 30.9136V26.2364C46.5859 19.5784 44.0849 13.2329 39.5422 8.36347L39.4375 2.20068C39.4375 1.21301 38.6381 0.413574 37.6504 0.413574H23.3535C22.3655 0.413574 21.5664 1.21301 21.5664 2.20068V8.74222C16.1841 14.434 14.418 20.8505 14.418 28.0994V33.5942C14.418 35.0747 15.6182 36.2749 17.0986 36.2749Z"
+                                        fill="white" />
+                                </svg>
+
+                                </svg>
+                            </figure>
+                            <h3>Defensive Asylum</h3>
+                            <p>
+                                Those hoping to come to or stay in the United States to avoid persecution must seek
+                                asylum. There are two (2) ways you may choose to seek asylum—learn more about each
+                                option below.
+                            </p>
+                            <a href="#url" class="applyWhiteBtn">
+                                Apply Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="faq_sec cmn_gap">
+        <div class="container-fluid">
+            <div class="faq_inner">
+                <div class="cmnSection_head">
+                    <h6>Asylum Types</h6>
+                    <h2>Frequent Asked Questions</h2>
+                    <p>At commitment, we’re more than a company; we are supportive community dedicated to <br>
+                        empowering immigrant attorneys</p>
+                </div>
+                <div class="faq_accordion_wrap">
+                    <div class="row faq_row">
+                        <div class="col-lg-6 faq_col">
+                            <div class="faq_left">
+                                <div class="accordion" id="faqAccordion">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="faqAcc_heading1">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapse1" aria-expanded="true"
+                                                aria-controls="collapse1">
+                                                Is there a free trial available?
+                                            </button>
+                                        </h2>
+                                        <div id="collapse1" class="accordion-collapse collapse show"
+                                            aria-labelledby="faqAcc_heading1" data-bs-parent="#faqAccordion">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    We are seeking a dynamic and experienced Advisor Manager to join our
+                                                    team. The Advisor Manager will play a crucial role in overseeing a
+                                                    team
+                                                    of advisors who provide personalized assistance!
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="faqAcc_heading2">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapse2"
+                                                aria-expanded="false" aria-controls="collapse2">
+                                                What is your cancellation policy?
+                                            </button>
+                                        </h2>
+                                        <div id="collapse2" class="accordion-collapse collapse"
+                                            aria-labelledby="faqAcc_heading2" data-bs-parent="#faqAccordion">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+                                                    dicta
+                                                    omnis quod magni nam natus repudiandae adipisci eos sequi harum,
+                                                    eligendi at quas cumque aliquam! Vitae distinctio commodi laudantium
+                                                    eum!
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="faqAcc_heading3">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapse3"
+                                                aria-expanded="false" aria-controls="collapse3">
+                                                Can other info be added to an invoice?
+                                            </button>
+                                        </h2>
+                                        <div id="collapse3" class="accordion-collapse collapse"
+                                            aria-labelledby="faqAcc_heading3" data-bs-parent="#faqAccordion">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quas id
+                                                    aperiam a culpa vero sed repudiandae expedita odit commodi quidem
+                                                    voluptates tempora, consequatur nostrum esse eligendi ducimus sunt
+                                                    amet!
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="faqAcc_heading4">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapse4"
+                                                aria-expanded="false" aria-controls="collapse4">
+                                                Can I change my plan later?
+                                            </button>
+                                        </h2>
+                                        <div id="collapse4" class="accordion-collapse collapse"
+                                            aria-labelledby="faqAcc_heading4" data-bs-parent="#faqAccordion">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quas id
+                                                    aperiam a culpa vero sed repudiandae expedita odit commodi quidem
+                                                    voluptates tempora, consequatur nostrum esse eligendi ducimus sunt
+                                                    amet!
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="faqAcc_heading5">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapse5"
+                                                aria-expanded="false" aria-controls="collapse5">
+                                                What is your cancellation policy?
+                                            </button>
+                                        </h2>
+                                        <div id="collapse5" class="accordion-collapse collapse"
+                                            aria-labelledby="faqAcc_heading5" data-bs-parent="#faqAccordion">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quas id
+                                                    aperiam a culpa vero sed repudiandae expedita odit commodi quidem
+                                                    voluptates tempora, consequatur nostrum esse eligendi ducimus sunt
+                                                    amet!
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="faqAcc_heading6">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapse6"
+                                                aria-expanded="false" aria-controls="collapse6">
+                                                Can other info be added to an invoice?
+                                            </button>
+                                        </h2>
+                                        <div id="collapse6" class="accordion-collapse collapse"
+                                            aria-labelledby="faqAcc_heading6" data-bs-parent="#faqAccordion">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quas id
+                                                    aperiam a culpa vero sed repudiandae expedita odit commodi quidem
+                                                    voluptates tempora, consequatur nostrum esse eligendi ducimus sunt
+                                                    amet!
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="stateNumber">
+                                    <h3>Our States And Numbers</h3>
+                                    <p>
+                                        Diversified client profile across multiple verticals – Industrial Capex,
+                                        projects
+                                    </p>
+                                    <div class="stateNumber_row">
+                                        <div class="stateNumber_col">
+                                            <h4>6283+</h4>
+                                            <p>
+                                                Project Completed
+                                            </p>
+                                        </div>
+                                        <div class="stateNumber_col">
+                                            <h4>6283+</h4>
+                                            <p>
+                                                Happy Customers
+                                            </p>
+                                        </div>
+                                        <div class="stateNumber_col">
+                                            <h4>6283+</h4>
+                                            <p>
+                                                Project Completed
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 faq_col">
+                            <div class="faq_right">
+                                <h3>
+                                    Let’s make your Visa Possible
+                                </h3>
+                                <p>
+                                    You can reach us anytime via <a href="mailto:hi@immigrate.com">hi@immigrate.com</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="recentBlogs_sec cmn_gap">
+        <div class="container-fluid">
+            <div class="recentBlogs_inner">
+                <div class="cmnSection_head">
+                    <h6>Asylum Types</h6>
+                    <h2>Our recent blogs and articles</h2>
+                    <p>At commitment, we’re more than a company; we are supportive community dedicated to <br>
+                        empowering immigrant attorneys</p>
+                </div>
+                <div class="recentBlogs_row row">
+                    <div class="recentBlogs_col col-lg-4 col-md-6">
+                        <div class="blogsCard">
+                            <figure>
+                                <img src="images/blog1.png" alt="">
+                            </figure>
+                            <div class="blogsCard_text">
+                                <h4><a href="#url">Contrary to popular belief, Lorem Ipsu is not simply random.</a></h4>
+                                <p>
+                                    At commitment, we’re more than a company; we are supportive community dedicated to
+                                    empowering immigrant attorneys
+                                </p>
+                                <ul class="blogInfo_list">
+                                    <li>
+                                        <i><img src="images/calendar-icon.svg" alt=""></i> Nov 27,2023
+                                    </li>
+                                    <li>
+                                        <a href="#url"><i><img src="images/edit-icon.svg" alt=""></i> Angelo perara</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recentBlogs_col col-lg-4 col-md-6">
+                        <div class="blogsCard">
+                            <figure>
+                                <img src="images/blog2.png" alt="">
+                            </figure>
+                            <div class="blogsCard_text">
+                                <h4><a href="#url">Contrary to popular belief, Lorem Ipsu is not simply random.</a></h4>
+                                <p>
+                                    At commitment, we’re more than a company; we are supportive community dedicated to
+                                    empowering immigrant attorneys
+                                </p>
+                                <ul class="blogInfo_list">
+                                    <li>
+                                        <i><img src="images/calendar-icon.svg" alt=""></i> Nov 27,2023
+                                    </li>
+                                    <li>
+                                        <a href="#url"><i><img src="images/edit-icon.svg" alt=""></i> Angelo perara</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recentBlogs_col col-lg-4 col-md-6">
+                        <div class="blogsCard">
+                            <figure>
+                                <img src="images/blog3.png" alt="">
+                            </figure>
+                            <div class="blogsCard_text">
+                                <h4><a href="#url">Contrary to popular belief, Lorem Ipsu is not simply random.</a></h4>
+                                <p>
+                                    At commitment, we’re more than a company; we are supportive community dedicated to
+                                    empowering immigrant attorneys
+                                </p>
+                                <ul class="blogInfo_list">
+                                    <li>
+                                        <i><img src="images/calendar-icon.svg" alt=""></i> Nov 27,2023
+                                    </li>
+                                    <li>
+                                        <a href="#url"><i><img src="images/edit-icon.svg" alt=""></i> Angelo perara</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
