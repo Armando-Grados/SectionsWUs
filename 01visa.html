@@ -185,11 +185,18 @@
             padding: 0;
             margin-bottom: 0;
         }
-        .cmnTickList li{
+        .cmnTickList {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 0;
+        }
+
+        .cmnTickList li {
             display: flex;
 
         }
-        .cmnTickList li i{
+
+        .cmnTickList li i {
             margin-right: 20px;
             width: 28px;
             min-width: 28px;
@@ -317,9 +324,7 @@
         .cmnSection_head.white h2 {
             color: #ffffff;
         }
-        .cmnSection_head.white h6{
-            color: #ffffff;
-        }
+        
         .cmnSection_head.white p {
             color: #ffffff;
             max-width: 1220px;
@@ -676,6 +681,9 @@
 
 
         /* legal section card start */
+        .legalStatusCard_sec .cmnSection_head.white h6 {
+            color: #ffffff;
+        }
         .legalStatusCard_inner{
             background: #CEA03E;
             border-radius: 24px;
@@ -817,6 +825,12 @@
             width: 100%;
             max-height: 620px;
             object-fit: cover;
+        }
+        .abilityVisa_col{
+            margin-bottom: 30px;
+        }
+        .abilityVisa_row{
+            margin-bottom: -30px;
         }
         /* ability visa end */
 
@@ -1032,6 +1046,19 @@
             .cmnTabsWrap .nav-tabs .nav-link {
                 white-space: nowrap;
             }
+            .abilityVisa_sec {
+                padding-bottom: 0;
+            }
+
+            .visaClassification_sec .applicationProcess_row:not(:last-child) {
+                margin-bottom: 30px;
+            }
+            .visaClassificationRow_wrap .applicationProcess_row:nth-child(even){
+                flex-direction: column-reverse;
+            }
+            .recentBlogs_sec {
+                padding-top: 0;
+            }
         }
 
         @media (max-width: 767px) {
@@ -1211,6 +1238,69 @@
                 margin-bottom: 10px;
             }
 
+            .cmnBanner_sec figure img {
+                height: 157px;
+            }
+            .banner_title {
+                font-size: 32px;
+            }
+
+            .abilityVisa_sec .cmn_innerTitle {
+                margin-bottom: 20px;
+            }
+            .abilityVisa_sec p {
+                font-size: 16px;
+            }
+
+            .applicationProcess_card h3{
+                font-size: 24px;
+            }
+            .applicationProcess_card p{
+                font-size: 16px;
+                margin-bottom: 25px;
+            }
+            .applicationProcess_card{
+                padding: 27px 12px 40px;
+            }
+            .cmn_innerTitle_sm h4{
+                font-size: 24px;
+            }
+
+            .legalStatusCard_inner {
+                padding: 40px 15px;
+            }
+
+            .legalStatusCard_leftBg {
+                width: 150px;
+                left: -25px;
+                top: -25px;
+            }
+
+            .legalStatusCard_rightBg {
+                width: 198px;
+                right: -10px;
+                bottom: -30px;
+            }
+            .handleAsylum_top {
+                padding: 50px 0 90px;
+            }
+
+            .handleAsylum_card_wrap {
+                margin-top: -85px;
+            }
+            
+        }
+        @media (max-width: 479px) {
+            .applicationProcess_sec  .cmnTickList li {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .applicationProcess_sec  .cmnTickList li i{
+                margin-right: 16px;
+            }
+            .applicationProcess_sec  .cmnTickList {
+                margin-bottom: -20px;
+            }
         }
 
         @media (max-width: 375px) {
