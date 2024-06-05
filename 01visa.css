@@ -1,0 +1,1304 @@
+body,html{
+    overflow-x: hidden;
+}
+body {
+    padding: 0;
+    
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.cmn_gap {
+    padding: 50px 0;
+}
+
+/* custom padding for bootstrap container */
+
+.container-fluid {
+    padding: 0 80px;
+}
+
+/* common styles start */
+.cmnSection_head {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.cmnSection_head h6 {
+    font-weight: 700;
+    font-size: 18px;
+    color: #CEA03E;
+    margin-bottom: 0;
+}
+
+.cmnSection_head h2 {
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #121212;
+}
+
+.cmnSection_head h2:last-child {
+    margin-bottom: 0;
+}
+
+.cmnSection_head p {
+    font-size: 24px;
+    color: #4A4A4A;
+}
+
+.cmn_btn {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 8px 24px;
+    min-width: 131px;
+    height: 44px;
+    background: linear-gradient(90deg, #EAB646 -2.63%, #966B33 100%);
+    border-radius: 4px;
+    border: 0;
+    transition: 0.4s all ease;
+}
+
+.cmn_btn:hover {
+    background: linear-gradient(90deg, #966B33 -2.63%, #EAB646 100%);
+}
+
+.cmn_innerTitle {
+    margin-bottom: 32px;
+}
+
+.cmn_innerTitle h3 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #121212;
+    margin-bottom: 25px;
+}
+
+.cmn_innerTitle p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #CEA03E;
+}
+
+.cmn_innerTitle h3:last-child {
+    margin-bottom: 0;
+}
+
+.cmn_innerTitle_sm h4{
+    font-size: 32px;
+    font-weight: 400;
+}
+.cmnSection_head {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.cmnSection_head h6 {
+    font-weight: 700;
+    font-size: 18px;
+    color: #CEA03E;
+    margin-bottom: 0;
+}
+
+.cmnSection_head h2 {
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #121212;
+}
+
+.cmnSection_head h2:last-child {
+    margin-bottom: 0;
+}
+
+.cmnSection_head p {
+    font-size: 24px;
+    color: #4A4A4A;
+}
+
+.cmnSecHead_withImg {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.cmnSecHead_withImg figure {
+    margin-bottom: 0;
+}
+
+.cmnSecHead_withImg figure img {
+    width: 100%;
+    height: 285px;
+    object-fit: fill;
+}
+
+.cmnSecHead_withImg .cmnSecHead_withImg_content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 52px;
+    text-align: center;
+    max-width: 984px;
+    margin: 0 auto;
+}
+
+.cmnSecHead_withImg .cmnSecHead_withImg_content h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.cmnSecHead_withImg .cmnSecHead_withImg_content p {
+    font-size: 24px;
+    font-weight: 400;
+    color: #D7D7D7;
+}
+.forMobile {
+    display: none;
+}
+
+.cmnTickList{
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+.cmnTickList {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.cmnTickList li {
+    display: flex;
+
+}
+
+.cmnTickList li i {
+    margin-right: 20px;
+    width: 28px;
+    min-width: 28px;
+}
+
+/* banner sec start */
+.cmnBanner_sec {
+    position: relative;
+}
+
+.cmnBanner_sec figure {
+    margin-bottom: 0;
+}
+
+.cmnBanner_sec figure img {
+    width: 100%;
+    height: 332px;
+    object-fit: cover;
+}
+
+.cmnBanner_content {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.banner_title {
+    font-weight: 700;
+    color: #FFFFFF;
+    font-size: 56px;
+}
+
+/* banner sec end */
+
+/* visctim visa start */
+.victimVisa_sec{
+    font-size: 24px;
+}
+.victimVisa_sec .victimVisa_row{
+    align-items: center;
+}
+.victimVisa_sec .victimVisa_right_img{
+    padding-left: 163px;
+    padding-bottom: 58px;
+    position: relative;
+}
+.victimVisa_sec .victimVisa_right_img figure{
+    margin-bottom: 0;
+}
+.victimVisa_sec .victimVisa_right_img figure img{
+    width: 100%;
+}
+.victimVisa_right_img .victimVisa_lgImg{
+    border-radius: 16px;
+    overflow: hidden;
+    
+}
+.victimVisa_right_img .victimVisa_lgImg img{
+    max-height: 538px;
+    object-fit: cover;
+}
+.victimVisa_right_img .victimVisa_smImg{
+    max-width: 242px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border: 8px solid #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.victimVisa_right_img .victimVisa_smImg img{
+    max-height: 302px;
+    object-fit: cover;
+}
+/* visctim visa end */
+
+
+/* visa factor sec start */
+.visaFactor_col{
+    margin-bottom: 32px;
+}
+.visaFactor_row{
+    margin-bottom: -32px;
+}
+.visaFactor_card{
+    padding: 30px 20px;
+    background: #FFFFFF;
+    border-bottom: 3px solid #006634;
+    box-shadow: -4px 8px 35px rgba(0, 0, 0, 0.07);
+    border-radius: 16px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.visaFactor_card_left{
+    width: 64px;
+    flex-basis: 64px;
+}
+.visaFactor_card_right{
+    width: calc(100% - 64px);
+    flex-basis: calc(100% - 64px);
+    padding-left: 30px;
+    font-size: 16px;
+}
+.visaFactor_card_left .visaFactor_card_left_number{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 3px solid #CEA03E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.visaFactor_card_left .visaFactor_card_left_number h3{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+/* visa factor sec end */
+
+
+/* handle Asylum sec start */
+.cmnSection_head.white h2 {
+    color: #ffffff;
+}
+
+.cmnSection_head.white p {
+    color: #ffffff;
+    max-width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.handleAsylum_top {
+    padding: 50px 0 182px;
+    background: #006634;
+
+}
+
+.handleAsylum_card_each {
+    padding: 30px 24px;
+    background: #FFFFFF;
+    box-shadow: -4px 8px 35px rgba(0, 0, 0, 0.07);
+    border-radius: 16px;
+}
+
+.handleAsylum_card_each h4 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.handleAsylum_card_each p {
+    font-size: 16px;
+    color: #7C7C7C;
+}
+
+.handleAsylum_card_wrap {
+    position: relative;
+    margin-top: -170px;
+}
+
+.handleAsylum_card_col{
+    margin-bottom: 24px;
+}
+.handleAsylum_card_row{
+    margin-bottom: -24px;
+}
+
+.handleAsylum_card_icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background: #CEA03E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* handle Asylum sec end */
+
+/* meet experts sec start */
+.meetExperts_cardWrap {
+    max-width: 905px;
+    margin: 0 auto;
+}
+
+.meetExperts_row {
+    margin: 0 -24px -30px;
+}
+
+.meetExperts_col {
+    padding: 0 24px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.meetExperts_col figure {
+    border-radius: 24px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.meetExperts_col figure img {
+    width: 100%;
+}
+
+.meetExperts_col h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.meetExperts_col p {
+    color: #7C7C7C;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.exploneMore_btn {
+    display: inline-flex;
+    align-items: center;
+    color: #CEA03E;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.exploneMore_btn i {
+    margin-left: 6px;
+    transition: 0.3s all ease;
+}
+
+.exploneMore_btn:hover {
+    color: #CEA03E;
+}
+
+.exploneMore_btn:hover i {
+    transform: translateX(5px);
+}
+
+.meetExperts_card_content {
+    padding: 0 30px;
+}
+
+/* meet experts sec end */
+
+/* application process start */
+.applicationProcess_col {
+    margin-bottom: 25px;
+}
+.applicationProcess_row{
+    margin-bottom: -25px;
+}
+.applicationProcess_card {
+   
+    border-radius: 16px;
+    padding: 37px 32px;
+    color: #ffffff;
+}
+.applicationProcess_card.green{
+    background: #006634;
+}
+.applicationProcess_card.yellow{
+    background: #CEA03E;
+}
+.applicationProcess_card  figure{
+    margin-bottom: 35px;
+}
+
+.applicationProcess_card h3 {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.applicationProcess_card p {
+    font-size: 24px;
+    margin-bottom: 35px;
+}
+
+.applyWhiteBtn {
+    padding: 14px 23px;
+    background: #ffffff;
+    color: #132020;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    display: inline-block;
+    transition: 0.3s all ease;
+}
+
+.applyWhiteBtn:hover {
+    background: #132020;
+    color: #ffffff;
+}
+
+/* application process end */
+
+
+/* advantage of tvisa start */
+.advantagesTvisa_row{
+    margin: 0 -20px -30px;
+}
+.advantagesTvisa_col{
+    padding: 0 20px;
+    margin-bottom: 30px;
+}
+.advantagesTvisa_left figure{
+    margin-bottom: 0;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.advantagesTvisa_left figure img{
+    width: 100%;
+    max-height: 545px;
+    object-fit: cover;
+}
+.advantagesTvisa_list{
+    padding-top: 20px;
+    margin-bottom: 45px;
+}
+.advantagesTvisa_list .cmnTickList{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px -32px;
+}
+.advantagesTvisa_list .cmnTickList li{
+    width: 50%;
+    padding: 0 20px;
+    margin-bottom: 32px;
+    font-size: 18px;
+    font-weight: 400;
+}
+/* advantage of tvisa end */
+
+/* faq section start */
+.faq_accordion_wrap {
+    padding-top: 20px;
+}
+
+.accordion-item {
+    border: 0;
+    margin-bottom: 32px;
+}
+
+.accordion-item:last-child {
+    margin-bottom: 0;
+}
+
+.accordion-item:first-of-type {
+    border-radius: 0;
+}
+
+.accordion-button {
+    color: #101828;
+    font-family: 'Helvetica';
+    font-size: 18px !important;
+    padding: 3px 0 !important;
+}
+
+.accordion-button:not(.collapsed) {
+    box-shadow: none;
+    background: #ffffff;
+    color: #101828;
+}
+
+ .accordion:not(:last-child) {
+    border-bottom: 0;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-body {
+    padding: 10px 0 0;
+    color: #7C7C7C;
+    font-size: 16px;
+}
+
+.accordion-body p:last-child {
+    margin-bottom: 0;
+}
+
+ .accordion-button::after {
+    background-image: url(http://www.servingimmigrants.com/wp-content/uploads/2024/05/accordion-icon.svg);
+    background-size: contain;
+    width: 23px;
+    height: 23px;
+    content: "";
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url(http://www.servingimmigrants.com/wp-content/uploads/2024/05/accordion-expand-icon.svg);
+      content: "";
+}
+
+.faq_row {
+    margin: 0 -38px -30px;
+}
+
+.faq_col {
+    padding: 0 38px;
+    margin-bottom: 30px;
+}
+
+.faq_right {
+    padding: 30px 24px;
+    background: #FFFFFF;
+    box-shadow: -4px 8px 35px rgba(0, 0, 0, 0.07);
+    border-radius: 16px;
+    height: 100%;
+}
+
+.faq_right h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #101828;
+    margin-bottom: 15px;
+}
+
+.faq_right p {
+    color: #7C7C7C;
+    font-size: 20px;
+}
+
+.faq_right p a {
+    color: #006634;
+    text-decoration: none;
+    transition: 0.3s all ease;
+}
+
+.faq_right p a:hover {
+    text-decoration: underline;
+}
+
+.stateNumber {
+    padding-top: 55px;
+    color: #394760;
+    font-size: 16px;
+}
+
+.stateNumber h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.stateNumber .stateNumber_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -17px -20px;
+}
+
+.stateNumber .stateNumber_col {
+    padding: 0 17px;
+    margin-bottom: 20px;
+}
+
+.stateNumber .stateNumber_col h4 {
+    color: #000000;
+}
+
+.stateNumber .stateNumber_col p {
+    font-weight: 500;
+}
+
+/* faq section end */
+
+/* legal section start */
+.legalStatus_sec{
+    font-size: 24px;
+}
+.legalStatus_sec .legalStatus_left figure{
+    margin-bottom: 0;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.legalStatus_sec .legalStatus_left img{
+    width: 100%;
+    max-height: 448px;
+    object-fit: cover;
+}
+/* legal section end */
+
+
+/* legal section card start */
+.legalStatusCard_sec .cmnSection_head.white h6 {
+    color: #ffffff;
+}
+.legalStatusCard_inner{
+    background: #CEA03E;
+    border-radius: 24px;
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.legalStatusCard_leftBg{
+    position: absolute;
+    left: -80px;
+    top: -90px;
+    z-index: -1;
+}
+.legalStatusCard_rightBg{
+    position: absolute;
+    right: -20px;
+    bottom: -40px;
+    z-index: -1; 
+}
+.legalStatusCard_inner .cmnSection_head{
+    max-width: 888px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.legalStatusCard_inner .legalStatusCard_btn{
+    display: flex;
+    justify-content: center;
+}
+/* legal section card end */
+
+/* recent blog section start */
+.recentBlogs_col{
+    margin-bottom: 25px;
+}
+.recentBlogs_row{
+    margin-bottom: -25px;
+}
+.blogsCard figure {
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 0;
+}
+
+.blogsCard figure img {
+    width: 100%;
+}
+
+.blogsCard_text {
+    padding: 16px 16px 20px;
+}
+
+.blogsCard_text h4 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.blogsCard_text h4 a {
+    color: #000000;
+    text-decoration: none;
+    transition: 0.3s all ease;
+}
+
+.blogsCard_text h4 a:hover {
+    color: #CEA03E;
+}
+
+.blogsCard_text p {
+    color: #7C7C7C;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+
+.blogInfo_list {
+    list-style: none;
+    padding: 0;
+    margin: 0 -15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blogInfo_list li {
+    display: flex;
+    width: 50%;
+    padding: 0 15px;
+    border-right: 1px solid #B8B8C0;
+    color: #333333;
+    font-size: 14px;
+}
+
+.blogInfo_list li>i {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.blogInfo_list li:last-child {
+    border: 0;
+    justify-content: flex-end;
+}
+
+.blogInfo_list li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333333;
+}
+
+.blogInfo_list li a:hover {
+    text-decoration: underline;
+}
+
+.blogInfo_list li a i {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}
+
+/* recent blog section end */
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ability visa start */
+.abilityVisa_sec p{
+    font-size: 24px;
+}
+.abilityVisa_img figure{
+    border-radius: 24px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+.abilityVisa_img figure img{
+    width: 100%;
+    max-height: 620px;
+    object-fit: cover;
+}
+.abilityVisa_col{
+    margin-bottom: 30px;
+}
+.abilityVisa_row{
+    margin-bottom: -30px;
+}
+/* ability visa end */
+
+/* visa classification start */
+
+.visaClassification_sec .cmn_innerTitle_sm{
+    margin-bottom: 30px;
+}
+.visaClassification_sec .cmnTickList li{
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.visaClassification_sec .cmnTickList li:last-child{
+    margin-bottom: 0;
+}
+
+.visaClassification_sec .applicationProcess_row:not(:last-child){
+    margin-bottom: 60px;
+}
+/* visa classification end */
+/* media queries start */
+@media (max-width: 1399px) {
+    .officeAnimatin_each .officeAnimatin_eachImg figure img {
+        min-width: 260px;
+        height: 180px;
+    }
+
+    .OfficeEquipments_animations {
+        right: -35%;
+    }
+}
+
+@media (max-width: 1199px) {
+    .cmnSection_head h2 {
+        font-size: 35px;
+    }
+
+    .cmnSecHead_withImg .cmnSecHead_withImg_content h2 {
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+
+    .testimonialSlider_each .testimonialSlider_left {
+        width: 400px;
+        flex-basis: 400px;
+    }
+
+    .testimonialSlider_each .testimonialSlider_right {
+        width: calc(100% - 400px);
+        flex-basis: calc(100% - 400px);
+    }
+
+    .testimonialSlider_inner .testimonialSlider_bot {
+        max-width: calc(100% - 400px);
+    }
+
+    .cmn_innerTitle h3 {
+        font-size: 35px;
+    }
+
+    .testimonialSlider .carousel-item {
+        padding-top: 0;
+    }
+
+    .testimonialSlider_each .testimonialSlider_right .quoteIcon {
+        margin-bottom: 15px;
+    }
+
+    .officeAnimatin_each .officeAnimatin_eachImg figure img {
+        min-width: 230px;
+        height: 150px;
+    }
+
+    .OfficeEquipmentsSec {
+        padding: 90px 0;
+    }
+
+    .OfficeEquipments_animations {
+        right: -35%;
+    }
+
+    .OfficeEquipmentsContent .OfficeEquipmentsContent_inner {
+        max-width: 450px;
+    }
+
+    .each_country_row .each_country figure {
+        width: 50px;
+        flex-basis: 50px;
+        display: flex;
+    }
+
+    .each_country_row .each_country figure img {
+        width: 100%;
+    }
+
+    .each_country_row .each_country .each_country_text {
+        padding-left: 15px;
+        width: calc(100% - 50px);
+        flex-basis: calc(100% - 50px);
+    }
+
+    .mapCountries_inner .map_area figure img {
+        max-width: 350px;
+    }
+
+    
+
+    .ourTeam_row .ourTeam_col {
+       
+        margin-bottom: 10px;
+    }
+
+    .outTeamSec .ourTeam_row {
+        margin: 0 -10px -10px;
+    }
+
+
+}
+
+@media (max-width: 991px) {
+    .container-fluid {
+        padding: 0 15px;
+    }
+
+    .testimonialSlider_each .testimonialSlider_left {
+        position: static;
+        transform: initial;
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    .testimonialSlider_each .testimonialSlider_right {
+        width: 100%;
+        flex-basis: 100%;
+        padding-left: 0;
+        padding-top: 40px;
+    }
+
+    .testimonialSlider_each .testimonialSlider_left figure {
+        padding: 23px;
+    }
+
+    .testimonialSlider_each .testimonialSlider_left figure::before {
+        left: 0;
+        top: 0;
+    }
+
+    .testimonialSlider_each .testimonialSlider_left figure::after {
+        right: 0;
+        bottom: 0;
+    }
+
+    .testimonialSlider .carousel-inner {
+        padding: 0;
+        margin: 0;
+    }
+
+    .testimonialSlider_each .testimonialSlider_left figure img {
+        height: 650px;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .testimonialSlider_inner .testimonialSlider_bot {
+        max-width: initial;
+        padding: 10px 0 0;
+        position: static;
+    }
+
+    .testimonialSlider .carousel-item {
+        padding-bottom: 0;
+    }
+
+    .cmn_innerTitle h3 br {
+        display: none;
+    }
+
+    .officeAnimatin_each .officeAnimatin_eachImg figure img {
+        min-width: 200px;
+        height: 136px;
+    }
+
+    .OfficeEquipments_animations {
+        right: -30%;
+        top: 120px;
+    }
+
+    .OfficeEquipmentsSec {
+        padding: 50px 0;
+    }
+
+    .mapCountries_inner .map_area figure img {
+        max-width: 220px;
+    }
+
+    .each_country_row .each_country figure {
+        width: 40px;
+        flex-basis: 40px;
+    }
+
+    .each_country_row .each_country .each_country_text {
+        width: calc(100% - 40px);
+        flex-basis: calc(100% - 40px);
+    }
+
+    .cmnTabsWrap .nav-tabs {
+        flex-wrap: nowrap;
+        overflow: hidden;
+        overflow-x: auto;
+        justify-content: initial;
+    }
+
+    .cmnTabsWrap .nav-tabs .nav-link {
+        white-space: nowrap;
+    }
+    .abilityVisa_sec {
+        padding-bottom: 0;
+    }
+
+    .visaClassification_sec .applicationProcess_row:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    .visaClassificationRow_wrap .applicationProcess_row:nth-child(even){
+        flex-direction: column-reverse;
+    }
+    .recentBlogs_sec {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .eachJob .cmn_btn {
+        position: static;
+    }
+
+    .eachJob .jobLocationTypeList {
+        margin-bottom: 24px;
+    }
+
+    .cmnTabsWrap .nav-tabs .nav-link {
+        font-size: 16px;
+        padding: 0 15px 10px;
+    }
+
+    .cmnSection_head h2 {
+        font-size: 24px;
+    }
+
+    .cmnSection_head h6 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .cmnSection_head p {
+        font-size: 16px;
+    }
+
+    .eachJob .jobTitle {
+        font-size: 24px;
+    }
+
+    .cmnSecHead_withImg .cmnSecHead_withImg_content h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .cmnSecHead_withImg .cmnSecHead_withImg_content p {
+        font-size: 16px;
+    }
+
+    .forDesktop {
+        display: none;
+    }
+
+    .forMobile {
+        display: block;
+    }
+
+    .cmnSecHead_withImg {
+        margin-bottom: 50px;
+    }
+
+    .testimonialSlider_each .testimonialSlider_left figure::before {
+        max-width: 260px;
+        height: 310px;
+    }
+
+    .testimonialSlider_each .testimonialSlider_left figure::after {
+        max-width: 260px;
+        height: 310px;
+    }
+
+    .testimonialSlider_each .testimonialSlider_left figure img {
+        height: 465px;
+    }
+
+    .testimonialSlider_each .testimonialSlider_right .quoteIcon {
+        margin-bottom: 25px;
+    }
+
+    .OfficeEquipments_animations {
+        position: static;
+    }
+
+    .OfficeEquipments_animations_wrap {
+        overflow: hidden;
+        height: 350px;
+        margin-bottom: 40px;
+    }
+
+    .OfficeEquipmentsSec {
+        padding-top: 0;
+    }
+
+    .mapCountries_inner .map_area {
+        display: none;
+    }
+
+    .nationsSec .mapCountries_wrap {
+        padding-top: 0;
+    }
+
+    .countries_area .each_country_row:first-child,
+    .countries_area .each_country_row:last-child {
+        padding: 0;
+    }
+
+    .countries_area .each_country_row:nth-child(-2n+4) {
+        padding: 0;
+    }
+
+    .each_country_row .each_country_wrap {
+        width: 50%;
+        text-align: center;
+    }
+
+    .each_country_row .each_country .each_country_text {
+        width: 100%;
+        flex-basis: 100%;
+        padding-left: 0;
+    }
+
+    .each_country_row .each_country figure {
+        width: 40px;
+        flex-basis: 40px;
+        margin: 0 auto 12px;
+    }
+
+    .each_country_row .each_country {
+        box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+        border-radius: 8px;
+    }
+
+    .countries_area .each_country_row {
+        margin: 0 -8px 16px;
+    }
+
+    .countries_area .each_country_row:last-child {
+        margin-bottom: 0;
+    }
+
+    .each_country_row .each_country_wrap {
+        padding: 0 8px;
+    }
+
+    .outTeamSec {
+        padding-top: 0;
+    }
+
+    .each_country .each_country_text h5 {
+        font-size: 20px;
+    }
+
+    
+
+   
+
+    .ourTeamCard figure {
+        min-height: initial;
+        
+    }
+
+    .ourTeamCard h5 {
+        font-size: 14px;
+    }
+
+    .ourTeamCard .roleInfo {
+        font-size: 12px;
+    }
+
+    .ourTeam_row .ourTeam_col {
+        margin-bottom: 30px;
+    }
+
+    .outTeamSec .ourTeam_row {
+        margin-bottom: -30px;
+    }
+
+    .cmnSecHead_withImg .cmnSecHead_withImg_content {
+        top: 45px;
+    }
+
+    .cmn_innerTitle h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .cmnBanner_sec figure img {
+        height: 157px;
+    }
+    .banner_title {
+        font-size: 32px;
+    }
+
+    .abilityVisa_sec .cmn_innerTitle {
+        margin-bottom: 20px;
+    }
+    .abilityVisa_sec p {
+        font-size: 16px;
+    }
+
+    .applicationProcess_card h3{
+        font-size: 24px;
+    }
+    .applicationProcess_card p{
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+    .applicationProcess_card{
+        padding: 27px 12px 40px;
+    }
+    .cmn_innerTitle_sm h4{
+        font-size: 24px;
+    }
+
+    .legalStatusCard_inner {
+        padding: 40px 15px;
+    }
+
+    .legalStatusCard_leftBg {
+        width: 150px;
+        left: -25px;
+        top: -25px;
+    }
+
+    .legalStatusCard_rightBg {
+        width: 198px;
+        right: -10px;
+        bottom: -30px;
+    }
+    .handleAsylum_top {
+        padding: 50px 0 90px;
+    }
+
+    .handleAsylum_card_wrap {
+        margin-top: -85px;
+    }
+    
+}
+@media (max-width: 479px) {
+    .applicationProcess_sec  .cmnTickList li {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .applicationProcess_sec  .cmnTickList li i{
+        margin-right: 16px;
+    }
+    .applicationProcess_sec  .cmnTickList {
+        margin-bottom: -20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .testimonialSlider_bot_right {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .testimonialSlider_bot_right svg {
+        max-width: 70%;
+    }
+}
+
+/* media queries end */

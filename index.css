@@ -1,0 +1,1128 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    padding: 0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* custom padding for bootstrap container */
+.container-fluid {
+    padding: 0 80px;
+}
+
+/* common styles start */
+.cmnSection_head {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.cmnSection_head h6 {
+    font-weight: 700;
+    font-size: 18px;
+    color: #CEA03E;
+    margin-bottom: 0;
+}
+
+.cmnSection_head h2 {
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #121212;
+}
+
+.cmnSection_head h2:last-child {
+    margin-bottom: 0;
+}
+
+.cmnSection_head p {
+    font-size: 24px;
+    color: #4A4A4A;
+}
+
+.cmn_btn {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 8px 24px;
+    min-width: 131px;
+    height: 44px;
+    background: linear-gradient(90deg, #EAB646 -2.63%, #966B33 100%);
+    border-radius: 4px;
+    border: 0;
+    transition: 0.4s all ease;
+}
+
+.cmn_btn:hover {
+    background: linear-gradient(90deg, #966B33 -2.63%, #EAB646 100%);
+}
+
+.cmnSecHead_withImg {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.cmnSecHead_withImg figure {
+    margin-bottom: 0;
+}
+
+.cmnSecHead_withImg figure img {
+    width: 100%;
+    height: 285px;
+    object-fit: fill;
+}
+
+.cmnSecHead_withImg .cmnSecHead_withImg_content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 52px;
+    text-align: center;
+    max-width: 984px;
+    margin: 0 auto;
+}
+
+.cmnSecHead_withImg .cmnSecHead_withImg_content h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.cmnSecHead_withImg .cmnSecHead_withImg_content p {
+    font-size: 24px;
+    font-weight: 400;
+    color: #D7D7D7;
+}
+
+.cmn_innerTitle {
+    margin-bottom: 32px;
+}
+
+.cmn_innerTitle h3 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #121212;
+    margin-bottom: 25px;
+}
+
+.cmn_innerTitle p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #CEA03E;
+}
+
+.cmn_innerTitle h3:last-child {
+    margin-bottom: 0;
+}
+
+.cmn_gap {
+    padding: 50px 0;
+}
+
+.cmnTabsWrap .nav-tabs {
+    justify-content: center;
+    border-bottom: 3px solid #E6E6E6;
+    margin-bottom: 40px;
+}
+
+.cmnTabsWrap .nav-tabs .nav-link {
+    border: 0;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    font-size: 24px;
+    color: #8F8F8F;
+    font-weight: 400;
+    padding: 0 28px 10px;
+
+}
+
+.cmnTabsWrap .nav-tabs .nav-link.active {
+    border-bottom-color: #006634;
+    font-weight: 700;
+    color: #006634;
+}
+
+.forMobile {
+    display: none;
+}
+
+/* common styles end */
+
+/* job section start */
+
+
+.jobsSec .cmnSection_head {
+    margin-bottom: 56px;
+}
+
+.eachJob {
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #E0E0E0;
+    position: relative;
+    font-size: 18px;
+    font-weight: 400;
+    color: #7C7C7C;
+}
+
+.eachJob .cmn_btn {
+    position: absolute;
+    right: 0;
+    top: 12px;
+
+}
+
+.eachJob .jobAppliation_date {
+    font-size: 14px;
+    font-weight: 700;
+    color: #CEA03E;
+    margin-bottom: 8px;
+}
+
+.eachJob .jobTitle {
+    font-weight: 700;
+    font-size: 32px;
+    color: #006634;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 15px;
+}
+
+.eachJob p {
+    margin-bottom: 15px;
+}
+
+.eachJob .hideContent {
+    display: none;
+}
+
+.eachJob .showContent {
+    display: initial;
+}
+
+.eachJob .show-more {
+    background: transparent;
+    border: 0;
+    color: #CEA03E;
+    margin-left: 5px;
+    font-weight: 500;
+}
+
+.eachJob .jobLocationTypeList {
+    list-style: none;
+    padding: 5px 0 0;
+    margin: 0 -8px;
+    display: flex;
+}
+
+.eachJob .jobLocationTypeList li {
+    font-size: 14px;
+    font-weight: 400;
+    color: #7C7C7C;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+}
+
+.eachJob .jobLocationTypeList li span {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.jobLoadMore_wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.jobLoadMore_wrap .loadMoreJob_btn {
+    min-width: 149px;
+    height: 44px;
+    border: 1px solid #132020;
+    border-radius: 4px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 5px 10px 7px 10px;
+    color: #132020;
+}
+.jobLoadMore_wrap .loadMoreJob_btn.hidden{
+    display: none;
+}
+
+.jobLoadMore_wrap .loadMoreJob_btn:hover {
+    background-color: #CEA03E;
+    color: #ffffff;
+    border-color: #CEA03E;
+}
+
+.applyJobModal .modal-footer {
+    justify-content: center;
+    border: 0;
+}
+
+.modal-header {
+    position: relative;
+}
+
+.modal-header .btn-close {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    margin: 0;
+    z-index: 1;
+
+}
+
+.modal-header .modal-title {
+    width: 100%;
+    text-align: center;
+}
+
+/* job section end */
+
+/* Client success Stories start */
+.successStoriesSec {
+    background: #F6F6F6;
+    padding: 0 0 50px;
+}
+
+.testimonialSlider .carousel-inner {
+    padding: 32px 32px;
+    margin: 0 -32px;
+}
+
+.testimonialSlider .carousel-item {
+    padding: 32px 0 95px;
+}
+
+.testimonialSlider .testimonialSlider_each {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.testimonialSlider_each .testimonialSlider_left {
+    width: 507px;
+    flex-basis: 507px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+
+.testimonialSlider_each .testimonialSlider_left figure {
+    margin-bottom: 0;
+}
+
+.testimonialSlider_each .testimonialSlider_right {
+    width: calc(100% - 507px);
+    flex-basis: calc(100% - 507px);
+    padding-left: 110px;
+    margin-left: auto;
+    padding-top: 32px;
+}
+
+
+.testimonialSlider_each .testimonialSlider_left figure {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.testimonialSlider_each .testimonialSlider_left figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonialSlider_each .testimonialSlider_left figure::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    max-width: 370px;
+    height: 438px;
+    background: #006634;
+    top: -32px;
+    left: -32px;
+    z-index: -1;
+}
+
+.testimonialSlider_each .testimonialSlider_left figure::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    max-width: 370px;
+    height: 438px;
+    background: #CEA03E;
+    bottom: -32px;
+    right: -32px;
+    z-index: -1;
+}
+
+.testimonialSlider_each .testimonialSlider_right .testimonialText p {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.testimonialSlider_each .testimonialSlider_right .testimonialInfo h6 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 2px;
+}
+
+.testimonialSlider_each .testimonialSlider_right .testimonialInfo p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #303030;
+}
+
+.testimonialSlider_each .testimonialSlider_right .quoteIcon {
+    margin-bottom: 25px;
+}
+
+.testimonialSlider_inner {
+    position: relative;
+}
+
+.testimonialSlider_inner .testimonialSlider_bot {
+    position: absolute;
+    right: 0;
+    bottom: 68px;
+    max-width: calc(100% - 507px);
+    width: 100%;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 110px;
+}
+
+.testimonialSlider_bot .testimonialSliderControls_arrow {
+    padding: 16px 24px;
+    /* min-width: 133px; */
+    height: 44px;
+    background: #CEA03E;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFFFFF;
+    border: 0;
+    margin-left: 10px;
+    line-height: 1;
+}
+
+.testimonialSlider_bot .testimonialSliderControls_arrow:hover {
+    background: #006634;
+}
+
+.testimonialSlider_bot .testimonialSliderControls_arrow:first-child {
+    margin-left: 0;
+}
+
+.testimonialSlider_bot_Left {
+    display: flex;
+}
+
+
+/* Client success Stories end */
+
+/* meet our team start */
+.outTeamSec .ourTeam_row {
+    margin: 0 -12px -30px;
+}
+
+.ourTeam_row .ourTeam_col {
+    padding: 0 12px;
+    margin-bottom: 30px;
+}
+
+.ourTeam_col .ourTeamCard {
+    text-align: center;
+}
+
+.ourTeamCard figure {
+    background: #537D7D;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* min-height: 230px;
+   min-height: 282px; */
+}
+
+.ourTeamCard figure img {
+    /* height: 282px; */
+    object-fit: cover;
+    width: 100%;
+}
+
+.ourTeamCard h5 {
+    color: #121212;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.ourTeamCard .roleInfo {
+    font-size: 16px;
+    font-weight: 700;
+    color: #CEA03E;
+}
+
+.ourTeamCard .roleInfo:last-child {
+    margin-bottom: 0;
+}
+
+/* meet our team end */
+
+
+/* global team from nations start */
+.nationsSec .mapCountries_wrap {
+    padding-top: 70px;
+}
+
+.nationsSec .mapCountries_inner {
+    position: relative;
+
+}
+
+.mapCountries_inner .map_area {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.mapCountries_inner .map_area figure {
+    margin-bottom: 0;
+}
+
+.countries_area .each_country_row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -15px 30px;
+}
+
+.countries_area .each_country_row:last-child {
+    margin-bottom: 0;
+}
+
+.each_country_row .each_country_wrap {
+    padding: 0 15px;
+}
+
+.each_country_row .each_country {
+    padding: 9px 8px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+}
+
+.each_country_row .each_country figure {
+    width: 65px;
+    flex-basis: 65px;
+    margin-bottom: 0;
+    display: flex;
+}
+.each_country_row .each_country figure img{
+    width: 100%;
+}
+.each_country_row .each_country .each_country_text {
+    padding-left: 20px;
+    width: calc(100% - 65px);
+    flex-basis: calc(100% - 65px);
+}
+
+.each_country .each_country_text h5 {
+    color: #132020;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.countries_area .each_country_row:first-child,
+.countries_area .each_country_row:last-child {
+    padding: 0 123px;
+}
+
+.countries_area .each_country_row:nth-child(-2n+4) {
+    padding: 0 46px;
+}
+
+/* global team from nations end */
+
+
+/* Virtual Office & Equipments start */
+.OfficeEquipmentsSec {
+    overflow: hidden;
+    position: relative;
+    padding: 137px 0 158px;
+}
+
+.OfficeEquipmentsContent .nenefitPerksList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.OfficeEquipmentsContent .nenefitPerksList li {
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+    color: #121212;
+    margin-bottom: 17px;
+}
+
+.OfficeEquipmentsContent .nenefitPerksList li:last-child {
+    margin-bottom: 0;
+}
+
+.OfficeEquipmentsContent .nenefitPerksList li .tick_icon {
+    display: inline-flex;
+    margin-right: 12px;
+}
+
+.OfficeEquipmentsContent .OfficeEquipmentsContent_inner {
+    max-width: 628px;
+}
+
+.OfficeEquipments_animations {
+    position: absolute;
+    right: -27%;
+    top: 0;
+    width: 100%;
+    transform: rotate(-60deg);
+    z-index: -1;
+
+}
+
+.officeAnimatin_each {
+    display: flex;
+    margin: 0 -10px 16px;
+    min-width: 100%;
+}
+
+.officeAnimatin_each:last-child {
+    margin-bottom: 0;
+}
+
+.officeAnimatin_each .officeAnimatin_eachImg {
+    padding: 0 10px;
+}
+
+.officeAnimatin_each .officeAnimatin_eachImg figure {
+    margin: 0;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.officeAnimatin_each .officeAnimatin_eachImg figure img {
+    width: 100%;
+    min-width: 360px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.animation_down {
+    animation: moveDown 40s linear 0s infinite running;
+    /* animation: 3s linear 0s infinite running slidein; */
+    transition: all ease 3s;
+    animation-fill-mode: none;
+}
+
+.animation_up {
+    animation: moveDown 40s linear 0s infinite running;
+    animation-direction: reverse;
+    animation-delay: calc(40s / -2);
+}
+
+
+/* animation down */
+@keyframes moveDown {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* Virtual Office & Equipments end */
+
+
+/* temp change start */
+.cmnTabsWrap .jobTabs_nav {
+    display: flex;
+    justify-content: center;
+}
+.cmnTabsWrap .jobTabs_nav .job-tabs{
+    border-bottom: 0;
+    border-radius: 12px;
+    border: 1px solid #E0E0E0;
+    padding: 10px 12px;
+}
+.cmnTabsWrap .jobTabs_nav .job-tabs .nav-link{
+    border-bottom: 0;
+    padding: 4px 15px;
+}
+.cmnTabsWrap .jobTabs_nav .job-tabs .nav-link.active{
+    background-color: #006634;
+    color: #ffffff;
+    border-radius: 8px;
+}
+/* temp change end */
+
+/* business secrtion start */
+.business_sec{
+    background-color: #132020;
+    overflow: hidden;
+}
+.business_sec .cmnSection_head h2{
+    color: #ffffff;
+}
+.business_sec .cmnSection_head p{
+    max-width: 1270px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #D7D7D7;
+}
+.busninessCard_row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -45px -30px;
+    padding-top: 24px;
+}
+.busninessCard_col{
+    padding: 0 45px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.busninessCard_col p{
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+.busninessCard_col i{
+    margin-bottom: 12px;
+    display: inline-block;
+}
+/* business secrtion end */
+
+/* media queries start */
+@media (max-width: 1399px) {
+    .officeAnimatin_each .officeAnimatin_eachImg figure img {
+        min-width: 260px;
+        height: 180px;
+    }
+
+    .OfficeEquipments_animations {
+        right: -35%;
+    }
+}
+
+@media (max-width: 1199px) {
+    .cmnSection_head h2 {
+        font-size: 35px;
+    }
+
+    .cmnSecHead_withImg .cmnSecHead_withImg_content h2 {
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+
+    .testimonialSlider_each .testimonialSlider_left {
+        width: 400px;
+        flex-basis: 400px;
+    }
+
+    .testimonialSlider_each .testimonialSlider_right {
+        width: calc(100% - 400px);
+        flex-basis: calc(100% - 400px);
+    }
+
+    .testimonialSlider_inner .testimonialSlider_bot {
+        max-width: calc(100% - 400px);
+    }
+
+    .cmn_innerTitle h3 {
+        font-size: 35px;
+    }
+
+    .testimonialSlider .carousel-item {
+        padding-top: 0;
+    }
+
+    .testimonialSlider_each .testimonialSlider_right .quoteIcon {
+        margin-bottom: 15px;
+    }
+
+    .officeAnimatin_each .officeAnimatin_eachImg figure img {
+        min-width: 230px;
+        height: 150px;
+    }
+
+    .OfficeEquipmentsSec {
+        padding: 90px 0;
+    }
+
+    .OfficeEquipments_animations {
+        right: -35%;
+    }
+
+    .OfficeEquipmentsContent .OfficeEquipmentsContent_inner {
+        max-width: 450px;
+    }
+
+    .each_country_row .each_country figure {
+        width: 50px;
+        flex-basis: 50px;
+        display: flex;
+    }
+
+    .each_country_row .each_country figure img {
+        width: 100%;
+    }
+
+    .each_country_row .each_country .each_country_text {
+        padding-left: 15px;
+        width: calc(100% - 50px);
+        flex-basis: calc(100% - 50px);
+    }
+
+    .mapCountries_inner .map_area figure img {
+        max-width: 350px;
+    }
+
+    
+
+    .ourTeam_row .ourTeam_col {
+       
+        margin-bottom: 10px;
+    }
+
+    .outTeamSec .ourTeam_row {
+        margin: 0 -10px -10px;
+    }
+
+
+}
+
+@media (max-width: 991px) {
+    .container-fluid {
+        padding: 0 15px;
+    }
+
+    .testimonialSlider_each .testimonialSlider_left {
+        position: static;
+        transform: initial;
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    .testimonialSlider_each .testimonialSlider_right {
+        width: 100%;
+        flex-basis: 100%;
+        padding-left: 0;
+        padding-top: 40px;
+    }
+
+    .testimonialSlider_each .testimonialSlider_left figure {
+        padding: 23px;
+    }
+
+    .testimonialSlider_each .testimonialSlider_left figure::before {
+        left: 0;
+        top: 0;
+    }
+
+    .testimonialSlider_each .testimonialSlider_left figure::after {
+        right: 0;
+        bottom: 0;
+    }
+
+    .testimonialSlider .carousel-inner {
+        padding: 0;
+        margin: 0;
+    }
+
+    .testimonialSlider_each .testimonialSlider_left figure img {
+        height: 650px;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .testimonialSlider_inner .testimonialSlider_bot {
+        max-width: initial;
+        padding: 10px 0 0;
+        position: static;
+    }
+
+    .testimonialSlider .carousel-item {
+        padding-bottom: 0;
+    }
+
+    .cmn_innerTitle h3 br {
+        display: none;
+    }
+
+    .officeAnimatin_each .officeAnimatin_eachImg figure img {
+        min-width: 200px;
+        height: 136px;
+    }
+
+    .OfficeEquipments_animations {
+        right: -30%;
+        top: 120px;
+    }
+
+    .OfficeEquipmentsSec {
+        padding: 50px 0;
+    }
+
+    .mapCountries_inner .map_area figure img {
+        max-width: 220px;
+    }
+
+    .each_country_row .each_country figure {
+        width: 40px;
+        flex-basis: 40px;
+    }
+
+    .each_country_row .each_country .each_country_text {
+        width: calc(100% - 40px);
+        flex-basis: calc(100% - 40px);
+    }
+
+    .cmnTabsWrap .nav-tabs {
+        flex-wrap: nowrap;
+        overflow: hidden;
+        overflow-x: auto;
+        justify-content: initial;
+    }
+
+    .cmnTabsWrap .nav-tabs .nav-link {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 767px) {
+    .eachJob .cmn_btn {
+        position: static;
+    }
+
+    .eachJob .jobLocationTypeList {
+        margin-bottom: 24px;
+    }
+
+    .cmnTabsWrap .nav-tabs .nav-link {
+        font-size: 16px;
+        padding: 0 15px 10px;
+    }
+
+    .cmnSection_head h2 {
+        font-size: 24px;
+    }
+
+    .cmnSection_head h6 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .cmnSection_head p {
+        font-size: 16px;
+    }
+
+    .eachJob .jobTitle {
+        font-size: 24px;
+    }
+
+    .cmnSecHead_withImg .cmnSecHead_withImg_content h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .cmnSecHead_withImg .cmnSecHead_withImg_content p {
+        font-size: 16px;
+    }
+
+    .forDesktop {
+        display: none;
+    }
+
+    .forMobile {
+        display: block;
+    }
+
+    .cmnSecHead_withImg {
+        margin-bottom: 50px;
+    }
+
+    .testimonialSlider_each .testimonialSlider_left figure::before {
+        max-width: 260px;
+        height: 310px;
+    }
+
+    .testimonialSlider_each .testimonialSlider_left figure::after {
+        max-width: 260px;
+        height: 310px;
+    }
+
+    .testimonialSlider_each .testimonialSlider_left figure img {
+        height: 465px;
+    }
+
+    .testimonialSlider_each .testimonialSlider_right .quoteIcon {
+        margin-bottom: 25px;
+    }
+
+    .OfficeEquipments_animations {
+        position: static;
+    }
+
+    .OfficeEquipments_animations_wrap {
+        overflow: hidden;
+        height: 350px;
+        margin-bottom: 40px;
+    }
+
+    .OfficeEquipmentsSec {
+        padding-top: 0;
+    }
+
+    .mapCountries_inner .map_area {
+        display: none;
+    }
+
+    .nationsSec .mapCountries_wrap {
+        padding-top: 0;
+    }
+
+    .countries_area .each_country_row:first-child,
+    .countries_area .each_country_row:last-child {
+        padding: 0;
+    }
+
+    .countries_area .each_country_row:nth-child(-2n+4) {
+        padding: 0;
+    }
+
+    .each_country_row .each_country_wrap {
+        width: 50%;
+        text-align: center;
+    }
+
+    .each_country_row .each_country .each_country_text {
+        width: 100%;
+        flex-basis: 100%;
+        padding-left: 0;
+    }
+
+    .each_country_row .each_country figure {
+        width: 40px;
+        flex-basis: 40px;
+        margin: 0 auto 12px;
+    }
+
+    .each_country_row .each_country {
+        box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+        border-radius: 8px;
+    }
+
+    .countries_area .each_country_row {
+        margin: 0 -8px 16px;
+    }
+
+    .countries_area .each_country_row:last-child {
+        margin-bottom: 0;
+    }
+
+    .each_country_row .each_country_wrap {
+        padding: 0 8px;
+    }
+
+    .outTeamSec {
+        padding-top: 0;
+    }
+
+    .each_country .each_country_text h5 {
+        font-size: 20px;
+    }
+
+    
+
+   
+
+    .ourTeamCard figure {
+        min-height: initial;
+        
+    }
+
+    .ourTeamCard h5 {
+        font-size: 14px;
+    }
+
+    .ourTeamCard .roleInfo {
+        font-size: 12px;
+    }
+
+    .ourTeam_row .ourTeam_col {
+        margin-bottom: 30px;
+    }
+
+    .outTeamSec .ourTeam_row {
+        margin-bottom: -30px;
+    }
+
+    .cmnSecHead_withImg .cmnSecHead_withImg_content {
+        top: 45px;
+    }
+
+    .cmn_innerTitle h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+}
+@media (max-width: 479px) {
+    .busninessCard_col p{
+        font-size: 18px;
+    }
+}
+@media (max-width: 375px) {
+    .testimonialSlider_bot_right {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .testimonialSlider_bot_right svg {
+        max-width: 70%;
+    }
+}
+
+/* media queries end */
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,764 @@
+body,html{
+    overflow-x: hidden;
+}
+body {
+    padding: 0;
+    
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.cmn_gap {
+    padding: 50px 0;
+}
+
+/* custom padding for bootstrap container */
+
+.container-fluid {
+    padding: 0 80px;
+}
+
+/* common styles start */
+.cmnSection_head {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.cmnSection_head h6 {
+    font-weight: 700;
+    font-size: 18px;
+    color: #CEA03E;
+    margin-bottom: 0;
+}
+
+.cmnSection_head h2 {
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #121212;
+}
+
+.cmnSection_head h2:last-child {
+    margin-bottom: 0;
+}
+
+.cmnSection_head p {
+    font-size: 24px;
+    color: #4A4A4A;
+}
+
+.cmn_btn {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 8px 24px;
+    min-width: 131px;
+    height: 44px;
+    background: linear-gradient(90deg, #EAB646 -2.63%, #966B33 100%);
+    border-radius: 4px;
+    border: 0;
+    transition: 0.4s all ease;
+}
+
+.cmn_btn:hover {
+    background: linear-gradient(90deg, #966B33 -2.63%, #EAB646 100%);
+}
+
+.cmn_innerTitle {
+    margin-bottom: 32px;
+}
+
+.cmn_innerTitle h3 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #121212;
+    margin-bottom: 25px;
+}
+
+.cmn_innerTitle p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #CEA03E;
+}
+
+.cmn_innerTitle h3:last-child {
+    margin-bottom: 0;
+}
+
+.cmnSection_head {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.cmnSection_head h6 {
+    font-weight: 700;
+    font-size: 18px;
+    color: #CEA03E;
+    margin-bottom: 0;
+}
+
+.cmnSection_head h2 {
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #121212;
+}
+
+.cmnSection_head h2:last-child {
+    margin-bottom: 0;
+}
+
+.cmnSection_head p {
+    font-size: 24px;
+    color: #4A4A4A;
+}
+
+
+/* banner sec start */
+.cmnBanner_sec {
+    position: relative;
+}
+
+.cmnBanner_sec figure {
+    margin-bottom: 0;
+}
+
+.cmnBanner_sec figure img {
+    width: 100%;
+    height: 332px;
+    object-fit: cover;
+}
+
+.cmnBanner_content {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.banner_title {
+    font-weight: 700;
+    color: #FFFFFF;
+    font-size: 56px;
+}
+
+/* banner sec end */
+
+/* whatAsylum sec start */
+.whatAsylum_right_img figure {
+    margin-bottom: 0;
+}
+
+.whatAsylum_right_img figure {
+    border-radius: 24px;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.whatAsylum_right_img figure img {
+    width: 100%;
+    height: 100%;
+    max-height: 606px;
+    object-fit: cover;
+}
+
+.whatAsylum_sec {
+    font-size: 24px;
+}
+
+/* whatAsylum sec end */
+
+/* apply Asylum sec start */
+.applyAsylum_col_left figure {
+    margin-bottom: 25px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.applyAsylum_col_left figure:last-child {
+    margin-bottom: 0;
+}
+
+.applyAsylum_col_left figure img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.applyAsylum_col_left figure.lgImg img {
+    height: 380px;
+}
+
+.applyAsylum_col_left figure.smImg img {
+    height: 178px;
+}
+
+.applyAsylum_col_right {
+    font-size: 24px;
+}
+
+/* apply Asylum sec end */
+
+/* handle Asylum sec start */
+.cmnSection_head.white h2 {
+    color: #ffffff;
+}
+
+.cmnSection_head.white p {
+    color: #ffffff;
+    max-width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.handleAsylum_top {
+    padding: 50px 0 182px;
+    background: #006634;
+
+}
+
+.handleAsylum_card_each {
+    padding: 30px 24px;
+    background: #FFFFFF;
+    box-shadow: -4px 8px 35px rgba(0, 0, 0, 0.07);
+    border-radius: 16px;
+}
+
+.handleAsylum_card_each h4 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.handleAsylum_card_each p {
+    font-size: 16px;
+    color: #7C7C7C;
+}
+
+.handleAsylum_card_wrap {
+    position: relative;
+    margin-top: -170px;
+}
+
+.handleAsylum_card_col{
+    margin-bottom: 24px;
+}
+.handleAsylum_card_row{
+    margin-bottom: -24px;
+}
+
+.handleAsylum_card_icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background: #CEA03E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* handle Asylum sec end */
+
+/* meet experts sec start */
+.meetExperts_cardWrap {
+    max-width: 905px;
+    margin: 0 auto;
+}
+
+.meetExperts_row {
+    margin: 0 -24px -30px;
+}
+
+.meetExperts_col {
+    padding: 0 24px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.meetExperts_col figure {
+    border-radius: 24px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.meetExperts_col figure img {
+    width: 100%;
+}
+
+.meetExperts_col h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.meetExperts_col p {
+    color: #7C7C7C;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.exploneMore_btn {
+    display: inline-flex;
+    align-items: center;
+    color: #CEA03E;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.exploneMore_btn i {
+    margin-left: 6px;
+    transition: 0.3s all ease;
+}
+
+.exploneMore_btn:hover {
+    color: #CEA03E;
+}
+
+.exploneMore_btn:hover i {
+    transform: translateX(5px);
+}
+
+.meetExperts_card_content {
+    padding: 0 30px;
+}
+
+/* meet experts sec end */
+
+/* application process start */
+.applicationProcess_col {
+    margin-bottom: 25px;
+}
+.applicationProcess_row{
+    margin-bottom: -25px;
+}
+.applicationProcess_card {
+   
+    border-radius: 16px;
+    padding: 37px 32px;
+    color: #ffffff;
+}
+.applicationProcess_card.green{
+    background: #006634;
+}
+.applicationProcess_card.yellow{
+    background: #CEA03E;
+}
+.applicationProcess_card  figure{
+    margin-bottom: 35px;
+}
+
+.applicationProcess_card h3 {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.applicationProcess_card p {
+    font-size: 24px;
+    margin-bottom: 35px;
+}
+
+.applyWhiteBtn {
+    padding: 14px 23px;
+    background: #ffffff;
+    color: #132020;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    display: inline-block;
+    transition: 0.3s all ease;
+}
+
+.applyWhiteBtn:hover {
+    background: #132020;
+    color: #ffffff;
+}
+
+/* application process end */
+
+/* faq section start */
+.faq_accordion_wrap {
+    padding-top: 20px;
+}
+
+.accordion-item {
+    border: 0;
+    margin-bottom: 32px;
+}
+
+.accordion-item:last-child {
+    margin-bottom: 0;
+}
+
+.accordion-item:first-of-type {
+    border-radius: 0;
+}
+
+.accordion-button {
+    color: #101828;
+    font-family: 'Helvetica' !important;
+    font-size: 18px !important;
+    padding: 3px 0 !important;
+}
+
+.accordion-button:not(.collapsed) {
+    box-shadow: none;
+    background: #ffffff;
+    color: #101828;
+}
+
+.accordion:not(:last-child) {
+    border-bottom: 0;
+}
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-body {
+    padding: 10px 0 0;
+    color: #7C7C7C;
+    font-size: 16px;
+}
+
+.accordion-body p:last-child {
+    margin-bottom: 0;
+}
+
+.accordion-button::after {
+     background-image: url(http://www.servingimmigrants.com/wp-content/uploads/2024/05/accordion-icon.svg);
+    background-size: contain;
+    width: 23px;
+    height: 23px;
+    content: "";
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url(http://www.servingimmigrants.com/wp-content/uploads/2024/05/accordion-expand-icon.svg);
+      content: "";
+}
+
+.faq_row {
+    margin: 0 -38px -30px;
+}
+
+.faq_col {
+    padding: 0 38px;
+    margin-bottom: 30px;
+}
+
+.faq_right {
+    padding: 30px 24px;
+    background: #FFFFFF;
+    box-shadow: -4px 8px 35px rgba(0, 0, 0, 0.07);
+    border-radius: 16px;
+    height: 100%;
+}
+
+.faq_right h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #101828;
+    margin-bottom: 15px;
+}
+
+.faq_right p {
+    color: #7C7C7C;
+    font-size: 20px;
+}
+
+.faq_right p a {
+    color: #006634;
+    text-decoration: none;
+    transition: 0.3s all ease;
+}
+
+.faq_right p a:hover {
+    text-decoration: underline;
+}
+
+.stateNumber {
+    padding-top: 55px;
+    color: #394760;
+    font-size: 16px;
+}
+
+.stateNumber h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.stateNumber .stateNumber_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -17px -20px;
+}
+
+.stateNumber .stateNumber_col {
+    padding: 0 17px;
+    margin-bottom: 20px;
+}
+
+.stateNumber .stateNumber_col h4 {
+    color: #000000;
+}
+
+.stateNumber .stateNumber_col p {
+    font-weight: 500;
+}
+
+/* faq section end */
+
+/* recent blog section start */
+.recentBlogs_col{
+    margin-bottom: 25px;
+}
+.recentBlogs_row{
+    margin-bottom: -25px;
+}
+.blogsCard figure {
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 0;
+}
+
+.blogsCard figure img {
+    width: 100%;
+}
+
+.blogsCard_text {
+    padding: 16px 16px 20px;
+}
+
+.blogsCard_text h4 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.blogsCard_text h4 a {
+    color: #000000;
+    text-decoration: none;
+    transition: 0.3s all ease;
+}
+
+.blogsCard_text h4 a:hover {
+    color: #CEA03E;
+}
+
+.blogsCard_text p {
+    color: #7C7C7C;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+
+.blogInfo_list {
+    list-style: none;
+    padding: 0;
+    margin: 0 -15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blogInfo_list li {
+    display: flex;
+    width: 50%;
+    padding: 0 15px;
+    border-right: 1px solid #B8B8C0;
+    color: #333333;
+    font-size: 14px;
+}
+
+.blogInfo_list li>i {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.blogInfo_list li:last-child {
+    border: 0;
+    justify-content: flex-end;
+}
+
+.blogInfo_list li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333333;
+}
+
+.blogInfo_list li a:hover {
+    text-decoration: underline;
+}
+
+.blogInfo_list li a i {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}
+
+/* recent blog section end */
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+/* media queries start */
+
+
+@media (max-width: 1199px) {
+    .cmnSection_head h2 {
+        font-size: 35px;
+    }
+
+
+    .cmn_innerTitle h3 {
+        font-size: 35px;
+    }
+
+
+}
+
+@media (max-width: 991px) {
+    .container-fluid {
+        padding: 0 15px;
+    }
+
+    .cmn_innerTitle h3 br {
+        display: none;
+    }
+
+    .banner_title {
+        font-size: 40px;
+    }
+
+    .whatAsylum_col {
+        margin-bottom: 30px;
+    }
+
+    .whatAsylum_col:last-child {
+        margin-bottom: 0;
+    }
+    .applyAsylum_col {
+        margin-bottom: 30px;
+    }
+    .applyAsylum_col:last-child{
+        margin-bottom: 0;
+    }
+    .meetExperts_sec.cmn_gap {
+        padding-bottom: 0;
+    }
+    .faq_sec.cmn_gap {
+        padding-bottom: 0;
+    }
+    .applicationProcess_sec.cmn_gap {
+        padding-bottom: 0;
+    }
+    
+}
+
+@media (max-width: 767px) {
+
+
+    .cmnSection_head h2 {
+        font-size: 24px;
+    }
+
+    .cmnSection_head h6 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .cmnSection_head p {
+        font-size: 16px;
+    }
+
+    .forDesktop {
+        display: none;
+    }
+
+    .forMobile {
+        display: block;
+    }
+
+    .cmn_innerTitle h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .cmnBanner_sec figure img {
+        height: 157px;
+    }
+
+    .banner_title {
+        font-size: 32px;
+    }
+
+    .whatAsylum_sec .cmn_innerTitle {
+        margin-bottom: 20px;
+    }
+
+    .whatAsylum_sec {
+        font-size: 16px;
+    }
+
+    .applyAsylum_col_left figure.lgImg img {
+        height: 216px;
+    }
+
+    .applyAsylum_col_left figure.smImg img {
+        height: 101px;
+    }
+    .applyAsylum_col_left figure{
+        margin-bottom: 14px;
+    }
+    .applyAsylum_col_right {
+        font-size:16px;
+    }
+
+    .handleAsylum_top{
+        padding: 50px 0 90px;
+    }
+    .handleAsylum_card_wrap{
+        margin-top: -85px;
+    }
+    .handleAsylum_card_each{
+        padding: 30px 16px;
+    }
+
+    .meetExperts_col figure{
+        margin-bottom: 16px;
+    }
+    .meetExperts_card_content {
+        padding: 0 10px;
+    }
+    .meetExperts_col p{
+        margin-bottom: 10px;
+    }
+
+    .applicationProcess_card h3{
+        font-size: 24px;
+    }
+    .applicationProcess_card p{
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+    .applicationProcess_card{
+        padding: 27px 12px 40px;
+    }
+    .faq_right{
+        padding: 30px 12px;
+    }
+}
+
+@media (max-width: 375px) {}
+
+/* media queries end */
