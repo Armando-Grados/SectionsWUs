@@ -15,8 +15,18 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
+    <!-- slick css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- custom css -->
     <link rel="stylesheet" href="index.css">
+
+
+
     <!-- custom javascript -->
     <script>
 
@@ -86,6 +96,8 @@
 
 
         })
+
+
 
         // show more / show less end
     </script>
@@ -2139,6 +2151,176 @@
             </div>
         </div>
     </div>
+
+
+    <!-- team member marquee start -->
+    <div class="temMarquee cmn_gap">
+        <div class="container-fluid">
+            <div class="temMarquee_slider">
+                <div class="teamMarquee_inner">
+                    <figure>
+                        <img src="http://www.servingimmigrants.com/wp-content/uploads/2024/06/team-marquee1.png" alt="">
+                    </figure>
+                </div>
+                <div class="teamMarquee_inner">
+                    <figure>
+                        <img src="http://www.servingimmigrants.com/wp-content/uploads/2024/06/team-marquee2.png" alt="">
+                    </figure>
+                </div>
+                <div class="teamMarquee_inner">
+                    <figure>
+                        <img src="http://www.servingimmigrants.com/wp-content/uploads/2024/06/team-marquee3.png" alt="">
+                    </figure>
+                </div>
+                <div class="teamMarquee_inner">
+                    <figure>
+                        <img src="http://www.servingimmigrants.com/wp-content/uploads/2024/06/team-marquee4.png" alt="">
+                    </figure>
+                </div>
+                <div class="teamMarquee_inner">
+                    <figure>
+                        <img src="http://www.servingimmigrants.com/wp-content/uploads/2024/06/team-marquee5.png" alt="">
+                    </figure>
+                </div>
+                <div class="teamMarquee_inner">
+                    <figure>
+                        <img src="http://www.servingimmigrants.com/wp-content/uploads/2024/06/team-marquee6.png" alt="">
+                    </figure>
+                </div>
+                <div class="teamMarquee_inner">
+                    <figure>
+                        <img src="http://www.servingimmigrants.com/wp-content/uploads/2024/06/team-marquee7.png" alt="">
+                    </figure>
+                </div>
+                <div class="teamMarquee_inner">
+                    <figure>
+                        <img src="http://www.servingimmigrants.com/wp-content/uploads/2024/06/team-marquee8.png" alt="">
+                    </figure>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- team member marquee end -->
+
+    <!-- counter section start -->
+    <div class="counterSection cmn_gap" id="counter">
+        <div class="container-fluid">
+            <div class="counterSection_row">
+                <div class="counterSection_col">
+                    <p class="counter_number">
+                        +
+                        <span class="count percent" data-count="20">
+                            0
+                        </span>
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet.
+                    </p>
+                </div>
+                <div class="counterSection_col">
+                    <p class="counter_number">
+                        +
+                        <span class="count percent" data-count="50">
+                            0
+                        </span>
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet.
+                    </p>
+                </div>
+                <div class="counterSection_col">
+                    <p class="counter_number">
+                        +
+                        <span class="count percent" data-count="80">
+                            0
+                        </span>
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet.
+                    </p>
+                </div>
+                <div class="counterSection_col">
+                    <p class="counter_number">
+                        +
+                        <span class="count percent" data-count="100">
+                            0
+                        </span>
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- counter section end -->
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- slick js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- slick js trigger -->
+    <script>
+        $('.temMarquee_slider').slick({
+            speed: 8000,
+            autoplay: true,
+            autoplaySpeed: 0,
+            centerMode: false,
+            cssEase: 'linear',
+            slidesToShow: 1,
+            draggable: false,
+            focusOnSelect: false,
+            pauseOnFocus: false,
+            pauseOnHover: false,
+            slidesToScroll: 1,
+            variableWidth: true,
+            infinite: true,
+            initialSlide: 1,
+            arrows: false,
+            buttons: false
+        });
+    </script>
+
+    <!-- counter js -->
+    <script>
+        var counted = 0;
+        $(window).scroll(function () {
+
+            var oTop = $('#counter').offset().top - window.innerHeight;
+            if (counted == 0 && $(window).scrollTop() > oTop) {
+                $('.count').each(function () {
+                    var $this = $(this),
+                        countTo = $this.attr('data-count');
+                    $({
+                        countNum: $this.text()
+                    }).animate({
+                        countNum: countTo
+                    },
+
+                        {
+
+                            duration: 2000,
+                            easing: 'swing',
+                            step: function () {
+                                $this.text(Math.floor(this.countNum));
+                            },
+                            complete: function () {
+                                $this.text(this.countNum);
+                                //alert('finished');
+                            }
+
+                        });
+                });
+                counted = 1;
+            }
+
+        });
+    </script>
 </body>
 
 </html>
